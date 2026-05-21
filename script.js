@@ -2124,7 +2124,7 @@ let wrongCount = 0;
 let wrongQuestions = [];
 
 let timer;
-let timeLeft = 30;
+let timeLeft = 90;
 let currentGap = "";
 
 /* ======================================================
@@ -2448,7 +2448,7 @@ else{
     .innerText = "";
 clearInterval(timer);
 
-timeLeft = 30;
+timeLeft = 90;
 
 document
   .getElementById("feedback")
