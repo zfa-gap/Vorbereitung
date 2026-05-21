@@ -286,11 +286,11 @@ const questions = {
 
   answers: [
     "Ein Patient hat das Recht, dass seine Daten berichtigt werden, wenn sie unrichtig sind.",
-    "Personenbezogene Daten dürfen nicht von Auszubildenden eingesehen werden.",
-    "Ein Patient hat das Recht, dass seine Daten berichtigt werden, wenn diese falsch sind.",
+    "Personenbezogene Daten dürfen nicht von Auszubildenden eingesehen werden.  ",
+    "Ein Patient hat das Recht, dass seine Daten berichtigt werden, wenn diese falsch sind",
     "Ein Patient hat das Recht, dass auch Verdachtsdiagnosen, die sich nicht bewahrheitet haben, gelöscht werden.",
-    "Personenbezogene Daten dürfen nicht gelöscht werden, wenn die Aufbewahrungsfrist noch läuft.",
-    "Ein Patient hat das Recht, dass seine Daten gelöscht werden, wenn ihre Speicherung nicht erlaubt ist."
+    "Personenbezogene Daten einer Zahnarztpraxis dürfen nicht gelöscht werden, wenn ihre gesetzlich vorgeschriebene Aufbewahrungsfrist noch nicht abgelaufen ist. ",
+    "Ein Patient hat das Recht, dass seine Daten gelöscht werden, wenn ihre Speicherung nicht erlaubt ist. "
   ],
 
   correct: [1,3]
@@ -316,16 +316,16 @@ const questions = {
 
 {
   question:
-  "Welches Verhalten von Manuela ist nicht korrekt?",
+  "Beurteilen Sie das Verhalten der ZFA Manuela hinsichtlich des Einhaltens des Datenschutzes. Welches Verhalten von Manuela ist nicht korrekt?",
 
   multiple: false,
 
   answers: [
-    "Manuela bittet einen schwerhörigen Patienten in ein Behandlungszimmer.",
-    "Manuela schützt Daten an der Anmeldung.",
-    "Manuela verweigert Rezeptausgabe ohne Vollmacht.",
-    "Manuela gibt der angeblichen AOK telefonisch Auskunft.",
-    "Manuela beschränkt den Zugriff des Technikers."
+    "Manuela bittet einen schwerhörigen Patienten in ein Behandlungszimmer, um ihm auf Anweisung des Zahnarztes einen Befund mitzuteilen.",
+    "Manuela achtet darauf, dass an der Anmeldung die anderen Patienten die Daten des Patienten, den sie gerade bedient, nicht mithören oder sehen können.",
+    "Ein Mann betritt die Praxis und sagt, dass er das Rezept für seine Frau abholen will. Der Mann hat keine Vollmacht dabei. Manuela weigert sich, dem Mann das Rezept mitzugeben.",
+    "Manuela erhält einen Anruf. Der Anrufer behauptet von der AOK zu sein und möchte den Grund der Krankschreibung des Patienten Hilbert Meyer wissen. Manuela gibt bereitwillig Auskunft, dass der Anrufer ja gesagt hat, dass er von der AOK ist und sie weiß, Krankenkassen bestimmte Auskunftsrechte haben. ",
+    "Manuela achtet darauf, dass der Techniker, der die Computeranlage repariert, nicht mehr Einblick in die Patientendaten hat, als es zur Erfüllung seiner Aufgabe notwendig ist."
   ],
 
   correct: [3]
