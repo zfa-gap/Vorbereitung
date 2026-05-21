@@ -154,7 +154,911 @@ const questions = {
       ],
 
       correct: [0]
-    }
+    }, {
+  question:
+  "Warum sind Röntgenstrahlen für den Menschen gefährlich?",
+
+  multiple: false,
+
+  answers: [
+    "weil sie Moleküle in der Zelle ionisieren können",
+    "weil sie sich im Vakuum mit Lichtgeschwindigkeit ausbreiten",
+    "weil sie sogar Materialien hoher Dichte ungehindert durchdringen können",
+    "weil sie sich geradlinig ausbreiten",
+    "weil sie fluoreszierende Stoffe aufleuchten lassen"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Warum ist es unverantwortlich, den Sensor im Mund des Patienten zu halten?",
+
+  multiple: false,
+
+  answers: [
+    "weil der Fingerabdruck den Sensor beschädigt",
+    "weil die häufige Bestrahlung der Finger zu Hautkrebs führen kann",
+    "weil bereits geringe Strahlendosen zu Nekrosen führen",
+    "weil der Finger auf der Aufnahme abgebildet wird",
+    "weil Röntgenstrahlen Gelenkentzündungen begünstigen"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Die Menge der entstehenden Röntgenstrahlen wird beeinflusst durch ...",
+
+  multiple: true,
+
+  answers: [
+    "die Einschaltdauer",
+    "die Röhrenspannung",
+    "die Stromstärke",
+    "die Temperatur der Rohre",
+    "die Größe des Tubus",
+    "die Bildgröße"
+  ],
+
+  correct: [0,1,2]
+},
+
+{
+  question:
+  "Warum müssen metallhaltige Gegenstände vor einer OPG-Aufnahme entfernt werden?",
+
+  multiple: false,
+
+  answers: [
+    "weil sie die Haut erwärmen",
+    "weil sie die Diagnose erschweren können",
+    "weil sie elektrisch aufgeladen werden können",
+    "weil von ihnen Streustrahlung ausgeht",
+    "weil sie beschädigt werden"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Was stellt sich auf einer Röntgenaufnahme als Verschattung dar?",
+
+  multiple: false,
+
+  answers: [
+    "eine Zyste",
+    "eine Metallkrone",
+    "eine Karies",
+    "eine Höhle nach Wurzelspitzenresektion",
+    "der Mandibularkanal"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Warum wird bei der Paralleltechnik ein Filmhalter benötigt?",
+
+  multiple: false,
+
+  answers: [
+    "damit Film und Zahn senkrecht zueinander stehen",
+    "damit der Zentralstrahl parallel zur Winkelhalbierenden steht",
+    "weil Patienten den Film nicht selbst halten können",
+    "damit der Zentralstrahl senkrecht auf Film und Zahn trifft",
+    "damit der Zentralstrahl parallel zur Zahnachse verläuft"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Technik wird gewählt, um zwei Wurzelkanäle sichtbar zu machen?",
+
+  multiple: false,
+
+  answers: [
+    "Bissflügelaufnahme",
+    "Aufbissaufnahme",
+    "orthoradiale Einstellung",
+    "exzentrische Einstellung",
+    "gebogener Film"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Was gilt bei Röntgenaufnahmen bei Schwangeren?",
+
+  multiple: false,
+
+  answers: [
+    "die Röhrenspannung muss unter 50 kV liegen",
+    "Aufnahmen nur mit Zustimmung des Frauenarztes",
+    "Röntgenaufnahmen sind verboten",
+    "Röntgenaufnahmen sind nur außerhalb bestimmter Monate erlaubt",
+    "bei zwingender Notwendigkeit darf geröntgt werden"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Die rechtfertigende Indikation ...",
+
+  multiple: true,
+
+  answers: [
+    "ist für jede Röntgenaufnahme aufzuzeichnen",
+    "wird alle fünf Jahre überprüft",
+    "wird nur bei auffälligem Befund verlangt",
+    "stellt der Zahnarzt persönlich fest",
+    "ist nur für Kassenpatienten nötig",
+    "wird nur bei Schwangeren notiert"
+  ],
+
+  correct: [0,3]
+},
+
+{
+  question:
+  "Was versteht man unter Abnahmeprüfung?",
+
+  multiple: false,
+
+  answers: [
+    "regelmäßige Kontrolle der Bildqualität",
+    "stichprobenartige Prüfung durch Sachverständige",
+    "Überprüfung der Röntgeneinrichtung vor Inbetriebnahme",
+    "Überprüfung der Aufnahme durch Gutachter",
+    "quartalsweise Kontrolle der Röntgenstelle"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Wie heißt der Bereich, in dem sich während der Belichtung nur der Patient aufhält?",
+
+  multiple: false,
+
+  answers: [
+    "Schutzbereich",
+    "Sicherheitsbereich",
+    "Überwachungsbereich",
+    "Kontrollbereich",
+    "Röntgenbereich"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Nach Beendigung des Röntgenvorgangs ...",
+
+  multiple: false,
+
+  answers: [
+    "sind nur noch im Kontrollbereich Strahlen vorhanden",
+    "geben die Wände noch Strahlen ab",
+    "strahlt die Röhre noch nach",
+    "ist im Raum keine Strahlung mehr vorhanden",
+    "ist im Film weiterhin Strahlung vorhanden"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Wie oft muss der Kenntnisnachweis aktualisiert werden?",
+
+  multiple: false,
+
+  answers: [
+    "jedes Jahr",
+    "alle fünf Jahre",
+    "bei Arbeitsplatzwechsel",
+    "nie",
+    "bei Fehlern in der Filmverarbeitung",
+    "nur während aktiver Tätigkeit"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Wie lange müssen Inhalte der Konstanzprüfung aufbewahrt werden?",
+
+  multiple: false,
+
+  answers: [
+    "gar nicht",
+    "3 Monate",
+    "2 Jahre",
+    "5 Jahre",
+    "10 Jahre"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Wie lange müssen Röntgenaufnahmen eines 12-jährigen Kindes aufbewahrt werden?",
+
+  multiple: false,
+
+  answers: [
+    "1 Jahr",
+    "bis 18",
+    "bis 22",
+    "bis 28",
+    "10 Jahre"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Aufnahme eignet sich zur Darstellung von Approximalkaries?",
+
+  multiple: false,
+
+  answers: [
+    "distalexzentrische Aufnahme",
+    "Fernröntgenseitenaufnahme",
+    "Bissflügelaufnahme",
+    "Aufbissaufnahme",
+    "DVT"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Eine Panoramaschichtaufnahme ist ...",
+
+  multiple: false,
+
+  answers: [
+    "eine Übersichtsaufnahme beider Kiefer",
+    "eine Kiefergelenksaufnahme",
+    "eine Aufbissaufnahme",
+    "eine Fernröntgenseitenaufnahme",
+    "eine digitale Volumentomografie"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Welche Untersuchungsmethode eignet sich nicht zur Kariesdiagnostik?",
+
+  multiple: false,
+
+  answers: [
+    "Bissflügelaufnahme",
+    "Durchleuchten mit Lichtquelle",
+    "Fernröntgenseitenaufnahme",
+    "Kariesdetektoren",
+    "Fluoreszenzmessung"
+  ],
+
+  correct: [2]
+}, {
+  question:
+  "Ordnen Sie die Materialien nach ihrer Strahlendurchlässigkeit!",
+
+  multiple: false,
+
+  answers: [
+    "Schleimhaut → Dentin → Knochen → Zahnschmelz → Goldgussfüllung",
+    "Goldgussfüllung → Zahnschmelz → Knochen → Dentin → Schleimhaut",
+    "Schleimhaut → Knochen → Dentin → Zahnschmelz → Goldgussfüllung",
+    "Dentin → Schleimhaut → Knochen → Goldgussfüllung → Zahnschmelz"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Was erkennen Sie als Aufhellung auf einem Röntgenbild?",
+
+  multiple: false,
+
+  answers: [
+    "eine Zyste",
+    "eine Metallkrone",
+    "eine Wurzelkanalfüllung",
+    "eine Amalgamfüllung",
+    "einen Wurzelrest"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Wozu dient der Aluminiumfilter?",
+
+  multiple: false,
+
+  answers: [
+    "Abfangen weicher Strahlung",
+    "Eingrenzung des Nutzstrahlenbündels",
+    "Messung der Strahlenschutzwirkung",
+    "Ausrichtung des Zentralstrahls"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Je größer die Beschleunigungsspannung ist ...",
+
+  multiple: false,
+
+  answers: [
+    "desto kürzer wird die Wellenlänge",
+    "desto weicher wird die Strahlung",
+    "desto stärker steigt die biologische Wirkung",
+    "desto länger wird die Wellenlänge"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Was versteht man unter Äquivalentdosis?",
+
+  multiple: false,
+
+  answers: [
+    "Maß für die Belichtungszeit",
+    "Messwert für Mindestabstand",
+    "Messung der Gewebedichte",
+    "Maß für die biologische Wirkung der Röntgenstrahlen",
+    "Bleigleichwert der Schürze"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Warum sind Röntgenstrahlen für Menschen gefährlich?",
+
+  multiple: false,
+
+  answers: [
+    "weil sie Moleküle ionisieren können",
+    "weil sie Lichtgeschwindigkeit haben",
+    "weil sie alles durchdringen",
+    "weil sie sich geradlinig ausbreiten",
+    "weil Stoffe fluoreszieren"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Welche Aussage zur Fernröntgenseitenaufnahme ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Darstellung von Speichelsteinen",
+    "Schichtaufnahme",
+    "Spezialprojektion zur kieferorthopädischen Diagnostik",
+    "Kiefergelenksaufnahme",
+    "Abstand maximal 0,5 m"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Welche Aufnahmen dienen der Wachstumsanalyse in der KFO?",
+
+  multiple: true,
+
+  answers: [
+    "Fernröntgenseitenaufnahmen",
+    "Panoramaschichtaufnahmen",
+    "Kiefergelenksaufnahmen",
+    "Röntgenaufnahmen der Hand"
+  ],
+
+  correct: [0,3]
+},
+
+{
+  question:
+  "Ein Röntgenfilm ist viel zu hell. Welche Ursache vermuten Sie?",
+
+  multiple: false,
+
+  answers: [
+    "zu lange belichtet",
+    "zu lange entwickelt",
+    "Entwicklertemperatur zu hoch",
+    "zu kurz belichtet",
+    "Kilovoltzahl zu hoch"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Wann sollte eine Speicherfolie ausgelesen werden?",
+
+  multiple: false,
+
+  answers: [
+    "erst nach mehreren Stunden",
+    "Zeitpunkt spielt keine Rolle",
+    "möglichst sofort nach Belichtung",
+    "erst am Tagesende"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "230 V auf dem Typenschild bedeutet ...",
+
+  multiple: false,
+
+  answers: [
+    "Röhrenstrom",
+    "Beschleunigungsspannung",
+    "Filterung",
+    "Netzanschlussspannung"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Was muss bei der wöchentlichen Prüfung dokumentiert werden?",
+
+  multiple: true,
+
+  answers: [
+    "Konzentration des Entwicklers",
+    "Dauer der Filmverarbeitung",
+    "Temperatur des Entwicklers",
+    "optische Dichte des Prüffilms",
+    "Belichtungszeit"
+  ],
+
+  correct: [2,3]
+},
+
+{
+  question:
+  "Wie wird der Niedrigkontrast digitaler Röntgenbilder bewertet?",
+
+  multiple: false,
+
+  answers: [
+    "Anzahl sichtbarer Graustufen",
+    "Anzahl sichtbarer Bohrungen",
+    "Strahlenbelastung",
+    "Linienpaare pro mm",
+    "Kilovolt-Angabe"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Wo befindet sich der Kontrollbereich?",
+
+  multiple: false,
+
+  answers: [
+    "Schutzbereich",
+    "Sicherheitsbereich",
+    "Überwachungsbereich",
+    "Kontrollbereich",
+    "Röntgenbereich"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Röntgenstrahlen sind energiereicher ...",
+
+  multiple: false,
+
+  answers: [
+    "je höher die Röhrenspannung",
+    "je höher die Stromstärke",
+    "bei längerer Einschaltdauer",
+    "bei größerer Entfernung",
+    "bei niedrigem Kilovoltwert"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Wodurch wird das Strahlenbündel begrenzt?",
+
+  multiple: false,
+
+  answers: [
+    "durch die Blende",
+    "durch die Kathode",
+    "durch den Aluminiumfilter",
+    "durch den Filmhalter",
+    "durch die Anode"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Der Zentralstrahl ist ...",
+
+  multiple: false,
+
+  answers: [
+    "ein Streustrahl",
+    "ein Strahl zwischen Kathode und Anode",
+    "eine Einstellhilfe",
+    "der gedachte Mittelstrahl des Nutzstrahlenbündels",
+    "ein Laserstrahl"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Wie zeigt sich ein Defekt der Dunkelkammerleuchte?",
+
+  multiple: false,
+
+  answers: [
+    "Bilder werden zu hell",
+    "helle Streifen entstehen",
+    "Bilder werden kontrastarm und dunkler",
+    "Bilder werden unscharf"
+  ],
+
+  correct: [2]
+},
+     {
+  question:
+  "Was ist bei der Lagerung von Röntgenfilmen zu beachten?",
+
+  multiple: true,
+
+  answers: [
+    "Sie sollten feucht gelagert werden.",
+    "Die Filme sollten vor Belichtung gelagert werden.",
+    "Sie müssen vor kurzwelliger Bestrahlung geschützt werden.",
+    "Sie sollten kühl aufbewahrt werden.",
+    "Sie müssen steril gelagert werden."
+  ],
+
+  correct: [2,3]
+},
+
+{
+  question:
+  "Was bedeutet die teratogene Wirkung von Röntgenstrahlen?",
+
+  multiple: false,
+
+  answers: [
+    "Schädigung von Körperzellen",
+    "Zerlegung von Zellsubstanz",
+    "Schädigung von Erbinformation",
+    "Schädigung während der Embryonalzeit",
+    "Aufleuchten bestimmter Stoffe"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Rolle spielt die Temperatur der Entwicklerlösung?",
+
+  multiple: true,
+
+  answers: [
+    "Bei Zimmertemperatur werden Bilder am besten.",
+    "Je wärmer der Entwickler, desto dunkler die Bilder.",
+    "Je kälter der Entwickler, desto dunkler die Bilder.",
+    "Je wärmer der Entwickler, desto heller die Bilder.",
+    "Die vorgeschriebene Entwicklertemperatur muss eingehalten werden."
+  ],
+
+  correct: [1,4]
+},
+
+{
+  question:
+  "Welche Aussagen zu Sensoren sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Es wird ein CCD-Chip verwendet.",
+    "Ein Scanner muss vorhanden sein.",
+    "Die Daten müssen innerhalb von 30 Minuten ausgelesen werden.",
+    "Eine Ausleseeinheit muss vorhanden sein.",
+    "Die Anwendung erfolgt wie beim filmgestützten Röntgen.",
+    "Die Aufnahme ist sofort sichtbar."
+  ],
+
+  correct: [0,5]
+},
+
+{
+  question:
+  "Was muss bei einer Röntgenaufnahme dokumentiert werden?",
+
+  multiple: true,
+
+  answers: [
+    "frühere Infektionskrankheiten",
+    "Vorhandensein eines Herzschrittmachers",
+    "frühere Röntgenaufnahmen im fraglichen Gebiet",
+    "Angaben zur Krankenversicherung",
+    "das Filmformat",
+    "die rechtfertigende Indikation"
+  ],
+
+  correct: [2,5]
+},
+
+{
+  question:
+  "Wie stark darf die optische Dichte maximal abweichen?",
+
+  multiple: false,
+
+  answers: [
+    "gar nicht",
+    "nur eine Stufe weniger dicht",
+    "eine Stufe nach oben oder unten",
+    "nur eine Stufe dichter",
+    "wird individuell festgelegt"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Was wird bei der monatlichen Konstanzprüfung dokumentiert?",
+
+  multiple: true,
+
+  answers: [
+    "Schaltdaten der Konstanzaufnahme",
+    "Entwicklungszeit",
+    "Dichteunterschied zur Ursprungsaufnahme",
+    "Größe des Nutzstrahlenfeldes",
+    "Anzahl der Dichtestufen"
+  ],
+
+  correct: [0,2,4]
+},
+
+{
+  question:
+  "Welche Aussage zur Panoramaschichtaufnahme ist falsch?",
+
+  multiple: false,
+
+  answers: [
+    "Schmuck und Zahnersatz müssen entfernt werden.",
+    "Die Frankfurter Horizontale muss eingestellt werden.",
+    "Der Patient darf den Kopf nicht drehen.",
+    "Die Zunge soll an den Gaumen gelegt werden.",
+    "Der Patient soll die Luft anhalten."
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Aussage zur Kilovolt-Einstellung bei Kindern ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Die Spannung wird reduziert, damit das Bild nicht zu dunkel wird.",
+    "Die erhöhte Absorption muss ausgeglichen werden.",
+    "Die Einstellung ist unabhängig vom Alter.",
+    "Digitale Systeme haben einen hohen Belichtungsspielraum."
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Welche anatomischen Strukturen erscheinen als Aufhellung?",
+
+  multiple: true,
+
+  answers: [
+    "Zysten",
+    "Metallkronen",
+    "Kieferhöhle",
+    "leere Alveole",
+    "Foramen mentale",
+    "Wurzelkanalfüllung"
+  ],
+
+  correct: [0,2,3,4]
+},
+
+{
+  question:
+  "Welche Aussage zu Röntgenstrahlen ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Sie werden mit 60 oder 70 Volt erzeugt.",
+    "Sie werden energiereicher bei höherer Röhrenspannung.",
+    "Sie ergeben schärfere Bilder bei längerer Belichtung.",
+    "Ihre Energie bleibt bei Entfernung unverändert.",
+    "Sie werden durch hohe Stromstärke härter."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche Aussage zur Speicherung digitaler Bilder ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Speicherfolien können nur einmal genutzt werden.",
+    "Sensoren benötigen keinen Computer.",
+    "Digitale Bilder können nachbearbeitet werden.",
+    "Digitale Bilder haben keine Graustufen."
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Welche Aussage zur Bissflügelaufnahme ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Sie zeigt beide Kiefer vollständig.",
+    "Sie dient der Kariesdiagnostik im Approximalbereich.",
+    "Sie wird nur bei Kindern eingesetzt.",
+    "Sie ist eine Fernröntgenaufnahme."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche Aussage zur Paralleltechnik ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Der Film liegt schräg zur Zahnachse.",
+    "Der Zentralstrahl trifft senkrecht auf Zahn und Film.",
+    "Filmhalter sind unnötig.",
+    "Die Technik wird nur bei OPG genutzt."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche Aussage zur digitalen Volumentomografie ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Sie ersetzt jede intraorale Aufnahme.",
+    "Sie liefert dreidimensionale Aufnahmen.",
+    "Sie wird nur in der KFO eingesetzt.",
+    "Sie benötigt keine rechtfertigende Indikation."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche Aussage zur Konstanzprüfung ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Sie wird nur einmal durchgeführt.",
+    "Sie überprüft die gleichbleibende Bildqualität.",
+    "Sie ersetzt die Sachverständigenprüfung.",
+    "Sie ist nur bei analogen Geräten nötig."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche Aussage zur Strahlenbelastung ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Digitale Systeme benötigen meist geringere Strahlendosen.",
+    "Digitale Systeme benötigen höhere Strahlendosen.",
+    "Die Strahlenbelastung ist immer gleich.",
+    "Strahlenschutz ist bei digitalen Geräten unnötig."
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Welche Aussage zum Strahlenschutz ist richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Abstand reduziert die Strahlenbelastung.",
+    "Bleischürzen können schützen.",
+    "Schutzmaßnahmen sind freiwillig.",
+    "Die Belichtungszeit sollte möglichst kurz sein."
+  ],
+
+  correct: [0,1,3]
+}
 
   ],
 
