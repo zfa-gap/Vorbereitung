@@ -686,23 +686,359 @@ const questions = {
 
   GS: [
 
-    {
-      question:
-      "Was gehört zur persönlichen Schutzausrüstung?",
+{
+  question:
+  "Nach erfolgter Prothetik Behandlung sollen Sie den Arbeitsplatz hygienisch aufbereiten. Ordnen Sie zu!",
 
-      multiple: true,
+  type: "matching",
 
-      answers: [
-        "Handschuhe",
-        "Mundschutz",
-        "Schutzbrille",
-        "Schokolade"
-      ],
-
-      correct: [0,1,2]
-    }
-
+  categories: [
+    "kritisch = 1",
+    "semikritisch = 2",
+    "unkritisch = 3"
   ],
+
+  items: [
+    "Abformlöffel aus Metall",
+    "Gesichtsbogen",
+    "Fräse und Gummipolierer zur Entfernung von Druckstellen",
+    "Halter für Okklusionsfolie",
+    "Bohr- und Schleifinstrumente für Präparation",
+    "Elektrotom"
+  ],
+
+  correct: [2,1,2,1,0,0]
+},
+
+{
+  question:
+  "Nehmen Sie für die verwendeten Medizinprodukte die Risikobewertung vor!",
+
+  type: "matching",
+
+  categories: [
+    "unkritisch = 1",
+    "semikritisch = 2",
+    "kritisch = 3"
+  ],
+
+  items: [
+    "Durchdringen Haut oder Schleimhaut",
+    "Kommen mit intakter Haut in Berührung",
+    "kommen mit Schleimhaut oder krankhaft veränderter Haut in Berührung"
+  ],
+
+  correct: [2,0,1]
+},
+
+{
+  question:
+  "Bringen Sie die Schritte der hygienischen Aufbereitung in die richtige Reihenfolge!",
+
+  type: "ordering",
+
+  items: [
+    "gesicherter Transport zum Aufbereitungsbereich",
+    "Grobreinigung",
+    "RDG / Desinfektionsbad",
+    "Feinreinigung (Lupenkontrolle)",
+    "Pflegen, Ölen",
+    "Einschweißen oder Einsortieren in Trays",
+    "Sterilisation",
+    "Freigabe durch Hygienebeauftragte"
+  ],
+
+  correct: [0,1,2,3,4,5,6,7]
+},
+
+{
+  question:
+  "Nach einem chirurgischen Eingriff sollen Sie die kontaminierten Medizinprodukte nach RKI-Vorgaben aufbereiten. Welche Reihenfolge müssen Sie einhalten?",
+
+  multiple: false,
+
+  answers: [
+    "Desinfektion - geschlossener Transport - Pflege - Sterilisation - Verpacken - Dokumentation - Freigabe",
+    "geschlossener Transport - Desinfektion - Verpacken - Pflege - Sterilisation - Dokumentation - Freigabe",
+    "geschlossener Transport - Desinfektion - Pflege - Verpacken - Sterilisation - Dokumentation - Freigabe",
+    "Desinfektion - geschlossener Transport - Pflege - Sterilisation - Verpacken - Freigabe - Dokumentation",
+    "Pflege - Desinfektion - geschlossener Transport - Sterilisation - Verpacken - Dokumentation - Freigabe"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Durch eine Sterilisation mit einem Autoklaven der Klasse B wird folgendes erreicht:",
+
+  multiple: true,
+
+  answers: [
+    "Nur Bakterien werden unschädlich gemacht.",
+    "Bei sachgerechter Anwendung wird völlige Keimfreiheit erzielt.",
+    "Nur Krankheitserreger werden abgetötet.",
+    "Nur Viren und Sporen werden abgetötet.",
+    "Auch Innenbereiche von Hohlkörpern werden keimfrei gemacht.",
+    "Klasse-B-Sterilisatoren reinigen und pflegen Instrumente."
+  ],
+
+  correct: [1,4]
+},
+
+{
+  question:
+  "Bringen Sie den Ablauf der Klasse-B-Sterilisation in die richtige Reihenfolge!",
+
+  type: "ordering",
+
+  items: [
+    "Vakuumphase",
+    "Dampfeinlass",
+    "Sterilisationsphase",
+    "Druckablass",
+    "Entlüftungsphase"
+  ],
+
+  correct: [0,1,2,3,4]
+},
+
+{
+  question:
+  "Absolute Keimfreiheit von Medizinprodukten wird erreicht durch:",
+
+  multiple: false,
+
+  answers: [
+    "Einlegen in das Bohrerbad",
+    "Thermodesinfektion im RDG",
+    "Ultraschallreinigung",
+    "Sterilisation im Autoklaven",
+    "Sprühdesinfektion"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Aussage zur hygienischen Aufbereitung ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "PAR-Instrumente sind unkritisch.",
+    "Stumpfe Instrumente müssen vor Desinfektion geschliffen werden.",
+    "Untersuchungssonden sind kritisch.",
+    "Polierbürstchen sind nach einmaligem Gebrauch zu entsorgen.",
+    "Sterile PAR-Trays sind 8 Monate verwendbar."
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Aussagen zum Hygieneplan sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Der Hygieneplan muss nicht angepasst werden.",
+    "Jeder Praxisinhaber muss ihn individuell anpassen.",
+    "Mitarbeiter müssen geschult werden.",
+    "Nur der Praxisinhaber muss informiert sein.",
+    "Aktualisierungen sind unnötig.",
+    "Der Hygieneplan muss jährlich neu erstellt werden."
+  ],
+
+  correct: [1,2]
+},
+
+{
+  question:
+  "Welche Aussagen zur Verwendung von Schutzhandschuhen sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Handschuhe müssen zwischen Patienten gewechselt werden.",
+    "Handschuhe unterliegen keinen Qualitätsanforderungen.",
+    "Handschuhe spätestens nach 60 Minuten wechseln.",
+    "Handschuhe können mehrfach desinfiziert werden.",
+    "Bei Reinigungsarbeiten müssen beständige Handschuhe getragen werden.",
+    "Bei Händedesinfektion kann man auf Handschuhe verzichten."
+  ],
+
+  correct: [0,2,4]
+},
+
+{
+  question:
+  "Was gehört zu Ihrer persönlichen Schutzausrüstung?",
+
+  multiple: true,
+
+  answers: [
+    "Handschuhe",
+    "Mund-Nasenschutz",
+    "Händedesinfektionsmittel",
+    "geschlossene Schuhe",
+    "Schutzbrille",
+    "wasserabweisende Behandlungskittel"
+  ],
+
+  correct: [0,1,3,4,5]
+},
+
+{
+  question:
+  "Unterscheiden Sie zwischen hygienischer und chirurgischer Händedesinfektion!",
+
+  type: "matching",
+
+  categories: [
+    "hygienische Händedesinfektion = 1",
+    "chirurgische Händedesinfektion = 2"
+  ],
+
+  items: [
+    "Vor Arbeitsplatzvorbereitung",
+    "Vor umfangreichen chirurgischen Eingriffen",
+    "Vor jeder Behandlung",
+    "Nach Ausziehen der Handschuhe",
+    "Nach Toilettenbenutzung",
+    "Desinfektionsmittel nur aus Spendern entnehmen"
+  ],
+
+  correct: [0,1,0,0,0,0]
+},
+
+{
+  question:
+  "Welche Aussagen zur Händedesinfektion sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Vor der hygienischen Händedesinfektion werden Hände gewaschen.",
+    "Die Einwirkzeit beträgt 30 bis 60 Sekunden.",
+    "Nur pathogene Keime werden abgetötet.",
+    "Bei chirurgischer Desinfektion werden nur apathogene Keime abgetötet.",
+    "Die hygienische Händedesinfektion benötigt mehr Mittel."
+  ],
+
+  correct: [1,2]
+},
+
+{
+  question:
+  "Welche Aussagen zur Abfallentsorgung sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Röntgenfilme gehören in den Sondermüll.",
+    "Fotochemikalien gehören in Gruppe C.",
+    "Fotochemikalien dürfen in den Abguss.",
+    "Abfälle mit meldepflichtigen Erregern gehören zu Gruppe E.",
+    "Abgebundener Zement ist Sondermüll.",
+    "Kanülen dürfen verschlossen in den Hausmüll."
+  ],
+
+  correct: [1,3]
+},
+
+{
+  question:
+  "Welche Aussagen zum Hygieneplan sind falsch?",
+
+  multiple: true,
+
+  answers: [
+    "Er regelt Reinigungsmaßnahmen.",
+    "Er regelt Entsorgungsmaßnahmen.",
+    "Er regelt Beleuchtungsstärke.",
+    "Bei Änderungen müssen Beschäftigte eingewiesen werden.",
+    "Er muss aushängen.",
+    "Er regelt Gesundheitsvorsorgeuntersuchungen."
+  ],
+
+  correct: [2,5]
+},
+
+{
+  question:
+  "Welche Aussagen sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Benutzte Instrumente müssen vor Reinigung desinfiziert werden.",
+    "Längere Desinfektionszeit verbessert Wirkung.",
+    "Höhere Dosierung verbessert Wirkung.",
+    "Höhere Wassertemperatur verbessert Wirkung.",
+    "Desinfektionslösungen müssen jede Woche neu angesetzt werden.",
+    "Rotierende Instrumente benötigen gesonderte Aufbereitung."
+  ],
+
+  correct: [0,5]
+},
+
+{
+  question:
+  "Welche Aussagen sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Chirurgische Instrumente werden nur sterilisiert.",
+    "Behandlungsbereich wird einmal täglich gereinigt.",
+    "Abformungen müssen desinfiziert werden.",
+    "Sprühdesinfektion ist besser.",
+    "Thermodesinfektoren reinigen und desinfizieren.",
+    "Abdrücke können im Thermodesinfektor desinfiziert werden."
+  ],
+
+  correct: [2,4]
+},
+
+{
+  question:
+  "Welche Aussagen sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Sterilisatoren arbeiten mit gespanntem Dampf.",
+    "Im Autoklav wird destilliertes Wasser verwendet.",
+    "Im Autoklaven erfolgt die Ausgleichszeit auf die Abtötungszeit.",
+    "Während der Ausgleichszeit erreicht das Sterilgut Betriebstemperatur.",
+    "Heißluftsterilisatoren benötigen zusätzliche Phasen.",
+    "Heißluftsterilisatoren arbeiten schneller."
+  ],
+
+  correct: [0,1]
+},
+
+{
+  question:
+  "Welche Aussagen sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Heißluftsterilisatoren arbeiten mit 2000°C.",
+    "Gummi ohne 200°C-Aufschrift darf nicht sterilisiert werden.",
+    "Entlüftungszeit ist höher als beim Autoklav.",
+    "Gassterilisation ist Kaltersterilisation.",
+    "Bei B-Sterilisatoren wird Vakuum erzeugt."
+  ],
+
+  correct: [3,4]
+}
+
+],
 
   /* ======================================================
      GAP 1 — RÖNTGEN
