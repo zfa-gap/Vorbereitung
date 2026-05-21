@@ -843,9 +843,9 @@ const questions = {
   type: "ordering",
 
   items: [
-    "gesicherter Transport zum Aufbereitungsbereich",
-    "Grobreinigung",
-    "RDG / Desinfektionsbad",
+     "Grobreinigung",
+     "gesicherter Transport zum Aufbereitungsbereich",
+     "RDG / Desinfektionsbad",
     "Feinreinigung (Lupenkontrolle)",
     "Pflegen, Ölen",
     "Einschweißen oder Einsortieren in Trays",
@@ -853,7 +853,7 @@ const questions = {
     "Freigabe durch Hygienebeauftragte"
   ],
 
-  correct: [0,1,2,3,4,5,6,7]
+  correct: [1,0,2,3,4,5,6,7]
 },
 
 {
