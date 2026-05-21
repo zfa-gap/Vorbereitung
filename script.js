@@ -9,7 +9,7 @@
 const questions = {
 
   /* ======================================================
-     PRAXISVERWALTUNG
+     GAP 1 — PRAXISVERWALTUNG
   ====================================================== */
 
   PV: [
@@ -64,325 +64,12 @@ const questions = {
       ],
 
       correct: [4]
-    },
-
-    {
-      question:
-      "Welche der nachfolgenden Krankenkassen gehören zu den Primärkassen?",
-
-      multiple: true,
-
-      answers: [
-        "TK",
-        "IKK",
-        "Barmer",
-        "KKH",
-        "AOK",
-        "DAK"
-      ],
-
-      correct: [1,4]
-    },
-
-    {
-      question:
-      "Zu welcher Kassengruppe gehört die DAK?",
-
-      multiple: false,
-
-      answers: [
-        "PKV",
-        "Regionalkasse",
-        "Sonstige Kostenträger",
-        "vdek",
-        "Berufsgenossenschaft"
-      ],
-
-      correct: [3]
-    },
-     
-     {
-  question:
-  "Welche Daten gehören zu den Stammdaten der Patienten?",
-
-  multiple: false,
-
-  answers: [
-    "Name, Adresse, Geburtsdatum und Befund",
-    "Name, Adresse, Geburtsdatum und Telefonnummer",
-    "Name, Adresse, Geburtsdatum und Diagnose",
-    "Name, Adresse, Geburtsdatum und Behandlung",
-    "Name, Adresse, Befund und Diagnose"
-  ],
-
-  correct: [1]
-},
-
-{
-  question:
-  "Welche Verwaltungstätigkeit ist bei der Patientenaufnahme nicht erforderlich?",
-
-  multiple: false,
-
-  answers: [
-    "Anamneseerhebung",
-    "eGK einlesen",
-    "Patientenakte anlegen",
-    "Datenschutzerklärung unterschreiben lassen",
-    "Impfpass digitalisieren"
-  ],
-
-  correct: [4]
-},
-
-{
-  question:
-  "Wofür steht die Abkürzung ZBV?",
-
-  multiple: false,
-
-  answers: [
-    "Zahnärztlicher Bundesverband",
-    "Zahnärztlicher Bezirksverband",
-    "Zahnärzte-Bayern-Verbund",
-    "Zahnärztliche Bundesvereinigung",
-    "Zahnbeschwerden-Verband"
-  ],
-
-  correct: [1]
-},
-
-{
-  question:
-  "Wofür steht die Abkürzung KZVB?",
-
-  multiple: false,
-
-  answers: [
-    "Kassenzahnärztlicher Bundesverband",
-    "Kassenzahnärztlicher Verband Bayern",
-    "Kassenzahnärztliche Vereinigung Bayern",
-    "Kollegiale Zahnärztliche Bundesvereinigung",
-    "Kollegiale Zahnärztliche Vereinigung Bayern"
-  ],
-
-  correct: [2]
-},
-
-{
-  question:
-  "Welche Stelle ist für die Quartalsabrechnung für einen Zahnarzt in Bayern zuständig?",
-
-  multiple: false,
-
-  answers: [
-    "KZV",
-    "KZVB",
-    "BLZK",
-    "ZBV",
-    "BZÄK"
-  ],
-
-  correct: [1]
-},
-
-{
-  question:
-  "Welche beiden Aussagen zum Recall sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Recall bedeutet, dass der Patient per Anruf an seinen Termin erinnert wird.",
-    "Recall bedeutet, dass der Patient erinnert wird, wieder einen Termin zu vereinbaren.",
-    "Jeder Patient muss in die Recall-Datei aufgenommen werden.",
-    "Patienten müssen dem Recall zustimmen, damit sie erinnert werden dürfen.",
-    "Jede Zahnarztpraxis muss Recall anbieten.",
-    "Die Zahnarztpraxis entscheidet, welcher Patient in die Recall-Datei aufgenommen wird."
-  ],
-
-  correct: [1,3]
-},
-
-{
-  question:
-  "Welche Aussage zum Datenschutz ist richtig?",
-
-  multiple: false,
-
-  answers: [
-    "Alle Patientendaten werden regelmäßig gesichert.",
-    "Es darf kein Zugriff auf Patientendaten durch Dritte erfolgen.",
-    "Patientendaten müssen lebenslang aufbewahrt werden.",
-    "Datenschutz gilt nur für digitale Daten.",
-    "Alle Patientendaten müssen nach Abschluss der Behandlung gelöscht werden."
-  ],
-
-  correct: [1]
-},
-
-{
-  question:
-  "Was gehört nicht zur Hardware?",
-
-  multiple: false,
-
-  answers: [
-    "Monitor",
-    "Lesegerät für die eGK",
-    "Patientenverwaltungssystem (PVS)",
-    "Drucker",
-    "Maus"
-  ],
-
-  correct: [2]
-},
-
-{
-  question:
-  "Welche beiden Aussagen zum Datenschutzbeauftragten sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Jede Praxis muss unabhängig von ihrer Größe eine Datenschutzbeauftragte bestellen",
-    "Nur die Erstkraft darf zur Datenschutzbeauftragten ernannt werden.",
-    "Die Datenschutzbeauftragte achtet auf die Einhaltung der Datenschutzgrundverordnung (DSGVO) und anderer Vorschriften zum Datenschutz.",
-    "Um Datenschutzbeauftragte werden zu können, muss man eine Prüfung vor der Zahnärztekammer ablegen.",
-    "Eine Datenschutzbeauftragte muss immer benannt werden, wenn die Praxis einen Internetzugang hat.",
-    "Die Datenschutzbeauftragte muss die gesetzlichen Regelungen zum Datenschutz kennen und anwenden können."
-  ],
-
-  correct: [2,5]
-},
-
-{
-  question:
-  "Welche beiden Aussagen zum Datenschutz sind falsch?",
-
-  multiple: true,
-
-  answers: [
-    "Eltern dürfen immer die Aufzeichnungen ihrer Kinder einsehen, bis diese 18 Jahre alt sind.",
-    "Ein Patient kann von seinem Zahnarzt Auskunft verlangen, an welche Empfänger seine persönlichen Daten weitergegeben werden.",
-    "Ein Patient kann von seinem Zahnarzt Auskunft über den Zweck der Speicherung seiner persönlichen Daten verlangen.",
-    "Wünscht ein Patient Auskunft über seine persönlichen Daten, dann kann der Zahnarzt ihm in seine Aufzeichnungen Einblick gewähren.",
-    "Bei der Auskunftserteilung über die gespeicherten persönlichen Daten von Patienten handelt es sich um eine Zusatzleistung, die nach GOZ abgerechnet werden kann.",
-    "Ein Patient kann, bis auf wenige Ausnahmen, von seinem Zahnarzt Auskunft über die zu seiner Person gespeicherten Daten verlangen."
-  ],
-
-  correct: [0,4]
-},
-
-{
-  question:
-  "Welche beiden Aussagen zum Umgang mit personenbezogenen Daten gemäß DSGVO sind falsch?",
-
-  multiple: true,
-
-  answers: [
-    "Ein Patient hat das Recht, dass seine Daten berichtigt werden, wenn sie unrichtig sind.",
-    "Personenbezogene Daten dürfen nicht von Auszubildenden eingesehen werden.",
-    "Ein Patient hat das Recht, dass seine Daten berichtigt werden, wenn diese falsch sind.",
-    "Ein Patient hat das Recht, dass auch Verdachtsdiagnosen, die sich nicht bewahrheitet haben, gelöscht werden.",
-    "Personenbezogene Daten dürfen nicht gelöscht werden, wenn die Aufbewahrungsfrist noch läuft.",
-    "Ein Patient hat das Recht, dass seine Daten gelöscht werden, wenn ihre Speicherung nicht erlaubt ist."
-  ],
-
-  correct: [1,3]
-},
-
-{
-  question:
-  "Welche beiden Aussagen zum Datenschutz sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Ein gutes Passwort sollte kurz sein.",
-    "Ein sicheres Passwort sollte Sonderzeichen und Großbuchstaben enthalten.",
-    "Ein Passwort sollte über Jahre gleich bleiben.",
-    "Passwörter sollte man hinter dem Monitor notieren.",
-    "Die Speicherung von Passwörtern sollte ausgeschaltet werden.",
-    "Wenn Kolleginnen das Passwort kennen, sollte es geändert werden."
-  ],
-
-  correct: [1,4]
-},
-
-{
-  question:
-  "Welches Verhalten von Manuela ist nicht korrekt?",
-
-  multiple: false,
-
-  answers: [
-    "Manuela bittet einen schwerhörigen Patienten in ein Behandlungszimmer.",
-    "Manuela schützt Daten an der Anmeldung.",
-    "Manuela verweigert Rezeptausgabe ohne Vollmacht.",
-    "Manuela gibt der angeblichen AOK telefonisch Auskunft.",
-    "Manuela beschränkt den Zugriff des Technikers."
-  ],
-
-  correct: [3]
-},
-
-{
-  question:
-  "Welche Aussage über eine digitale Patientendatei ist richtig?",
-
-  multiple: false,
-
-  answers: [
-    "Als Hardware braucht man ein Zahnarztprogramm.",
-    "Als Hardware braucht man PC, Monitor und Drucker.",
-    "In digitalen Karteikarten sind nur Bewegungsdaten.",
-    "Jede Praxis nutzt zusätzlich Papierkarteikarten.",
-    "In digitalen Karteikarten sind nur Stammdaten."
-  ],
-
-  correct: [1]
-},
-
-{
-  question:
-  "Welches Passwort ist sicher?",
-
-  multiple: false,
-
-  answers: [
-    "Abcdefgh",
-    "12345678",
-    "987654321",
-    "Sarah12122008",
-    "IwdPb2223!"
-  ],
-
-  correct: [4]
-},
-
-{
-  question:
-  "Welche beiden Ziele verfolgt der Datenschutz?",
-
-  multiple: true,
-
-  answers: [
-    "Personal- und Patientendaten sicher verwalten.",
-    "Zugriff soll überall möglich sein.",
-    "Recall braucht immer Zustimmung.",
-    "PCs sollen passwortgeschützt sein.",
-    "Risiko eines PC-Ausfalls verringern.",
-    "Patientendaten dürfen für Werbung genutzt werden."
-  ],
-
-  correct: [0,4]
-}
+    }
 
   ],
 
   /* ======================================================
-     BEHANDLUNGSASSISTENZ
+     GAP 1 — BEHANDLUNGSASSISTENZ
   ====================================================== */
 
   BA: [
@@ -419,265 +106,12 @@ const questions = {
       ],
 
       correct: [1]
-    }, 
-     {
-  question:
-  "Nach erfolgter Prothetik-Behandlung sollen Sie den Arbeitsplatz hygienisch aufbereiten. Ordnen Sie zu!",
-
-  multiple: false,
-
-  answers: [
-    "Kritisch = 1 / Semikritisch = 2 / Unkritisch = 3"
-  ],
-
-  correct: [0]
-},
-
-{
-  question:
-  "Welche Reihenfolge bei der Aufbereitung von Medizinprodukten ist richtig?",
-
-  multiple: false,
-
-  answers: [
-    "Grobreinigung → Transport → RDG → Kontrolle → Pflege → Verpacken → Sterilisation → Freigabe",
-    "Pflege → Sterilisation → Reinigung → Verpackung",
-    "Sterilisation → Reinigung → Pflege",
-    "Verpackung → Reinigung → RDG"
-  ],
-
-  correct: [0]
-},
-
-{
-  question:
-  "Absolute Keimfreiheit von Medizinprodukten wird erreicht durch",
-
-  multiple: false,
-
-  answers: [
-    "Bohrerbad",
-    "Thermodesinfektion im RDG",
-    "Ultraschallreinigung",
-    "Sterilisation im Autoklaven",
-    "Sprühdesinfektion"
-  ],
-
-  correct: [3]
-},
-
-{
-  question:
-  "Welche Aussage zur hygienischen Aufbereitung ist richtig?",
-
-  multiple: false,
-
-  answers: [
-    "PAR-Instrumente sind unkritisch",
-    "Stumpfe Instrumente müssen vor der Desinfektion geschliffen werden",
-    "Untersuchungssonden sind kritisch",
-    "Polierbürstchen sind nach einmaligem Gebrauch zu entsorgen",
-    "PAR-Trays sind acht Monate haltbar"
-  ],
-
-  correct: [3]
-},
-
-{
-  question:
-  "Welche Krankheit wird durch Bakterien verursacht?",
-
-  multiple: false,
-
-  answers: [
-    "Grippe",
-    "Aids",
-    "Karies",
-    "Herpes"
-  ],
-
-  correct: [2]
-},
-
-{
-  question:
-  "Was gehört zu Ihrer persönlichen Schutzausrüstung?",
-
-  multiple: true,
-
-  answers: [
-    "Handschuhe",
-    "Mund-Nasenschutz",
-    "Händedesinfektionsmittel",
-    "geschlossene Schuhe",
-    "Schutzbrille",
-    "wasserabweisender Behandlungskittel"
-  ],
-
-  correct: [0,1,4]
-},
-
-{
-  question:
-  "Welche Aussagen zum Hygieneplan sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Der Hygieneplan muss nicht angepasst werden",
-    "Der Praxisinhaber muss ihn individuell anpassen",
-    "Mitarbeiter müssen geschult werden",
-    "Nur der Praxisinhaber muss ihn kennen",
-    "Aktualisierungen sind unnötig",
-    "Er muss jährlich komplett neu erstellt werden"
-  ],
-
-  correct: [1,2]
-},
-
-{
-  question:
-  "Welche Aussagen zur Händedesinfektion sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Bei der hygienischen Händedesinfektion werden die Hände zuerst gewaschen",
-    "Die Einwirkzeit beträgt 30–60 Sekunden",
-    "Nur pathogene Keime werden abgetötet",
-    "Bei der chirurgischen Händedesinfektion werden nur apathogene Keime abgetötet",
-    "Die hygienische Händedesinfektion benötigt mehr Mittel"
-  ],
-
-  correct: [1,2]
-},
-
-{
-  question:
-  "Welche Aussagen zur Verwendung von Schutzhandschuhen sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Handschuhe müssen zwischen Patienten gewechselt werden",
-    "Handschuhe haben keine Qualitätsanforderungen",
-    "Handschuhe spätestens nach 60 Minuten wechseln",
-    "Handschuhe können den ganzen Vormittag getragen werden",
-    "Bei Reinigungsarbeiten müssen beständige Handschuhe getragen werden",
-    "Bei Händedesinfektion kann auf Handschuhe verzichtet werden"
-  ],
-
-  correct: [0,2,4]
-},
-
-{
-  question:
-  "Welche Aussagen zu Thermodesinfektoren sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Sie sterilisieren Instrumente",
-    "Sie arbeiten bei 200°C",
-    "Sie zählen zu chemischen Desinfektionsmitteln",
-    "Sie vermindern die Verletzungsgefahr",
-    "Sie sind Reinigungs- und Desinfektionsautomaten",
-    "Sie ersetzen Sterilisatoren vollständig"
-  ],
-
-  correct: [3,4]
-},
-
-{
-  question:
-  "Wie entsorgen Sie Kanülen und Einwegskalpelle richtig?",
-
-  multiple: false,
-
-  answers: [
-    "Hausmüll",
-    "Glascontainer",
-    "Sondermüll in stichfesten Behältern",
-    "Offene Mülltonne",
-    "Recycling"
-  ],
-
-  correct: [2]
-},
-
-{
-  question:
-  "Welche Aussagen zur aktiven Immunisierung sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Der Impfstoff enthält Antikörper",
-    "Der Impfschutz hält lange an",
-    "Der Impfstoff enthält abgeschwächte Erreger",
-    "Der Impfschutz tritt sofort ein",
-    "Es werden keine Antikörper gebildet",
-    "Die Impfung ist nur eine Notfallmaßnahme"
-  ],
-
-  correct: [1,2]
-},
-
-{
-  question:
-  "Was versteht man unter Kontamination?",
-
-  multiple: false,
-
-  answers: [
-    "Keimarmut",
-    "Ansteckung",
-    "Konzentration von Krankheitserregern",
-    "Infektion",
-    "Verunreinigung mit Keimen"
-  ],
-
-  correct: [4]
-},
-
-{
-  question:
-  "Welche Reihenfolge der Entstehung einer Infektion ist richtig?",
-
-  multiple: false,
-
-  answers: [
-    "Rekonvaleszenz → Inkubationszeit → Exposition",
-    "Exposition → Inkubationszeit → Infektion → Erkrankung → Rekonvaleszenz",
-    "Inkubationszeit → Exposition → Infektion",
-    "Exposition → Infektion → Inkubationszeit → Erkrankung → Rekonvaleszenz",
-    "Infektion → Exposition → Inkubationszeit"
-  ],
-
-  correct: [3]
-},
-
-{
-  question:
-  "Welche Aussage zum RDG ist richtig?",
-
-  multiple: false,
-
-  answers: [
-    "Es arbeitet im Ultraschallbereich",
-    "Es erreicht 143°C",
-    "Es arbeitet mit gespanntem Dampf",
-    "Es arbeitet mit 93°C",
-    "Es sterilisiert Medizinprodukte"
-  ],
-
-  correct: [3]
-}
+    }
 
   ],
 
   /* ======================================================
-     GESUNDHEITSSCHUTZ
+     GAP 1 — GESUNDHEITSSCHUTZ
   ====================================================== */
 
   GS: [
@@ -696,23 +130,63 @@ const questions = {
       ],
 
       correct: [0,1,2]
-    },
+    }
+
+  ],
+
+  /* ======================================================
+     GAP 1 — RÖNTGEN
+  ====================================================== */
+
+  RO: [
 
     {
       question:
-      "Wodurch erreicht man Keimfreiheit?",
+      "Wofür steht die Abkürzung OPG?",
 
       multiple: false,
 
       answers: [
-        "Sterilisation im Autoklaven",
-        "Bohrerbad",
-        "Ultraschallbad",
-        "Wischdesinfektion"
+        "Orthopantomogramm",
+        "Orale Panoramagrafie",
+        "Optische Prüfaufnahme",
+        "Ortho-Prophylaxe-Gerät"
       ],
 
       correct: [0]
     }
+
+  ],
+
+  /* ======================================================
+     GAP 2 — PRAXISVERWALTUNG
+  ====================================================== */
+
+  PV2: [
+
+  ],
+
+  /* ======================================================
+     GAP 2 — BEHANDLUNGSASSISTENZ
+  ====================================================== */
+
+  BA2: [
+
+  ],
+
+  /* ======================================================
+     GAP 2 — GESUNDHEITSSCHUTZ
+  ====================================================== */
+
+  GS2: [
+
+  ],
+
+  /* ======================================================
+     GAP 2 — RÖNTGEN
+  ====================================================== */
+
+  RO2: [
 
   ]
 
@@ -725,12 +199,15 @@ const questions = {
 let currentCategory = "";
 let currentQuestion = 0;
 let answerChecked = false;
+let currentGap = "";
 
 /* ======================================================
    NAVIGATION
 ====================================================== */
 
 function openGap1(){
+
+  currentGap = "GAP1";
 
   document
     .getElementById("start-screen")
@@ -742,6 +219,8 @@ function openGap1(){
 }
 
 function openGap2(){
+
+  currentGap = "GAP2";
 
   document
     .getElementById("start-screen")
@@ -771,15 +250,25 @@ function backToStart(){
     .classList.add("active");
 }
 
-function backToGap1(){
+function backToLastMenu(){
 
   document
     .getElementById("quiz-screen")
     .classList.remove("active");
 
-  document
-    .getElementById("gap1-screen")
-    .classList.add("active");
+  if(currentGap === "GAP1"){
+
+    document
+      .getElementById("gap1-screen")
+      .classList.add("active");
+  }
+
+  if(currentGap === "GAP2"){
+
+    document
+      .getElementById("gap2-screen")
+      .classList.add("active");
+  }
 }
 
 /* ======================================================
@@ -799,6 +288,10 @@ function openCategory(category){
     .classList.remove("active");
 
   document
+    .getElementById("gap2-screen")
+    .classList.remove("active");
+
+  document
     .getElementById("quiz-screen")
     .classList.add("active");
 
@@ -810,19 +303,45 @@ function openCategory(category){
   showQuestion();
 }
 
+/* ======================================================
+   KATEGORIEN NAMEN
+====================================================== */
+
 function getCategoryName(category){
 
   if(category === "PV"){
-    return "Praxisverwaltung";
+    return "Praxisverwaltung GAP 1";
   }
 
   if(category === "BA"){
-    return "Behandlungsassistenz";
+    return "Behandlungsassistenz GAP 1";
   }
 
   if(category === "GS"){
-    return "Gesundheitsschutz";
+    return "Gesundheitsschutz GAP 1";
   }
+
+  if(category === "RO"){
+    return "Röntgen GAP 1";
+  }
+
+  if(category === "PV2"){
+    return "Praxisverwaltung GAP 2";
+  }
+
+  if(category === "BA2"){
+    return "Behandlungsassistenz GAP 2";
+  }
+
+  if(category === "GS2"){
+    return "Gesundheitsschutz GAP 2";
+  }
+
+  if(category === "RO2"){
+    return "Röntgen GAP 2";
+  }
+
+  return "Quiz";
 }
 
 /* ======================================================
@@ -833,6 +352,24 @@ function showQuestion(){
 
   const q =
     questions[currentCategory][currentQuestion];
+
+  if(!q){
+
+    document
+      .getElementById("question")
+      .innerText =
+      "Noch keine Fragen vorhanden 😄";
+
+    document
+      .getElementById("answers")
+      .innerHTML = "";
+
+    document
+      .getElementById("feedback")
+      .innerText = "";
+
+    return;
+  }
 
   document
     .getElementById("question-number")
@@ -893,14 +430,14 @@ function showQuestion(){
 
 function nextQuestion(){
 
-  // =====================================
-  // ERSTER KLICK = PRÜFEN
-  // =====================================
+  const q =
+    questions[currentCategory][currentQuestion];
+
+  if(!q){
+    return;
+  }
 
   if(!answerChecked){
-
-    const q =
-      questions[currentCategory][currentQuestion];
 
     const selected =
 
@@ -941,14 +478,10 @@ function nextQuestion(){
       ? "✅ Richtig"
       : "❌ Falsch";
 
-    // Antworten markieren
-
     const answerLabels =
       document.querySelectorAll(".answer");
 
     answerLabels.forEach((label,index)=>{
-
-      // richtige Antwort
 
       if(q.correct.includes(index)){
 
@@ -958,8 +491,6 @@ function nextQuestion(){
         label.style.background =
           "rgba(141,255,181,0.15)";
       }
-
-      // falsch markiert
 
       if(
         selected.includes(index)
@@ -986,10 +517,6 @@ function nextQuestion(){
     return;
   }
 
-  // =====================================
-  // ZWEITER KLICK = NÄCHSTE FRAGE
-  // =====================================
-
   currentQuestion++;
 
   if(
@@ -1002,7 +529,7 @@ function nextQuestion(){
       "Bereich abgeschlossen 🎉"
     );
 
-    backToGap1();
+    backToLastMenu();
 
     return;
   }
