@@ -252,9 +252,23 @@ function backToStart(){
 
 function backToLastMenu(){
 
+  // Quiz schließen
+
   document
     .getElementById("quiz-screen")
     .classList.remove("active");
+
+  // Beide Menüs schließen
+
+  document
+    .getElementById("gap1-screen")
+    .classList.remove("active");
+
+  document
+    .getElementById("gap2-screen")
+    .classList.remove("active");
+
+  // Richtiges Menü öffnen
 
   if(currentGap === "GAP1"){
 
@@ -304,7 +318,7 @@ function openCategory(category){
 }
 
 /* ======================================================
-   KATEGORIEN NAMEN
+   KATEGORIEN
 ====================================================== */
 
 function getCategoryName(category){
@@ -345,7 +359,7 @@ function getCategoryName(category){
 }
 
 /* ======================================================
-   FRAGE ZEIGEN
+   FRAGE ANZEIGEN
 ====================================================== */
 
 function showQuestion(){
@@ -354,6 +368,10 @@ function showQuestion(){
     questions[currentCategory][currentQuestion];
 
   if(!q){
+
+    document
+      .getElementById("question-number")
+      .innerText = "";
 
     document
       .getElementById("question")
@@ -437,6 +455,10 @@ function nextQuestion(){
     return;
   }
 
+  // =====================================
+  // ANTWORT PRÜFEN
+  // =====================================
+
   if(!answerChecked){
 
     const selected =
@@ -483,6 +505,8 @@ function nextQuestion(){
 
     answerLabels.forEach((label,index)=>{
 
+      // Richtige Antworten
+
       if(q.correct.includes(index)){
 
         label.style.border =
@@ -491,6 +515,8 @@ function nextQuestion(){
         label.style.background =
           "rgba(141,255,181,0.15)";
       }
+
+      // Falsch ausgewählte Antworten
 
       if(
         selected.includes(index)
@@ -516,6 +542,10 @@ function nextQuestion(){
 
     return;
   }
+
+  // =====================================
+  // NÄCHSTE FRAGE
+  // =====================================
 
   currentQuestion++;
 
