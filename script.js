@@ -391,113 +391,67 @@ const questions = {
 
   BA: [
 
- {
-      question:
-      "Was bedeutet der Begriff Screening?",
-
-      multiple: false,
-
-      answers: [
-        "eine Bissflügelaufnahme",
-        "ein systematisches Kontrollverfahren",
-        "eine Fissurenversiegelung",
-        "eine Verlaufskontrolle",
-        "eine Konstanzaufnahme"
-      ],
-
-      correct: [1]
-    },
-
-    {
-      question:
-      "Unter Biofilm versteht man ...",
-
-      multiple: false,
-
-      answers: [
-        "chemisch angeraute Dentinschicht",
-        "bakterielle Beläge auf Zahnoberflächen",
-        "mikrobielle Schichten in wasserführenden Systemen",
-        "Testsubstanzen für Sterilisationsgeräte",
-        "helle Flecken im Zahnschmelz"
-      ],
-
-      correct: [1]
-    }, 
-     {
+{
   question:
-  "Nach erfolgter Prothetik-Behandlung sollen Sie den Arbeitsplatz hygienisch aufbereiten. Ordnen Sie zu!",
+  "Welche Faktoren begünstigen die Entstehung von Karies?",
 
-  multiple: false,
+  multiple: true,
 
   answers: [
-    "Kritisch = 1 / Semikritisch = 2 / Unkritisch = 3"
+    "hohe Biofilmansammlung",
+    "regelmäßige Fluoridierung",
+    "Zahnfehlstellungen",
+    "Remineralisation durch Speichel",
+    "gute Mundhygiene"
   ],
 
-  correct: [0]
+  correct: [0,2]
 },
 
 {
   question:
-  "Welche Reihenfolge bei der Aufbereitung von Medizinprodukten ist richtig?",
+  "Welche Untersuchungsmethoden eignen sich zur Kariesdiagnostik?",
 
-  multiple: false,
+  multiple: true,
 
   answers: [
-    "Grobreinigung → Transport → RDG → Kontrolle → Pflege → Verpacken → Sterilisation → Freigabe",
-    "Pflege → Sterilisation → Reinigung → Verpackung",
-    "Sterilisation → Reinigung → Pflege",
-    "Verpackung → Reinigung → RDG"
+    "Bissflügelaufnahme",
+    "Fluoreszenzmessung",
+    "Kariesdetektoren",
+    "Fernröntgenseitenaufnahme",
+    "Lichtdurchleuchtung"
   ],
 
-  correct: [0]
+  correct: [0,1,2,4]
 },
 
 {
   question:
-  "Absolute Keimfreiheit von Medizinprodukten wird erreicht durch",
+  "Welche Aussage zur Fissurenversiegelung ist richtig?",
 
   multiple: false,
 
   answers: [
-    "Bohrerbad",
-    "Thermodesinfektion im RDG",
-    "Ultraschallreinigung",
-    "Sterilisation im Autoklaven",
-    "Sprühdesinfektion"
+    "Die Zahnoberfläche wird mit H2O2 konditioniert.",
+    "Die Fissuren müssen kariesfrei sein.",
+    "Makrogefüllte Komposite sind am besten geeignet.",
+    "Die Versiegelung erfolgt ohne Trockenlegung."
   ],
 
-  correct: [3]
+  correct: [1]
 },
 
 {
   question:
-  "Welche Aussage zur hygienischen Aufbereitung ist richtig?",
+  "Mit welchem Hilfsmittel wird absolute Trockenlegung erreicht?",
 
   multiple: false,
 
   answers: [
-    "PAR-Instrumente sind unkritisch",
-    "Stumpfe Instrumente müssen vor der Desinfektion geschliffen werden",
-    "Untersuchungssonden sind kritisch",
-    "Polierbürstchen sind nach einmaligem Gebrauch zu entsorgen",
-    "PAR-Trays sind acht Monate haltbar"
-  ],
-
-  correct: [3]
-},
-
-{
-  question:
-  "Welche Krankheit wird durch Bakterien verursacht?",
-
-  multiple: false,
-
-  answers: [
-    "Grippe",
-    "Aids",
-    "Karies",
-    "Herpes"
+    "Watterollen",
+    "Speichelzieher",
+    "Kofferdam",
+    "Luftbläser"
   ],
 
   correct: [2]
@@ -505,17 +459,33 @@ const questions = {
 
 {
   question:
-  "Was gehört zu Ihrer persönlichen Schutzausrüstung?",
+  "Welche Aussagen zur Polymerisationslampe sind richtig?",
 
   multiple: true,
 
   answers: [
-    "Handschuhe",
-    "Mund-Nasenschutz",
-    "Händedesinfektionsmittel",
-    "geschlossene Schuhe",
-    "Schutzbrille",
-    "wasserabweisender Behandlungskittel"
+    "Das Licht kann die Augen schädigen.",
+    "Der Abstand zur Füllung sollte gering sein.",
+    "Das Lichtaustrittsfenster muss kontrolliert werden.",
+    "Das Lichtaustrittsfenster darf nie desinfiziert werden.",
+    "Akkubetriebene Lampen sollten geladen sein."
+  ],
+
+  correct: [0,1,2,4]
+},
+
+{
+  question:
+  "Welche Instrumente werden für eine PAR-Behandlung benötigt?",
+
+  multiple: true,
+
+  answers: [
+    "Scaler",
+    "Küretten",
+    "Polierer",
+    "Excavator",
+    "Ultraschallgerät"
   ],
 
   correct: [0,1,4]
@@ -523,52 +493,33 @@ const questions = {
 
 {
   question:
-  "Welche Aussagen zum Hygieneplan sind richtig?",
+  "Bringen Sie die Schritte der professionellen Zahnreinigung in die richtige Reihenfolge!",
 
-  multiple: true,
+  type: "ordering",
 
-  answers: [
-    "Der Hygieneplan muss nicht angepasst werden",
-    "Der Praxisinhaber muss ihn individuell anpassen",
-    "Mitarbeiter müssen geschult werden",
-    "Nur der Praxisinhaber muss ihn kennen",
-    "Aktualisierungen sind unnötig",
-    "Er muss jährlich komplett neu erstellt werden"
+  items: [
+    "Anfärben der Beläge",
+    "Entfernen harter Beläge",
+    "Entfernen weicher Beläge",
+    "Politur",
+    "Fluoridierung"
   ],
 
-  correct: [1,2]
+  correct: [0,1,2,3,4]
 },
 
 {
   question:
-  "Welche Aussagen zur Händedesinfektion sind richtig?",
+  "Welche Aussagen zur Gingivitis sind richtig?",
 
   multiple: true,
 
   answers: [
-    "Bei der hygienischen Händedesinfektion werden die Hände zuerst gewaschen",
-    "Die Einwirkzeit beträgt 30–60 Sekunden",
-    "Nur pathogene Keime werden abgetötet",
-    "Bei der chirurgischen Händedesinfektion werden nur apathogene Keime abgetötet",
-    "Die hygienische Händedesinfektion benötigt mehr Mittel"
-  ],
-
-  correct: [1,2]
-},
-
-{
-  question:
-  "Welche Aussagen zur Verwendung von Schutzhandschuhen sind richtig?",
-
-  multiple: true,
-
-  answers: [
-    "Handschuhe müssen zwischen Patienten gewechselt werden",
-    "Handschuhe haben keine Qualitätsanforderungen",
-    "Handschuhe spätestens nach 60 Minuten wechseln",
-    "Handschuhe können den ganzen Vormittag getragen werden",
-    "Bei Reinigungsarbeiten müssen beständige Handschuhe getragen werden",
-    "Bei Händedesinfektion kann auf Handschuhe verzichtet werden"
+    "Sie ist reversibel.",
+    "Sie betrifft den Zahnhalteapparat.",
+    "Biofilm ist eine Ursache.",
+    "Es kommt immer zu Knochenabbau.",
+    "Zahnfleischbluten kann auftreten."
   ],
 
   correct: [0,2,4]
@@ -576,109 +527,263 @@ const questions = {
 
 {
   question:
-  "Welche Aussagen zu Thermodesinfektoren sind richtig?",
+  "Welche Materialien werden bei einer Wurzelkanalbehandlung benötigt?",
 
   multiple: true,
 
   answers: [
-    "Sie sterilisieren Instrumente",
-    "Sie arbeiten bei 200°C",
-    "Sie zählen zu chemischen Desinfektionsmitteln",
-    "Sie vermindern die Verletzungsgefahr",
-    "Sie sind Reinigungs- und Desinfektionsautomaten",
-    "Sie ersetzen Sterilisatoren vollständig"
+    "Papierspitzen",
+    "Guttapercha",
+    "Kofferdam",
+    "Amalgamträger",
+    "Endofeilen"
   ],
 
-  correct: [3,4]
+  correct: [0,1,2,4]
 },
 
 {
   question:
-  "Wie entsorgen Sie Kanülen und Einwegskalpelle richtig?",
+  "Bringen Sie die Schritte einer Wurzelkanalbehandlung in die richtige Reihenfolge!",
 
-  multiple: false,
+  type: "ordering",
 
-  answers: [
-    "Hausmüll",
-    "Glascontainer",
-    "Sondermüll in stichfesten Behältern",
-    "Offene Mülltonne",
-    "Recycling"
+  items: [
+    "Trepanation",
+    "Längenbestimmung",
+    "Aufbereitung",
+    "Spülung",
+    "Wurzelfüllung"
   ],
 
-  correct: [2]
+  correct: [0,1,2,3,4]
 },
 
 {
   question:
-  "Welche Aussagen zur aktiven Immunisierung sind richtig?",
+  "Welche Aussagen zur Trepanation sind richtig?",
 
   multiple: true,
 
   answers: [
-    "Der Impfstoff enthält Antikörper",
-    "Der Impfschutz hält lange an",
-    "Der Impfstoff enthält abgeschwächte Erreger",
-    "Der Impfschutz tritt sofort ein",
-    "Es werden keine Antikörper gebildet",
-    "Die Impfung ist nur eine Notfallmaßnahme"
+    "Sie dient der Druckentlastung.",
+    "Das Pulpakavum wird eröffnet.",
+    "Sie erfolgt immer ohne Anästhesie.",
+    "Sie wird bei Schmerzen durchgeführt.",
+    "Danach erfolgt immer eine Extraktion."
   ],
 
-  correct: [1,2]
+  correct: [0,1,3]
 },
 
 {
   question:
-  "Was versteht man unter Kontamination?",
+  "Was versteht man unter Germektomie?",
 
   multiple: false,
 
   answers: [
-    "Keimarmut",
-    "Ansteckung",
-    "Konzentration von Krankheitserregern",
-    "Infektion",
-    "Verunreinigung mit Keimen"
+    "Entfernung eines Zahnkeimes",
+    "Entfernung einer Wurzelspitze",
+    "Entfernung eines Fremdkörpers",
+    "Entfernung eines Zahnes"
   ],
 
-  correct: [4]
+  correct: [0]
 },
 
 {
   question:
-  "Welche Reihenfolge der Entstehung einer Infektion ist richtig?",
+  "Welche Instrumente werden bei einer Extraktion benötigt?",
 
-  multiple: false,
+  multiple: true,
 
   answers: [
-    "Rekonvaleszenz → Inkubationszeit → Exposition",
-    "Exposition → Inkubationszeit → Infektion → Erkrankung → Rekonvaleszenz",
-    "Inkubationszeit → Exposition → Infektion",
-    "Exposition → Infektion → Inkubationszeit → Erkrankung → Rekonvaleszenz",
-    "Infektion → Exposition → Inkubationszeit"
+    "Hebel",
+    "Extraktionszange",
+    "Mundspiegel",
+    "Kürette",
+    "Sonde"
   ],
 
-  correct: [3]
+  correct: [0,1,3]
 },
 
 {
   question:
-  "Welche Aussage zum RDG ist richtig?",
+  "Bringen Sie die chirurgischen Arbeitsschritte in die richtige Reihenfolge!",
 
-  multiple: false,
+  type: "ordering",
 
-  answers: [
-    "Es arbeitet im Ultraschallbereich",
-    "Es erreicht 143°C",
-    "Es arbeitet mit gespanntem Dampf",
-    "Es arbeitet mit 93°C",
-    "Es sterilisiert Medizinprodukte"
+  items: [
+    "Anästhesie",
+    "Lösen des Zahnes",
+    "Extraktion",
+    "Kürettage",
+    "Tamponade"
   ],
 
-  correct: [3]
+  correct: [0,1,2,3,4]
+},
+
+{
+  question:
+  "Welche Aussagen zur Wurzelspitzenresektion sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Die Wurzelspitze wird entfernt.",
+    "Der Knochen wird eröffnet.",
+    "Sie erfolgt nur bei Milchzähnen.",
+    "Eine retrograde Füllung kann notwendig sein.",
+    "Sie gehört zur Kieferorthopädie."
+  ],
+
+  correct: [0,1,3]
+},
+
+{
+  question:
+  "Welche Aussagen zur Lokalanästhesie sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Sie dient der Schmerzausschaltung.",
+    "Vor Injektion sollte aspiriert werden.",
+    "Sie wirkt sofort unbegrenzt.",
+    "Eine Leitungsanästhesie kann im Unterkiefer erfolgen.",
+    "Sie ist immer ohne Risiken."
+  ],
+
+  correct: [0,1,3]
+},
+
+{
+  question:
+  "Ordnen Sie die Anästhesieformen zu!",
+
+  type: "matching",
+
+  categories: [
+    "Infiltrationsanästhesie = 1",
+    "Leitungsanästhesie = 2"
+  ],
+
+  items: [
+    "häufig im Oberkiefer",
+    "Unterkieferseitenzahnbereich",
+    "Nerv wird direkt betäubt",
+    "Diffusion im Gewebe"
+  ],
+
+  correct: [0,1,1,0]
+},
+
+{
+  question:
+  "Welche Materialien werden für eine Abformung benötigt?",
+
+  multiple: true,
+
+  answers: [
+    "Abformlöffel",
+    "Alginat",
+    "Silikon",
+    "Guttapercha",
+    "Anmischspatel"
+  ],
+
+  correct: [0,1,2,4]
+},
+
+{
+  question:
+  "Bringen Sie die Herstellung einer Krone in die richtige Reihenfolge!",
+
+  type: "ordering",
+
+  items: [
+    "Präparation",
+    "Abformung",
+    "Provisorium",
+    "Herstellung im Labor",
+    "Eingliederung"
+  ],
+
+  correct: [0,1,2,3,4]
+},
+
+{
+  question:
+  "Welche Aussagen zum Provisorium sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Es schützt den präparierten Zahn.",
+    "Es dient der Ästhetik.",
+    "Es ersetzt dauerhaft die Krone.",
+    "Es kann aus Kunststoff bestehen.",
+    "Es verhindert Zahnwanderungen."
+  ],
+
+  correct: [0,1,3,4]
+},
+
+{
+  question:
+  "Welche Maßnahmen gehören zur Individualprophylaxe?",
+
+  multiple: true,
+
+  answers: [
+    "Fluoridierung",
+    "Mundhygieneinstruktion",
+    "Fissurenversiegelung",
+    "Wurzelspitzenresektion",
+    "Professionelle Zahnreinigung"
+  ],
+
+  correct: [0,1,2,4]
+},
+
+{
+  question:
+  "Welche Aussagen zu Fluoriden sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Sie fördern die Remineralisation.",
+    "Sie machen Zähne weicher.",
+    "Sie erhöhen die Kariesresistenz.",
+    "Sie wirken nur bei Erwachsenen.",
+    "Sie können lokal angewendet werden."
+  ],
+
+  correct: [0,2,4]
+},
+
+{
+  question:
+  "Bringen Sie die Schritte der Mundhygiene in die richtige Reihenfolge!",
+
+  type: "ordering",
+
+  items: [
+    "Zahnbürste ansetzen",
+    "von Rot nach Weiß putzen",
+    "Außenflächen reinigen",
+    "Innenflächen reinigen",
+    "Kauflächen reinigen"
+  ],
+
+  correct: [0,1,2,3,4]
 }
 
-  ],
+],
 
   /* ======================================================
      GAP 1 — GESUNDHEITSSCHUTZ
