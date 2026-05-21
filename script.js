@@ -391,7 +391,7 @@ const questions = {
 
   BA: [
 
-    {
+ {
       question:
       "Was bedeutet der Begriff Screening?",
 
@@ -423,7 +423,260 @@ const questions = {
       ],
 
       correct: [1]
-    }
+    }, 
+     {
+  question:
+  "Nach erfolgter Prothetik-Behandlung sollen Sie den Arbeitsplatz hygienisch aufbereiten. Ordnen Sie zu!",
+
+  multiple: false,
+
+  answers: [
+    "Kritisch = 1 / Semikritisch = 2 / Unkritisch = 3"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Welche Reihenfolge bei der Aufbereitung von Medizinprodukten ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Grobreinigung → Transport → RDG → Kontrolle → Pflege → Verpacken → Sterilisation → Freigabe",
+    "Pflege → Sterilisation → Reinigung → Verpackung",
+    "Sterilisation → Reinigung → Pflege",
+    "Verpackung → Reinigung → RDG"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Absolute Keimfreiheit von Medizinprodukten wird erreicht durch",
+
+  multiple: false,
+
+  answers: [
+    "Bohrerbad",
+    "Thermodesinfektion im RDG",
+    "Ultraschallreinigung",
+    "Sterilisation im Autoklaven",
+    "Sprühdesinfektion"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Aussage zur hygienischen Aufbereitung ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "PAR-Instrumente sind unkritisch",
+    "Stumpfe Instrumente müssen vor der Desinfektion geschliffen werden",
+    "Untersuchungssonden sind kritisch",
+    "Polierbürstchen sind nach einmaligem Gebrauch zu entsorgen",
+    "PAR-Trays sind acht Monate haltbar"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Krankheit wird durch Bakterien verursacht?",
+
+  multiple: false,
+
+  answers: [
+    "Grippe",
+    "Aids",
+    "Karies",
+    "Herpes"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Was gehört zu Ihrer persönlichen Schutzausrüstung?",
+
+  multiple: true,
+
+  answers: [
+    "Handschuhe",
+    "Mund-Nasenschutz",
+    "Händedesinfektionsmittel",
+    "geschlossene Schuhe",
+    "Schutzbrille",
+    "wasserabweisender Behandlungskittel"
+  ],
+
+  correct: [0,1,4]
+},
+
+{
+  question:
+  "Welche Aussagen zum Hygieneplan sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Der Hygieneplan muss nicht angepasst werden",
+    "Der Praxisinhaber muss ihn individuell anpassen",
+    "Mitarbeiter müssen geschult werden",
+    "Nur der Praxisinhaber muss ihn kennen",
+    "Aktualisierungen sind unnötig",
+    "Er muss jährlich komplett neu erstellt werden"
+  ],
+
+  correct: [1,2]
+},
+
+{
+  question:
+  "Welche Aussagen zur Händedesinfektion sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Bei der hygienischen Händedesinfektion werden die Hände zuerst gewaschen",
+    "Die Einwirkzeit beträgt 30–60 Sekunden",
+    "Nur pathogene Keime werden abgetötet",
+    "Bei der chirurgischen Händedesinfektion werden nur apathogene Keime abgetötet",
+    "Die hygienische Händedesinfektion benötigt mehr Mittel"
+  ],
+
+  correct: [1,2]
+},
+
+{
+  question:
+  "Welche Aussagen zur Verwendung von Schutzhandschuhen sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Handschuhe müssen zwischen Patienten gewechselt werden",
+    "Handschuhe haben keine Qualitätsanforderungen",
+    "Handschuhe spätestens nach 60 Minuten wechseln",
+    "Handschuhe können den ganzen Vormittag getragen werden",
+    "Bei Reinigungsarbeiten müssen beständige Handschuhe getragen werden",
+    "Bei Händedesinfektion kann auf Handschuhe verzichtet werden"
+  ],
+
+  correct: [0,2,4]
+},
+
+{
+  question:
+  "Welche Aussagen zu Thermodesinfektoren sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Sie sterilisieren Instrumente",
+    "Sie arbeiten bei 200°C",
+    "Sie zählen zu chemischen Desinfektionsmitteln",
+    "Sie vermindern die Verletzungsgefahr",
+    "Sie sind Reinigungs- und Desinfektionsautomaten",
+    "Sie ersetzen Sterilisatoren vollständig"
+  ],
+
+  correct: [3,4]
+},
+
+{
+  question:
+  "Wie entsorgen Sie Kanülen und Einwegskalpelle richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Hausmüll",
+    "Glascontainer",
+    "Sondermüll in stichfesten Behältern",
+    "Offene Mülltonne",
+    "Recycling"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Welche Aussagen zur aktiven Immunisierung sind richtig?",
+
+  multiple: true,
+
+  answers: [
+    "Der Impfstoff enthält Antikörper",
+    "Der Impfschutz hält lange an",
+    "Der Impfstoff enthält abgeschwächte Erreger",
+    "Der Impfschutz tritt sofort ein",
+    "Es werden keine Antikörper gebildet",
+    "Die Impfung ist nur eine Notfallmaßnahme"
+  ],
+
+  correct: [1,2]
+},
+
+{
+  question:
+  "Was versteht man unter Kontamination?",
+
+  multiple: false,
+
+  answers: [
+    "Keimarmut",
+    "Ansteckung",
+    "Konzentration von Krankheitserregern",
+    "Infektion",
+    "Verunreinigung mit Keimen"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Reihenfolge der Entstehung einer Infektion ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Rekonvaleszenz → Inkubationszeit → Exposition",
+    "Exposition → Inkubationszeit → Infektion → Erkrankung → Rekonvaleszenz",
+    "Inkubationszeit → Exposition → Infektion",
+    "Exposition → Infektion → Inkubationszeit → Erkrankung → Rekonvaleszenz",
+    "Infektion → Exposition → Inkubationszeit"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Aussage zum RDG ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Es arbeitet im Ultraschallbereich",
+    "Es erreicht 143°C",
+    "Es arbeitet mit gespanntem Dampf",
+    "Es arbeitet mit 93°C",
+    "Es sterilisiert Medizinprodukte"
+  ],
+
+  correct: [3]
+}
 
   ],
 
