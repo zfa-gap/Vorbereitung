@@ -2322,6 +2322,90 @@ function showQuestion(){
 
   answersDiv.innerHTML = "";
 
+/* =========================
+   MATCHING
+========================= */
+
+if(q.type === "matching"){
+
+  q.items.forEach((item,index)=>{
+
+    const row =
+      document.createElement("div");
+
+    row.className = "matching-row";
+
+    let options =
+      `<option value="">Auswählen</option>`;
+
+    q.categories.forEach((cat,catIndex)=>{
+
+      options +=
+      `<option value="${catIndex}">
+        ${cat}
+      </option>`;
+    });
+
+    row.innerHTML = `
+
+      <div class="match-item">
+        ${item}
+      </div>
+
+      <select>
+        ${options}
+      </select>
+    `;
+
+    answersDiv.appendChild(row);
+  });
+}
+
+/* =========================
+   ORDERING
+========================= */
+
+else if(q.type === "ordering"){
+
+  q.items.forEach((item,index)=>{
+
+    const row =
+      document.createElement("div");
+
+    row.className = "matching-row";
+
+    let options =
+      `<option value="">Position wählen</option>`;
+
+    for(let i = 1; i <= q.items.length; i++){
+
+      options +=
+      `<option value="${i-1}">
+        ${i}
+      </option>`;
+    }
+
+    row.innerHTML = `
+
+      <div class="match-item">
+        ${item}
+      </div>
+
+      <select>
+        ${options}
+      </select>
+    `;
+
+    answersDiv.appendChild(row);
+  });
+}
+
+/* =========================
+   NORMALE FRAGEN
+========================= */
+
+else{
+
   q.answers.forEach((answer,index)=>{
 
     const label =
@@ -2346,6 +2430,7 @@ function showQuestion(){
 
     answersDiv.appendChild(label);
   });
+}
 
   document
     .getElementById("feedback")
@@ -2370,83 +2455,134 @@ function nextQuestion(){
     return;
   }
 
-  // =====================================
-  // ANTWORT PRÜFEN
-  // =====================================
-
   if(!answerChecked){
 
-    const selected =
+    let isCorrect = false;
 
-      [...document.querySelectorAll(
-        "input:checked"
-      )]
+    /* MATCHING + ORDERING */
 
-      .map(el =>
-        parseInt(el.value)
-      )
+    if(
+      q.type === "matching"
+      ||
+      q.type === "ordering"
+    ){
 
-      .sort();
+      const selects =
 
-    if(selected.length === 0){
+        [...document.querySelectorAll(
+          "#answers select"
+        )];
 
-      alert(
-        "Bitte Antwort auswählen 😄"
-      );
+      const selected =
+        selects.map(select =>
+          parseInt(select.value)
+        );
 
-      return;
+      if(selected.includes(NaN)){
+
+        alert(
+          "Bitte alles auswählen 😄"
+        );
+
+        return;
+      }
+
+      isCorrect =
+
+        JSON.stringify(selected)
+        ===
+        JSON.stringify(q.correct);
+
+      selects.forEach((select,index)=>{
+
+        if(
+          selected[index]
+          ===
+          q.correct[index]
+        ){
+
+          select.style.border =
+            "2px solid #8dffb5";
+        }
+
+        else{
+
+          select.style.border =
+            "2px solid #ff7b7b";
+        }
+      });
     }
 
-    const correct =
-      [...q.correct].sort();
+    /* NORMALE FRAGEN */
 
-    const isCorrect =
+    else{
 
-      JSON.stringify(selected)
-      ===
-      JSON.stringify(correct);
+      const selected =
 
-    const feedback =
-      document.getElementById("feedback");
+        [...document.querySelectorAll(
+          "input:checked"
+        )]
 
-    feedback.innerText =
+        .map(el =>
+          parseInt(el.value)
+        )
+
+        .sort();
+
+      if(selected.length === 0){
+
+        alert(
+          "Bitte Antwort auswählen 😄"
+        );
+
+        return;
+      }
+
+      const correct =
+        [...q.correct].sort();
+
+      isCorrect =
+
+        JSON.stringify(selected)
+        ===
+        JSON.stringify(correct);
+
+      const answerLabels =
+        document.querySelectorAll(".answer");
+
+      answerLabels.forEach((label,index)=>{
+
+        if(q.correct.includes(index)){
+
+          label.style.border =
+            "2px solid #8dffb5";
+
+          label.style.background =
+            "rgba(141,255,181,0.15)";
+        }
+
+        if(
+          selected.includes(index)
+          &&
+          !q.correct.includes(index)
+        ){
+
+          label.style.border =
+            "2px solid #ff7b7b";
+
+          label.style.background =
+            "rgba(255,123,123,0.15)";
+        }
+      });
+    }
+
+    document
+      .getElementById("feedback")
+      .innerText =
 
       isCorrect
       ? "✅ Richtig"
       : "❌ Falsch";
-
-    const answerLabels =
-      document.querySelectorAll(".answer");
-
-    answerLabels.forEach((label,index)=>{
-
-      // Richtige Antworten
-
-      if(q.correct.includes(index)){
-
-        label.style.border =
-          "2px solid #8dffb5";
-
-        label.style.background =
-          "rgba(141,255,181,0.15)";
-      }
-
-      // Falsch ausgewählte Antworten
-
-      if(
-        selected.includes(index)
-        &&
-        !q.correct.includes(index)
-      ){
-
-        label.style.border =
-          "2px solid #ff7b7b";
-
-        label.style.background =
-          "rgba(255,123,123,0.15)";
-      }
-
-    });
 
     document.querySelector(
       ".next-btn"
@@ -2457,10 +2593,6 @@ function nextQuestion(){
 
     return;
   }
-
-  // =====================================
-  // NÄCHSTE FRAGE
-  // =====================================
 
   currentQuestion++;
 
@@ -2483,3 +2615,4 @@ function nextQuestion(){
 
   showQuestion();
 }
+
