@@ -1,6 +1,3 @@
-# Neue vollständige script.js
-
-```javascript
 /* ======================================================
    ZFA PRÜFUNGSTRAINER
 ====================================================== */
@@ -67,6 +64,41 @@ const questions = {
       ],
 
       correct: [4]
+    },
+
+    {
+      question:
+      "Welche der nachfolgenden Krankenkassen gehören zu den Primärkassen?",
+
+      multiple: true,
+
+      answers: [
+        "TK",
+        "IKK",
+        "Barmer",
+        "KKH",
+        "AOK",
+        "DAK"
+      ],
+
+      correct: [1,4]
+    },
+
+    {
+      question:
+      "Zu welcher Kassengruppe gehört die DAK?",
+
+      multiple: false,
+
+      answers: [
+        "PKV",
+        "Regionalkasse",
+        "Sonstige Kostenträger",
+        "vdek",
+        "Berufsgenossenschaft"
+      ],
+
+      correct: [3]
     }
 
   ],
@@ -89,6 +121,23 @@ const questions = {
         "eine Fissurenversiegelung",
         "eine Verlaufskontrolle",
         "eine Konstanzaufnahme"
+      ],
+
+      correct: [1]
+    },
+
+    {
+      question:
+      "Unter Biofilm versteht man ...",
+
+      multiple: false,
+
+      answers: [
+        "chemisch angeraute Dentinschicht",
+        "bakterielle Beläge auf Zahnoberflächen",
+        "mikrobielle Schichten in wasserführenden Systemen",
+        "Testsubstanzen für Sterilisationsgeräte",
+        "helle Flecken im Zahnschmelz"
       ],
 
       correct: [1]
@@ -125,7 +174,7 @@ const questions = {
       multiple: false,
 
       answers: [
-        "Autoklav",
+        "Sterilisation im Autoklaven",
         "Bohrerbad",
         "Ultraschallbad",
         "Wischdesinfektion"
@@ -161,6 +210,36 @@ function openGap1(){
     .classList.add("active");
 }
 
+function openGap2(){
+
+  document
+    .getElementById("start-screen")
+    .classList.remove("active");
+
+  document
+    .getElementById("gap2-screen")
+    .classList.add("active");
+}
+
+function backToStart(){
+
+  document
+    .getElementById("gap1-screen")
+    .classList.remove("active");
+
+  document
+    .getElementById("gap2-screen")
+    .classList.remove("active");
+
+  document
+    .getElementById("quiz-screen")
+    .classList.remove("active");
+
+  document
+    .getElementById("start-screen")
+    .classList.add("active");
+}
+
 function backToGap1(){
 
   document
@@ -173,7 +252,7 @@ function backToGap1(){
 }
 
 /* ======================================================
-   KATEGORIE
+   KATEGORIE ÖFFNEN
 ====================================================== */
 
 function openCategory(category){
@@ -192,7 +271,27 @@ function openCategory(category){
     .getElementById("quiz-screen")
     .classList.add("active");
 
+  document
+    .getElementById("quiz-title")
+    .innerText =
+    getCategoryName(category);
+
   showQuestion();
+}
+
+function getCategoryName(category){
+
+  if(category === "PV"){
+    return "Praxisverwaltung";
+  }
+
+  if(category === "BA"){
+    return "Behandlungsassistenz";
+  }
+
+  if(category === "GS"){
+    return "Gesundheitsschutz";
+  }
 }
 
 /* ======================================================
@@ -264,7 +363,7 @@ function showQuestion(){
 function nextQuestion(){
 
   // =====================================
-  // ERSTER KLICK = ANTWORT PRÜFEN
+  // ERSTER KLICK = PRÜFEN
   // =====================================
 
   if(!answerChecked){
@@ -329,7 +428,7 @@ function nextQuestion(){
           "rgba(141,255,181,0.15)";
       }
 
-      // falsch gewählt
+      // falsche Antwort
 
       if(
         selected.includes(index)
@@ -346,8 +445,6 @@ function nextQuestion(){
 
     });
 
-    // Button ändern
-
     document.querySelector(
       ".next-btn"
     ).innerText =
@@ -359,7 +456,7 @@ function nextQuestion(){
   }
 
   // =====================================
-  // ZWEITER KLICK = NÄCHSTE FRAGE
+  // ZWEITER KLICK = WEITER
   // =====================================
 
   currentQuestion++;
@@ -383,6 +480,3 @@ function nextQuestion(){
 
   showQuestion();
 }
-```
-
-WICHTIG: Das ist die Version aus deiner hochgeladenen Datei MIT neuem Feedback-System ohne automatischen Sprung.
