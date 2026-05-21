@@ -8,7 +8,7 @@
 
 const questions = {
 
-  /* ======================================================
+  /* ======================================================x
      GAP 1 — PRAXISVERWALTUNG
   ====================================================== */
 
@@ -2113,6 +2113,7 @@ const questions = {
 
 let currentCategory = "";
 let currentQuestion = 0;
+let currentQuestions = [];
 let answerChecked = false;
 let xp = 0;
 let streak = 0;
@@ -2220,8 +2221,15 @@ function openCategory(category){
   currentCategory = category;
 
   currentQuestion = 0;
-questions[currentCategory]
-.sort(() => Math.random() - 0.5);
+currentQuestions =
+[
+...questions[currentCategory]
+];
+
+currentQuestions.sort(
+() => Math.random() - 0.5
+);
+
 
   answerChecked = false;
 
@@ -2293,7 +2301,7 @@ function getCategoryName(category){
 function showQuestion(){
 
   const q =
-    questions[currentCategory][currentQuestion];
+    currentQuestions[currentQuestion];
 
   if(!q){
 
@@ -2321,7 +2329,7 @@ function showQuestion(){
     "Frage "
     + (currentQuestion + 1)
     + " von "
-    + questions[currentCategory].length;
+    + currentQuestions.length;
 
   document
     .getElementById("question")
@@ -2485,7 +2493,7 @@ timer = setInterval(()=>{
 
       if(
         currentQuestion >=
-        questions[currentCategory].length
+        currentQuestions.length
       ){
 
         finishQuiz();
@@ -2514,7 +2522,7 @@ timer = setInterval(()=>{
 function nextQuestion(){
 
   const q =
-    questions[currentCategory][currentQuestion];
+    currentQuestions[currentQuestion];
 
   if(!q){
     return;
@@ -2688,7 +2696,7 @@ document.querySelector(
   if(
     currentQuestion
     >=
-    questions[currentCategory].length
+   currentQuestions.length
   ){
 
   finishQuiz();
@@ -2708,17 +2716,16 @@ clearInterval(timer);
 
 if(wrongQuestions.length > 0){
 
-questions[currentCategory] =
-questions[currentCategory]
-.concat(wrongQuestions);
+currentQuestions =
+[...wrongQuestions];
 
 wrongQuestions = [];
 
-alert(
-"🔁 Falsche Fragen kommen nochmal 😄"
-);
-
 currentQuestion = 0;
+
+alert(
+"🔁 Nur falsche Fragen kommen nochmal 😄"
+);
 
 answerChecked = false;
 
