@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>ZFA Prüfungstrainer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- TÜRKISE FORM -->
+
+  <div class="hero-shape"></div>
+
+  <!-- STARTSEITE -->
+
+  <div
+    id="start-screen"
+    class="screen active"
+  >
+
+    <div class="logo-area">
+
+      <img
+        src="logo.png"
+        class="logo"
+      >
+
+      <h1>
+        ZFA Prüfungstrainer
+      </h1>
+
+      <p class="subtitle">
+        Prüfungsvorbereitung GAP 1 & GAP 2
+      </p>
+
+    </div>
+
+    <!-- GAP AUSWAHL -->
+
+    <div class="main-grid">
+
+      <!-- GAP 1 -->
+
+      <div
+        class="main-card"
+        onclick="openGap1()"
+      >
+
+        <div class="icon">
+          📘
+        </div>
+
+        <h2>
+          GAP 1
+        </h2>
+
+        <p>
+          Prüfungsvorbereitung
+        </p>
+
+      </div>
+
+      <!-- GAP 2 -->
+
+      <div
+        class="main-card"
+        onclick="openGap2()"
+      >
+
+        <div class="icon">
+          📗
+        </div>
+
+        <h2>
+          GAP 2
+        </h2>
+
+        <p>
+          Prüfungsvorbereitung
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- GAP 1 -->
+
+  <div
+    id="gap1-screen"
+    class="screen"
+  >
+
+    <button
+      class="back-btn"
+      onclick="backToStart()"
+    >
+
+      ← Zurück
+
+    </button>
+
+    <h2 class="center-title">
+      GAP 1 Bereiche
+    </h2>
+
+    <div class="vertical-grid">
+
+      <!-- PRAXISVERWALTUNG -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('PV')"
+      >
+
+        <div class="icon">
+          💻
+        </div>
+
+        <h2>
+          Praxisverwaltung
+        </h2>
+
+        <p>
+          Datenschutz · Verwaltung · Kommunikation
+        </p>
+
+      </div>
+
+      <!-- BEHANDLUNGSASSISTENZ -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('BA')"
+      >
+
+        <div class="icon">
+          🦷
+        </div>
+
+        <h2>
+          Behandlungsassistenz
+        </h2>
+
+        <p>
+          PAR · Chirurgie · Endodontie
+        </p>
+
+      </div>
+
+      <!-- GESUNDHEITSSCHUTZ -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('GS')"
+      >
+
+        <div class="icon">
+          😷
+        </div>
+
+        <h2>
+          Gesundheitsschutz
+        </h2>
+
+        <p>
+          Hygiene · Schutzmaßnahmen · Steri
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- GAP 2 -->
+
+  <div
+    id="gap2-screen"
+    class="screen"
+  >
+
+    <button
+      class="back-btn"
+      onclick="backToStart()"
+    >
+
+      ← Zurück
+
+    </button>
+
+    <h2 class="center-title">
+      GAP 2 Bereiche
+    </h2>
+
+    <div class="vertical-grid">
+
+      <div class="main-card">
+
+        <div class="icon">
+          💻
+        </div>
+
+        <h2>
+          Praxisverwaltung
+        </h2>
+
+        <p>
+          Fragen folgen bald
+        </p>
+
+      </div>
+
+      <div class="main-card">
+
+        <div class="icon">
+          🦷
+        </div>
+
+        <h2>
+          Behandlungsassistenz
+        </h2>
+
+        <p>
+          Fragen folgen bald
+        </p>
+
+      </div>
+
+      <div class="main-card">
+
+        <div class="icon">
+          😷
+        </div>
+
+        <h2>
+          Gesundheitsschutz
+        </h2>
+
+        <p>
+          Fragen folgen bald
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- QUIZ -->
+
+  <div
+    id="quiz-screen"
+    class="screen"
+  >
+
+    <button
+      class="back-btn"
+      onclick="backToGap1()"
+    >
+
+      ← Zurück zu GAP 1
+
+    </button>
+
+    <h2 id="quiz-title"></h2>
+
+    <div class="quiz-box">
+
+      <div id="question-number"></div>
+
+      <div id="question"></div>
+
+      <div id="answers"></div>
+
+      <div class="bottom-row">
+
+        <button
+          class="next-btn"
+          onclick="nextQuestion()"
+        >
+
+          Nächste Frage
+
+        </button>
+
+        <div id="feedback"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
