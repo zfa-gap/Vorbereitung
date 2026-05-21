@@ -37,7 +37,9 @@
       >
 
       <h2>
-       Berufsschule für Zahnmedizinische Fachangestellte München <br> Prüfungstrainer
+        Berufsschule für Zahnmedizinische Fachangestellte München
+        <br>
+        Prüfungstrainer
       </h2>
 
       <p class="subtitle">
@@ -181,6 +183,27 @@
 
       </div>
 
+      <!-- RÖNTGEN -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('RO')"
+      >
+
+        <div class="icon">
+          🩻
+        </div>
+
+        <h2>
+          Röntgen
+        </h2>
+
+        <p>
+          OPG · Strahlenschutz · Aufnahmen
+        </p>
+
+      </div>
+
     </div>
 
   </div>
@@ -207,7 +230,12 @@
 
     <div class="vertical-grid">
 
-      <div class="main-card">
+      <!-- PRAXISVERWALTUNG -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('PV2')"
+      >
 
         <div class="icon">
           💻
@@ -218,12 +246,17 @@
         </h2>
 
         <p>
-          Fragen folgen bald
+          Verwaltung · Datenschutz · Abrechnung
         </p>
 
       </div>
 
-      <div class="main-card">
+      <!-- BEHANDLUNGSASSISTENZ -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('BA2')"
+      >
 
         <div class="icon">
           🦷
@@ -234,12 +267,17 @@
         </h2>
 
         <p>
-          Fragen folgen bald
+          Chirurgie · Endodontie · Prothetik
         </p>
 
       </div>
 
-      <div class="main-card">
+      <!-- GESUNDHEITSSCHUTZ -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('GS2')"
+      >
 
         <div class="icon">
           😷
@@ -250,7 +288,28 @@
         </h2>
 
         <p>
-          Fragen folgen bald
+          Hygiene · Sterilisation · Aufbereitung
+        </p>
+
+      </div>
+
+      <!-- RÖNTGEN -->
+
+      <div
+        class="main-card"
+        onclick="openCategory('RO2')"
+      >
+
+        <div class="icon">
+          🩻
+        </div>
+
+        <h2>
+          Röntgen
+        </h2>
+
+        <p>
+          Strahlenschutz · OPG · RöV
         </p>
 
       </div>
@@ -268,10 +327,10 @@
 
     <button
       class="back-btn"
-      onclick="backToGap1()"
+      onclick="backToLastMenu()"
     >
 
-      ← Zurück zu GAP 1
+      ← Zurück
 
     </button>
 
@@ -292,7 +351,7 @@
           onclick="nextQuestion()"
         >
 
-          Nächste Frage
+          Antwort prüfen
 
         </button>
 
