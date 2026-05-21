@@ -428,7 +428,7 @@ function nextQuestion(){
           "rgba(141,255,181,0.15)";
       }
 
-      // falsche Antwort
+      // falsch markiert
 
       if(
         selected.includes(index)
@@ -456,7 +456,7 @@ function nextQuestion(){
   }
 
   // =====================================
-  // ZWEITER KLICK = WEITER
+  // ZWEITER KLICK = NÄCHSTE FRAGE
   // =====================================
 
   currentQuestion++;
