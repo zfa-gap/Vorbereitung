@@ -1,503 +1,640 @@
-// ======================================================
-// SCREENS
-// ======================================================
+/* ======================================================
+   ZFA PRÜFUNGSTRAINER
+====================================================== */
 
-const startScreen =
-document.getElementById("start-screen");
-
-const gap1Screen =
-document.getElementById("gap1-screen");
-
-const gap2Screen =
-document.getElementById("gap2-screen");
-
-const quizScreen =
-document.getElementById("quiz-screen");
-
-// ======================================================
-// QUIZ VARIABLEN
-// ======================================================
-
-let currentCategory = "";
-
-let currentQuestion = 0;
-
-// ======================================================
-// FRAGEN
-// ======================================================
+/* ======================================================
+   FRAGEN
+====================================================== */
 
 const questions = {
 
-PV:[
+  /* ======================================================
+     PRAXISVERWALTUNG
+  ====================================================== */
 
-{
-question:"Wofür steht die Abkürzung vdek?",
-answers:[
-"Verband der deutschen Kieferorthopäden",
-"Verband der Ersatzkassen",
-"Verband der deutschen Kieferchirurgen",
-"Verband der deutschen Krankenkassen"
-],
-correct:[1]
-},
+  PV: [
 
-{
-question:"Welche Unterlagen sind bei der Patientenaufnahme nicht erforderlich?",
-answers:[
-"Anamnese",
-"Versichertenkarte",
-"Datenschutzerklärung",
-"Sozialversicherungsnachweis"
-],
-correct:[3]
-},
+    {
+      question:
+      "Frau Meier ist bei der AOK versichert. Welche beiden Aussagen zur AOK sind richtig?",
 
-{
-question:"Welche Stelle ist für die Quartalsabrechnung zuständig?",
-answers:[
-"KZVB",
-"BLZK",
-"ZBV",
-"BZÄK"
-],
-correct:[0]
-},
+      multiple: true,
 
-{
-question:"Welche Aussagen zum Recall sind richtig?",
-answers:[
-"Patienten müssen zustimmen",
-"Recall erinnert an neuen Termin",
-"Recall ist verboten",
-"Jeder Patient muss aufgenommen werden"
-],
-correct:[0,1]
-},
+      answers: [
+        "AOK ist die Abkürzung für Allgemeine Ortskrankenkasse.",
+        "AOK ist die Abkürzung für Ärztliche Ortskrankenkasse.",
+        "Die AOK gehört zu den Regionalkassen.",
+        "Die AOK gehört zum Verband der Ersatzkassen.",
+        "Die AOK ist eine Privatversicherung.",
+        "Die AOK gehört zu den sonstigen Kostenträgern."
+      ],
 
-{
-question:"Welche Aussage zum Datenschutz ist richtig?",
-answers:[
-"Alle Daten regelmäßig sichern",
-"Datenschutz gilt nur digital",
-"Patientendaten lebenslang speichern",
-"Dritte dürfen immer zugreifen"
-],
-correct:[0]
-},
+      correct: [0,2]
+    },
 
-{
-question:"Was gehört nicht zur Hardware?",
-answers:[
-"Monitor",
-"Drucker",
-"PVS",
-"Maus"
-],
-correct:[2]
-},
+    {
+      question:
+      "Wofür steht die Abkürzung vdek?",
 
-{
-question:"Welches Passwort ist sicher?",
-answers:[
-"12345678",
-"abcdefgh",
-"IwdPb2223!",
-"Sarah2008"
-],
-correct:[2]
-}
+      multiple: false,
 
-],
+      answers: [
+        "Verband der deutschen Kieferorthopäden",
+        "Verband der Ersatzkassen",
+        "Verband der deutschen Kieferchirurgen",
+        "Verband der deutschen Krankenkassen",
+        "Verband der deutschen Zahnärztekammern"
+      ],
 
-// ======================================================
-// BA
-// ======================================================
+      correct: [1]
+    },
 
-BA:[
+    {
+      question:
+      "Welche Unterlagen sind bei der Patientenaufnahme nicht erforderlich?",
 
-{
-question:"Welche Vertragsart liegt beim Behandlungsvertrag vor?",
-answers:[
-"Werkvertrag",
-"Dienstvertrag",
-"Kaufvertrag",
-"Mietvertrag"
-],
-correct:[1]
-},
+      multiple: false,
 
-{
-question:"Welche Aussage zur Einwilligung ist richtig?",
-answers:[
-"Patient kann nie widerrufen",
-"Nur bei OP notwendig",
-"Kann jederzeit widerrufen werden",
-"Nur schriftlich gültig"
-],
-correct:[2]
-},
+      answers: [
+        "Anamnese",
+        "Versichertenkarte",
+        "ggf. vorherige Behandlungsberichte",
+        "unterschriebene Datenschutzerklärung",
+        "Sozialversicherungsnachweis"
+      ],
 
-{
-question:"Wann liegt Geschäftsführung ohne Auftrag vor?",
-answers:[
-"Notfallbehandlung bewusstloser Patient",
-"Routinekontrolle",
-"Professionelle Zahnreinigung",
-"Terminvereinbarung"
-],
-correct:[0]
-},
+      correct: [4]
+    },
 
-{
-question:"Mit welcher Berufsgruppe besteht meist ein Werkvertrag?",
-answers:[
-"ZFA",
-"Handwerker/Zahntechniker",
-"Zahnarzt",
-"Patient"
-],
-correct:[1]
-}
+    {
+      question:
+      "Welche der nachfolgenden Krankenkassen gehören zu den Primärkassen?",
 
-],
+      multiple: true,
 
-// ======================================================
-// GS
-// ======================================================
+      answers: [
+        "TK",
+        "IKK",
+        "Barmer",
+        "KKH",
+        "AOK",
+        "DAK"
+      ],
 
-GS:[
+      correct: [1,4]
+    },
 
-{
-question:"Wozu dient ein Anti-Viren-Programm?",
-answers:[
-"Patientenschutz",
-"PC vor Viren schützen",
-"Desinfektion ersetzen",
-"Papier sparen"
-],
-correct:[1]
-},
+    {
+      question:
+      "Zu welcher Kassengruppe gehört die DAK?",
 
-{
-question:"Welche Aussage zum Datenschutz ist richtig?",
-answers:[
-"Passwort hinter Monitor kleben",
-"Sicheres Passwort mit Sonderzeichen",
-"Immer gleiches Passwort",
-"Kurzes Passwort ist sicher"
-],
-correct:[1]
-},
+      multiple: false,
 
-{
-question:"Was ist beim Datenschutz nicht korrekt?",
-answers:[
-"Befunde laut im Wartezimmer nennen",
-"Patienten diskret behandeln",
-"Technikerzugriff einschränken",
-"Datenschutz beachten"
-],
-correct:[0]
-}
+      answers: [
+        "PKV",
+        "Regionalkasse",
+        "Sonstige Kostenträger",
+        "vdek",
+        "Berufsgenossenschaft"
+      ],
 
-]
+      correct: [3]
+    },
+
+    {
+      question:
+      "Welche Daten gehören zu den Stammdaten der Patienten?",
+
+      multiple: false,
+
+      answers: [
+        "Name, Adresse, Geburtsdatum und Befund",
+        "Name, Adresse, Geburtsdatum und Telefonnummer",
+        "Name, Adresse, Geburtsdatum und Diagnose",
+        "Name, Adresse, Geburtsdatum und Behandlung",
+        "Name, Adresse, Befund und Diagnose"
+      ],
+
+      correct: [1]
+    },
+
+    {
+      question:
+      "Welche Verwaltungstätigkeit ist bei der Patientenaufnahme nicht erforderlich?",
+
+      multiple: false,
+
+      answers: [
+        "Anamneseerhebung",
+        "eGK einlesen",
+        "Patientenakte anlegen",
+        "Datenschutzerklärung unterschreiben lassen",
+        "Impfpass digitalisieren"
+      ],
+
+      correct: [4]
+    },
+
+    {
+      question:
+      "Wofür steht die Abkürzung ZBV?",
+
+      multiple: false,
+
+      answers: [
+        "Zahnärztlicher Bundesverband",
+        "Zahnärztlicher Bezirksverband",
+        "Zahnärzte-Bayern-Verbund",
+        "Zahnärztliche Bundesvereinigung",
+        "Zahnbeschwerden-Verband"
+      ],
+
+      correct: [1]
+    },
+
+    {
+      question:
+      "Wofür steht die Abkürzung KZVB?",
+
+      multiple: false,
+
+      answers: [
+        "Kassenzahnärztlicher Bundesverband",
+        "Kassenzahnärztlicher Verband Bayern",
+        "Kassenzahnärztliche Vereinigung Bayern",
+        "Kollegiale Zahnärztliche Bundesvereinigung",
+        "Kollegiale Zahnärztliche Vereinigung Bayern"
+      ],
+
+      correct: [2]
+    },
+
+    {
+      question:
+      "Welche Stelle ist für die Quartalsabrechnung zuständig?",
+
+      multiple: false,
+
+      answers: [
+        "KZV",
+        "KZVB",
+        "BLZK",
+        "ZBV",
+        "BZÄK"
+      ],
+
+      correct: [1]
+    },
+
+    {
+      question:
+      "Welche beiden Aussagen zum Recall sind richtig?",
+
+      multiple: true,
+
+      answers: [
+        "Recall bedeutet Erinnerung an einen Termin.",
+        "Recall bedeutet Erinnerung an neue Terminvereinbarung.",
+        "Jeder Patient muss aufgenommen werden.",
+        "Patienten müssen zustimmen.",
+        "Jede Praxis muss Recall anbieten.",
+        "Praxis entscheidet über Aufnahme."
+      ],
+
+      correct: [1,3]
+    },
+
+    {
+      question:
+      "Welche Aussage zum Datenschutz ist richtig?",
+
+      multiple: false,
+
+      answers: [
+        "Alle Patientendaten werden regelmäßig gesichert.",
+        "Es darf kein Zugriff durch Dritte erfolgen.",
+        "Patientendaten lebenslang aufbewahren.",
+        "Datenschutz gilt nur digital.",
+        "Nach Behandlung sofort löschen."
+      ],
+
+      correct: [1]
+    },
+
+    {
+      question:
+      "Was gehört nicht zur Hardware?",
+
+      multiple: false,
+
+      answers: [
+        "Monitor",
+        "eGK-Lesegerät",
+        "PVS",
+        "Drucker",
+        "Maus"
+      ],
+
+      correct: [2]
+    },
+
+    {
+      question:
+      "Welche Aussagen zum Datenschutzbeauftragten sind richtig?",
+
+      multiple: true,
+
+      answers: [
+        "Jede Praxis braucht immer einen.",
+        "Nur Erstkraft darf das sein.",
+        "Achtet auf DSGVO.",
+        "Muss Kammerprüfung machen.",
+        "Immer bei Internet nötig.",
+        "Muss Datenschutzregeln kennen."
+      ],
+
+      correct: [2,5]
+    },
+
+    {
+      question:
+      "Welches Passwort ist sicher?",
+
+      multiple: false,
+
+      answers: [
+        "Abcdefgh",
+        "12345678",
+        "987654321",
+        "Sarah12122008",
+        "IwdPb2223!"
+      ],
+
+      correct: [4]
+    },
+
+    {
+      question:
+      "Wie viele Seiten hat eine Nachricht laut Schulz von Thun?",
+
+      multiple: false,
+
+      answers: [
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+
+      correct: [2]
+    },
+
+    {
+      question:
+      "Welche Ebene gibt es beim 4-Ohren-Modell nicht?",
+
+      multiple: false,
+
+      answers: [
+        "Appell-Ebene",
+        "Sach-Ebene",
+        "Ich-Ebene",
+        "Du-Ebene",
+        "Beziehungs-Ebene"
+      ],
+
+      correct: [3]
+    },
+
+    {
+      question:
+      "Welche Aussagen treffen auf Watzlawick zu?",
+
+      multiple: true,
+
+      answers: [
+        "Es gibt nichts Gutes außer man tut es",
+        "Reden ist Silber",
+        "Man kann nicht nicht kommunizieren",
+        "Wer zuletzt lacht denkt zu langsam",
+        "Keine Antwort ist auch eine Antwort"
+      ],
+
+      correct: [2,4]
+    }
+
+  ],
+
+  /* ======================================================
+     BA
+  ====================================================== */
+
+  BA: [
+
+    {
+      question:
+      "Was bedeutet Screening?",
+
+      multiple: false,
+
+      answers: [
+        "Bissflügelaufnahme",
+        "systematisches Kontrollverfahren",
+        "Fissurenversiegelung",
+        "Verlaufskontrolle",
+        "Konstanzaufnahme"
+      ],
+
+      correct: [1]
+    },
+
+    {
+      question:
+      "Unter Biofilm versteht man ...",
+
+      multiple: false,
+
+      answers: [
+        "angeraute Dentinschicht",
+        "bakterielle Beläge",
+        "mikrobielle Schichten",
+        "Testsubstanzen",
+        "helle Flecken"
+      ],
+
+      correct: [1]
+    },
+
+    {
+      question:
+      "Welche Faktoren begünstigen Karies?",
+
+      multiple: true,
+
+      answers: [
+        "geringe Biofilmansammlung",
+        "Remineralisation",
+        "hohe Biofilmansammlung",
+        "regelmäßige Fluoridierung",
+        "Zahnfehlstellungen"
+      ],
+
+      correct: [2,4]
+    }
+
+  ],
+
+  /* ======================================================
+     GS
+  ====================================================== */
+
+  GS: [
+
+    {
+      question:
+      "Was gehört zur persönlichen Schutzausrüstung?",
+
+      multiple: true,
+
+      answers: [
+        "Handschuhe",
+        "Mundschutz",
+        "Schutzbrille",
+        "Schokolade"
+      ],
+
+      correct: [0,1,2]
+    },
+
+    {
+      question:
+      "Wodurch erreicht man Keimfreiheit?",
+
+      multiple: false,
+
+      answers: [
+        "Autoklav",
+        "Bohrerbad",
+        "Ultraschallbad",
+        "Wischdesinfektion"
+      ],
+
+      correct: [0]
+    }
+
+  ]
 
 };
 
-// ======================================================
-// GAP ÖFFNEN
-// ======================================================
+/* ======================================================
+   VARIABLEN
+====================================================== */
+
+let currentCategory = "";
+let currentQuestion = 0;
+
+/* ======================================================
+   NAVIGATION
+====================================================== */
 
 function openGap1(){
 
-startScreen.classList.remove("active");
+  document
+    .getElementById("start-screen")
+    .classList.remove("active");
 
-gap1Screen.classList.add("active");
-
-}
-
-function openGap2(){
-
-startScreen.classList.remove("active");
-
-gap2Screen.classList.add("active");
-
-}
-
-// ======================================================
-// ZURÜCK
-// ======================================================
-
-function backToStart(){
-
-gap1Screen.classList.remove("active");
-
-gap2Screen.classList.remove("active");
-
-quizScreen.classList.remove("active");
-
-startScreen.classList.add("active");
-
+  document
+    .getElementById("gap1-screen")
+    .classList.add("active");
 }
 
 function backToGap1(){
 
-quizScreen.classList.remove("active");
+  document
+    .getElementById("quiz-screen")
+    .classList.remove("active");
 
-gap1Screen.classList.add("active");
-
+  document
+    .getElementById("gap1-screen")
+    .classList.add("active");
 }
 
-// ======================================================
-// KATEGORIE
-// ======================================================
+/* ======================================================
+   KATEGORIE
+====================================================== */
 
 function openCategory(category){
 
-currentCategory = category;
+  currentCategory = category;
 
-currentQuestion = 0;
+  currentQuestion = 0;
 
-gap1Screen.classList.remove("active");
+  document
+    .getElementById("gap1-screen")
+    .classList.remove("active");
 
-quizScreen.classList.add("active");
+  document
+    .getElementById("quiz-screen")
+    .classList.add("active");
 
-document.getElementById("quiz-title").innerHTML =
-getCategoryName(category);
-
-loadQuestion();
-
+  showQuestion();
 }
 
-// ======================================================
-// NAME
-// ======================================================
+/* ======================================================
+   FRAGE ZEIGEN
+====================================================== */
 
-function getCategoryName(category){
+function showQuestion(){
 
-if(category === "PV") return "Praxisverwaltung";
+  const q =
+    questions[currentCategory][currentQuestion];
 
-if(category === "BA") return "Behandlungsassistenz";
+  document
+    .getElementById("question-number")
+    .innerText =
+    "Frage "
+    + (currentQuestion + 1)
+    + " von "
+    + questions[currentCategory].length;
 
-if(category === "GS") return "Gesundheitsschutz";
+  document
+    .getElementById("question")
+    .innerText =
+    q.question;
 
+  const answersDiv =
+    document.getElementById("answers");
+
+  answersDiv.innerHTML = "";
+
+  q.answers.forEach((answer,index)=>{
+
+    const label =
+      document.createElement("label");
+
+    label.className =
+      "answer";
+
+    label.innerHTML =
+
+      `<input
+        type="${
+          q.multiple
+          ? 'checkbox'
+          : 'radio'
+        }"
+        name="answer"
+        value="${index}"
+      >
+
+      ${answer}`;
+
+    answersDiv.appendChild(label);
+  });
+
+  document
+    .getElementById("feedback")
+    .innerText = "";
 }
 
-// ======================================================
-// FRAGE LADEN
-// ======================================================
-
-function loadQuestion(){
-
-const q =
-questions[currentCategory][currentQuestion];
-
-document.getElementById("question-number").innerHTML =
-"Frage "
-+
-(currentQuestion + 1)
-+
-" von "
-+
-questions[currentCategory].length;
-
-document.getElementById("question").innerHTML =
-q.question;
-
-const answersDiv =
-document.getElementById("answers");
-
-answersDiv.innerHTML = "";
-
-const multiple =
-q.correct.length > 1;
-
-q.answers.forEach((answer,index)=>{
-
-answersDiv.innerHTML +=
-
-`
-<label class="answer">
-
-<input
-type="${multiple ? "checkbox" : "radio"}"
-name="answer"
-value="${index}"
->
-
-<span>${answer}</span>
-
-</label>
-`;
-
-});
-
-document.getElementById("feedback").innerHTML = "";
-
-}
-
-// ======================================================
-// NÄCHSTE FRAGE
-// ======================================================
+/* ======================================================
+   NÄCHSTE FRAGE
+====================================================== */
 
 function nextQuestion(){
 
-const selected =
-document.querySelectorAll(
-"input:checked"
-);
+  const q =
+    questions[currentCategory][currentQuestion];
 
-if(selected.length === 0){
+  const selected =
 
-alert("Bitte Antwort auswählen 😄");
+    [...document.querySelectorAll(
+      "input:checked"
+    )]
 
-return;
+    .map(el =>
+      parseInt(el.value)
+    )
 
-}
+    .sort();
 
-const currentQ =
-questions[currentCategory][currentQuestion];
+  if(selected.length === 0){
 
-const correctAnswers =
-currentQ.correct;
+    alert(
+      "Bitte Antwort auswählen 😄"
+    );
 
-const selectedAnswers = [];
+    return;
+  }
 
-selected.forEach(box=>{
+  const correct =
+    [...q.correct].sort();
 
-selectedAnswers.push(
-parseInt(box.value)
-);
+  const isCorrect =
 
-});
+    JSON.stringify(selected)
+    ===
+    JSON.stringify(correct);
 
-const allAnswers =
-document.querySelectorAll(".answer");
+  const feedback =
+    document.getElementById("feedback");
 
-let isCorrect = true;
+  feedback.innerText =
 
-// prüfen
+    isCorrect
+    ? "✅ Richtig"
+    : "❌ Falsch";
 
-if(
-selectedAnswers.length
-!==
-correctAnswers.length
-){
+  const answerLabels =
+    document.querySelectorAll(".answer");
 
-isCorrect = false;
+  answerLabels.forEach((label,index)=>{
 
-}
+    if(q.correct.includes(index)){
 
-correctAnswers.forEach(answer=>{
+      label.style.border =
+        "2px solid #8dffb5";
 
-if(
-!selectedAnswers.includes(answer)
-){
+      label.style.background =
+        "rgba(141,255,181,0.15)";
+    }
 
-isCorrect = false;
+    if(
+      selected.includes(index)
+      &&
+      !q.correct.includes(index)
+    ){
 
-}
+      label.style.border =
+        "2px solid #ff7b7b";
 
-});
+      label.style.background =
+        "rgba(255,123,123,0.15)";
+    }
 
-// markieren
+  });
 
-allAnswers.forEach((answerDiv,index)=>{
+  setTimeout(()=>{
 
-// richtige
+    currentQuestion++;
 
-if(correctAnswers.includes(index)){
+    if(
+      currentQuestion
+      >=
+      questions[currentCategory].length
+    ){
 
-answerDiv.style.border =
-"2px solid #8dffb5";
+      alert(
+        "Bereich abgeschlossen 🎉"
+      );
 
-answerDiv.style.background =
-"rgba(141,255,181,0.18)";
+      backToGap1();
 
-}
+      return;
+    }
 
-// falsche
+    showQuestion();
 
-if(
-selectedAnswers.includes(index)
-&&
-!correctAnswers.includes(index)
-){
-
-answerDiv.style.border =
-"2px solid #ff7b7b";
-
-answerDiv.style.background =
-"rgba(255,123,123,0.18)";
-
-}
-
-});
-
-// feedback
-
-const feedback =
-document.getElementById("feedback");
-
-if(isCorrect){
-
-feedback.innerHTML =
-"✅ Richtig";
-
-}else{
-
-feedback.innerHTML =
-"❌ Falsch";
-
-}
-
-// button deaktivieren
-
-const nextBtn =
-document.querySelector(".next-btn");
-
-if(nextBtn){
-
-nextBtn.disabled = true;
-
-}
-
-// nächste frage
-
-setTimeout(()=>{
-
-currentQuestion++;
-
-if(
-currentQuestion
-<
-questions[currentCategory].length
-){
-
-loadQuestion();
-
-}else{
-
-document.getElementById("question").innerHTML =
-"🎉 Bereich abgeschlossen!";
-
-document.getElementById("answers").innerHTML =
-"";
-
-document.getElementById("feedback").innerHTML =
-"";
-
-document.getElementById("question-number").innerHTML =
-"";
-
-}
-
-if(nextBtn){
-
-nextBtn.disabled = false;
-
-}
-
-},2000);
-
+  },2000);
 }
