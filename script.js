@@ -2114,6 +2114,17 @@ const questions = {
 let currentCategory = "";
 let currentQuestion = 0;
 let answerChecked = false;
+let xp = 0;
+let streak = 0;
+let bestStreak = 0;
+
+let correctCount = 0;
+let wrongCount = 0;
+
+let wrongQuestions = [];
+
+let timer;
+let timeLeft = 30;
 let currentGap = "";
 
 /* ======================================================
@@ -2209,6 +2220,8 @@ function openCategory(category){
   currentCategory = category;
 
   currentQuestion = 0;
+questions[currentCategory]
+.sort(() => Math.random() - 0.5);
 
   answerChecked = false;
 
@@ -2297,9 +2310,7 @@ function showQuestion(){
       .getElementById("answers")
       .innerHTML = "";
 
-    document
-      .getElementById("feedback")
-      .innerText = "";
+
 
     return;
   }
@@ -2435,7 +2446,61 @@ else{
   document
     .getElementById("feedback")
     .innerText = "";
+clearInterval(timer);
 
+timeLeft = 30;
+
+document
+  .getElementById("feedback")
+  .innerText =
+  "⏳ " + timeLeft + " Sekunden";
+
+timer = setInterval(()=>{
+
+  timeLeft--;
+
+  document
+    .getElementById("feedback")
+    .innerText =
+    "⏳ " + timeLeft + " Sekunden";
+
+  if(timeLeft <= 0){
+
+    clearInterval(timer);
+
+    wrongCount++;
+
+    wrongQuestions.push(q);
+
+    document
+      .getElementById("feedback")
+      .innerText =
+      "⏰ Zeit abgelaufen";
+
+    answerChecked = true;
+
+    setTimeout(()=>{
+
+      currentQuestion++;
+
+      if(
+        currentQuestion >=
+        questions[currentCategory].length
+      ){
+
+        finishQuiz();
+
+        return;
+      }
+
+      answerChecked = false;
+
+      showQuestion();
+
+    },1000);
+  }
+
+},1000);
   document.querySelector(
     ".next-btn"
   ).innerText =
@@ -2456,6 +2521,7 @@ function nextQuestion(){
   }
 
   if(!answerChecked){
+clearInterval(timer);
 
     let isCorrect = false;
 
@@ -2478,7 +2544,7 @@ function nextQuestion(){
           parseInt(select.value)
         );
 
-      if(selected.includes(NaN)){
+   if(selected.some(isNaN)){
 
         alert(
           "Bitte alles auswählen 😄"
@@ -2584,7 +2650,30 @@ function nextQuestion(){
       ? "✅ Richtig"
       : "❌ Falsch";
 
-    document.querySelector(
+if(isCorrect){
+
+  xp += 10;
+
+  streak++;
+
+  correctCount++;
+
+  if(streak > bestStreak){
+
+    bestStreak = streak;
+  }
+}
+
+else{
+
+  streak = 0;
+
+  wrongCount++;
+
+  wrongQuestions.push(q);
+}
+    
+document.querySelector(
       ".next-btn"
     ).innerText =
     "Weiter →";
@@ -2602,11 +2691,9 @@ function nextQuestion(){
     questions[currentCategory].length
   ){
 
-    alert(
-      "Bereich abgeschlossen 🎉"
-    );
+  finishQuiz();
 
-    backToLastMenu();
+return;
 
     return;
   }
@@ -2615,4 +2702,62 @@ function nextQuestion(){
 
   showQuestion();
 }
+function finishQuiz(){
 
+clearInterval(timer);
+
+if(wrongQuestions.length > 0){
+
+questions[currentCategory] =
+questions[currentCategory]
+.concat(wrongQuestions);
+
+wrongQuestions = [];
+
+alert(
+"🔁 Falsche Fragen kommen nochmal 😄"
+);
+
+currentQuestion = 0;
+
+answerChecked = false;
+
+showQuestion();
+
+return;
+}
+
+const total =
+correctCount + wrongCount;
+
+const percent =
+Math.round(
+(correctCount / total) * 100
+);
+
+alert(
+
+"🎉 Bereich abgeschlossen\n\n"
+
++ "⭐ XP: " + xp + "\n"
+
++ "🔥 Beste Serie: "
++ bestStreak + "\n"
+
++ "✅ Richtig: "
++ correctCount + "\n"
+
++ "❌ Falsch: "
++ wrongCount + "\n"
+
++ "📊 Trefferquote: "
++ percent + "%"
+);
+
+correctCount = 0;
+wrongCount = 0;
+streak = 0;
+bestStreak = 0;
+
+backToLastMenu();
+}
