@@ -99,7 +99,7 @@ const questions = {
       ],
 
       correct: [3]
-    }
+    },
 
 
      {
