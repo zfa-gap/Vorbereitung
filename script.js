@@ -3751,3 +3751,358 @@ bestStreak = 0;
 
 backToLastMenu();
 }
+
+
+
+/* ======================================================
+   ZFA PRÜFUNGSTRAINER — QUIZ ENGINE
+====================================================== */
+
+let aktuellerGap = "";
+let aktuellerBereich = "";
+let aktuelleFragen = [];
+let aktuelleFrageIndex = 0;
+let punkte = 0;
+let beantwortet = false;
+
+function showBereiche(gap) {
+
+  aktuellerGap = gap;
+
+  document.getElementById("start-screen").classList.add("hidden");
+  document.getElementById("bereich-screen").classList.remove("hidden");
+
+  if(gap === "gap1") {
+    document.getElementById("bereich-title").innerText = "GAP 1 auswählen";
+  } else {
+    document.getElementById("bereich-title").innerText = "GAP 2 auswählen";
+  }
+
+}
+
+function goHome() {
+
+  document.getElementById("quiz-screen").classList.add("hidden");
+  document.getElementById("bereich-screen").classList.add("hidden");
+  document.getElementById("start-screen").classList.remove("hidden");
+
+}
+
+function startQuiz(bereich) {
+
+  aktuellerBereich = bereich;
+
+  let key = "";
+
+  if(aktuellerGap === "gap1") {
+
+    if(bereich === "pv") key = "PV";
+    if(bereich === "ba") key = "BA";
+    if(bereich === "gs") key = "GS";
+
+  }
+
+  if(aktuellerGap === "gap2") {
+
+    if(bereich === "pv") key = "PV2";
+    if(bereich === "ba") key = "BA";
+    if(bereich === "gs") key = "GS";
+
+  }
+
+  aktuelleFragen = questions[key];
+
+  aktuelleFrageIndex = 0;
+  punkte = 0;
+
+  document.getElementById("bereich-screen").classList.add("hidden");
+  document.getElementById("quiz-screen").classList.remove("hidden");
+
+  showQuestion();
+
+}
+
+function showQuestion() {
+
+  beantwortet = false;
+
+  const frage = aktuelleFragen[aktuelleFrageIndex];
+
+  const answersDiv = document.getElementById("answers");
+
+  answersDiv.innerHTML = "";
+
+  document.getElementById("result").innerText = "";
+
+  document.getElementById("progress").innerText =
+    "Frage " +
+    (aktuelleFrageIndex + 1) +
+    " von " +
+    aktuelleFragen.length;
+
+  document.getElementById("question").innerText =
+    frage.question || frage.frage;
+
+  if(frage.type === "matching") {
+
+    frage.items.forEach((item, index) => {
+
+      const wrapper = document.createElement("div");
+
+      wrapper.style.marginBottom = "15px";
+
+      const label = document.createElement("p");
+
+      label.innerText = item;
+
+      const select = document.createElement("select");
+
+      frage.categories.forEach((cat, i) => {
+
+        const option = document.createElement("option");
+
+        option.value = i;
+        option.text = cat;
+
+        select.appendChild(option);
+
+      });
+
+      wrapper.appendChild(label);
+      wrapper.appendChild(select);
+
+      answersDiv.appendChild(wrapper);
+
+    });
+
+    const btn = document.createElement("button");
+
+    btn.innerText = "Antwort prüfen";
+
+    btn.onclick = checkMatching;
+
+    answersDiv.appendChild(btn);
+
+    return;
+
+  }
+
+  if(frage.type === "ordering") {
+
+    frage.items.forEach((item, index) => {
+
+      const p = document.createElement("p");
+
+      p.innerText = (index + 1) + ". " + item;
+
+      answersDiv.appendChild(p);
+
+    });
+
+    const btn = document.createElement("button");
+
+    btn.innerText = "Weiter";
+
+    btn.onclick = nextQuestion;
+
+    answersDiv.appendChild(btn);
+
+    return;
+
+  }
+
+  const answers = frage.answers || frage.antworten;
+
+  if(frage.multiple === true) {
+
+    answers.forEach((answer, index) => {
+
+      const wrapper = document.createElement("div");
+
+      const checkbox = document.createElement("input");
+
+      checkbox.type = "checkbox";
+
+      checkbox.value = index;
+
+      const label = document.createElement("label");
+
+      label.innerText = answer;
+
+      wrapper.appendChild(checkbox);
+      wrapper.appendChild(label);
+
+      answersDiv.appendChild(wrapper);
+
+    });
+
+    const btn = document.createElement("button");
+
+    btn.innerText = "Antwort prüfen";
+
+    btn.onclick = checkMultipleChoice;
+
+    answersDiv.appendChild(btn);
+
+    return;
+
+  }
+
+  answers.forEach((answer, index) => {
+
+    const button = document.createElement("button");
+
+    button.innerText = answer;
+
+    button.onclick = () => checkSingleChoice(index);
+
+    answersDiv.appendChild(button);
+
+  });
+
+}
+
+function checkSingleChoice(index) {
+
+  if(beantwortet) return;
+
+  beantwortet = true;
+
+  const frage = aktuelleFragen[aktuelleFrageIndex];
+
+  const correct = frage.correct || [frage.korrekt];
+
+  if(correct.includes(index)) {
+
+    punkte++;
+
+    document.getElementById("result").innerText = "Richtig ✅";
+
+  } else {
+
+    document.getElementById("result").innerText = "Falsch ❌";
+
+  }
+
+  showNextButton();
+
+}
+
+function checkMultipleChoice() {
+
+  if(beantwortet) return;
+
+  beantwortet = true;
+
+  const frage = aktuelleFragen[aktuelleFrageIndex];
+
+  const correct = frage.correct;
+
+  const checked =
+    [...document.querySelectorAll("#answers input:checked")]
+    .map(cb => Number(cb.value));
+
+  const richtig =
+    JSON.stringify(checked.sort()) ===
+    JSON.stringify(correct.sort());
+
+  if(richtig) {
+
+    punkte++;
+
+    document.getElementById("result").innerText = "Richtig ✅";
+
+  } else {
+
+    document.getElementById("result").innerText = "Falsch ❌";
+
+  }
+
+  showNextButton();
+
+}
+
+function checkMatching() {
+
+  if(beantwortet) return;
+
+  beantwortet = true;
+
+  const frage = aktuelleFragen[aktuelleFrageIndex];
+
+  const selects =
+    document.querySelectorAll("#answers select");
+
+  let richtig = true;
+
+  selects.forEach((select, index) => {
+
+    if(Number(select.value) !== frage.correct[index]) {
+
+      richtig = false;
+
+    }
+
+  });
+
+  if(richtig) {
+
+    punkte++;
+
+    document.getElementById("result").innerText = "Richtig ✅";
+
+  } else {
+
+    document.getElementById("result").innerText = "Falsch ❌";
+
+  }
+
+  showNextButton();
+
+}
+
+function showNextButton() {
+
+  const answersDiv = document.getElementById("answers");
+
+  const btn = document.createElement("button");
+
+  btn.innerText = "Nächste Frage";
+
+  btn.onclick = nextQuestion;
+
+  answersDiv.appendChild(btn);
+
+}
+
+function nextQuestion() {
+
+  aktuelleFrageIndex++;
+
+  if(aktuelleFrageIndex < aktuelleFragen.length) {
+
+    showQuestion();
+    return;
+
+  }
+
+  showFinalResult();
+
+}
+
+function showFinalResult() {
+
+  document.getElementById("question").innerText =
+    "Quiz beendet 🎉";
+
+  document.getElementById("answers").innerHTML = "";
+
+  document.getElementById("result").innerHTML =
+    "<strong>Punkte: " +
+    punkte +
+    " / " +
+    aktuelleFragen.length +
+    "</strong>";
+
+}
+
