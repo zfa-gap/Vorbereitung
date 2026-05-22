@@ -497,13 +497,9 @@ const questions = {
   answers: [
 
     "der Geschäftsführer einer Firma einem Zahnarzt ein unverlangtes Angebot zusendet.",
-
     "eine zahnmedizinische Fachangestellte mit Patienten Termine vereinbart, ohne von ihrem Chef dazu beauftragt zu sein.",
-
     "ein Zahnarzt einen Patienten gegen dessen Willen behandelt.",
-
     "ein Zahnarzt einen Patienten, der seine eGK nicht vorgelegt hat, trotzdem behandelt.",
-
     "ein Zahnarzt einem bewusstlosen Patienten Erste Hilfe leistet."
 
   ],
@@ -520,13 +516,9 @@ const questions = {
   answers: [
 
     "Arbeitsvertrag",
-
     "Dienstvertrag",
-
     "Werkvertrag",
-
     "Behandlungsvertrag",
-
     "Geschäftsführung ohne Auftrag"
 
   ],
@@ -543,13 +535,9 @@ const questions = {
   answers: [
 
     "Rechtsanwalt",
-
     "Zahnarzt",
-
     "Handwerker/Zahntechniker",
-
     "Steuerberater",
-
     "Kieferchirurg"
 
   ],
@@ -566,13 +554,9 @@ const questions = {
   answers: [
 
     "Werkvertrag",
-
     "Dienstvertrag",
-
     "Arbeitsvertrag",
-
     "Behandlungsvertrag",
-
     "Geschäftsführung ohne Auftrag"
 
   ],
@@ -589,13 +573,9 @@ const questions = {
   answers: [
 
     "Ein Patient gibt seine Einwilligung zu einer Kieferoperation.",
-
     "Ein Zahnarzt erteilt einem Zahnlabor den Auftrag zur Reparatur einer Zahnprothese.",
-
     "Ein Arzt behandelt am Unfallort einen bewusstlosen Patienten.",
-
     "Ein Zahnarzt beauftragt in einem Streitfall einen Rechtsanwalt.",
-
     "Ein Patient erscheint zur Routineuntersuchung in der Praxis."
 
   ],
@@ -612,13 +592,9 @@ const questions = {
   answers: [
 
     "2",
-
     "3",
-
     "4",
-
     "5",
-
     "6"
 
   ],
@@ -635,13 +611,9 @@ const questions = {
   answers: [
 
     "Appell-Ebene",
-
     "Sach-Ebene",
-
     "Ich-Ebene",
-
     "Du-Ebene",
-
     "Beziehungs-Ebene"
 
   ],
@@ -658,13 +630,9 @@ const questions = {
   answers: [
 
     "Es gibt nichts Gutes, außer man tut es.",
-
     "Reden ist Silber, Schweigen ist Gold.",
-
     "Man kann nicht nicht kommunizieren.",
-
     "Wer zuletzt lacht, denkt zu langsam.",
-
     "Keine Antwort ist auch eine Antwort."
 
   ],
@@ -681,13 +649,9 @@ const questions = {
   answers: [
 
     "Bei einem Patienten mit einer Angststörung ist die Angst oft übertrieben und kann durch „sich zusammenreißen“ beherrscht werden.",
-
     "Bei einem Patienten mit einer Angststörung kann die Angst von der ZFA in der Regel gar nicht wahrgenommen werden.",
-
     "Ein Panikanfall beim Anblick einer Spritze kann sogar mit Todesangst beim Patienten einhergehen.",
-
     "Ein Panikanfall beim Anblick einer Spritze geht niemals mit Todesangst beim Patienten einher.",
-
     "Angststörungen spielen in der Zahnarztpraxis keine Rolle."
 
   ],
@@ -704,13 +668,9 @@ const questions = {
   answers: [
 
     "Kündigungsschreiben",
-
     "Ausbildungsvertrag",
-
     "Mahnung",
-
     "Mitarbeiterbesprechung",
-
     "Auftragsbestätigung"
 
   ],
@@ -727,13 +687,9 @@ const questions = {
   answers: [
 
     "Körpersprache",
-
     "Mimik",
-
     "Körperhaltung",
-
     "Kleidung",
-
     "Tonfall"
 
   ],
@@ -750,15 +706,10 @@ const questions = {
   answers: [
 
     "Sich herablassend benehmen",
-
     "Ich-Botschaften geben",
-
     "Ungebetene Ratschläge aussprechen",
-
     "Keine Gerüchte verbreiten",
-
     "Nicht zu seiner eigenen Botschaft stehen",
-
     "Empathie zeigen"
 
   ],
@@ -775,13 +726,9 @@ const questions = {
   answers: [
 
     "genügend Zeit einplanen",
-
     "ruhigen Raum reservieren",
-
     "sich über das Gegenüber informieren",
-
     "passende Kleidung",
-
     "sich Rechtfertigungen überlegen"
 
   ],
@@ -798,13 +745,9 @@ const questions = {
   answers: [
 
     "E-Mail",
-
     "Telefon",
-
     "persönliche Interaktion",
-
     "Videokonferenz",
-
     "Social Media"
 
   ],
@@ -821,13 +764,9 @@ const questions = {
   answers: [
 
     "E-Mail",
-
     "Telefon",
-
     "persönliche Interaktion",
-
     "Videokonferenz",
-
     "Internetauftritt"
 
   ],
@@ -844,13 +783,9 @@ const questions = {
   answers: [
 
     "Augenbrauen heben",
-
     "Lächeln",
-
     "Mundwinkel nach unten",
-
     "Kopf schütteln",
-
     "Augen schließen"
 
   ],
@@ -867,13 +802,9 @@ const questions = {
   answers: [
 
     "Kommunikation über Worte",
-
     "Kommunikation durch Gebärden",
-
     "Kommunikation durch Körpersprache",
-
     "Kommunikation durch Emotionen",
-
     "Kommunikation durch Stimme und Tonfall"
 
   ],
@@ -883,7 +814,7 @@ const questions = {
 
 {
   question:
-  "Welches Verhalten sollten Sie vermeiden, um die Patientenzufriedenheit zu verbessern?",
+  "Es kommt häufiger vor, dass sich Patienten beschweren. Um die Patientenzufriedenheit zu verbessern, müssen alle MitarbeiterInnen ihr Verhalten verbessern. Welches Verhalten sollten Sie vermeiden?",
 
   multiple: false,
 
@@ -891,15 +822,15 @@ const questions = {
 
     "Genau zuhören und wichtige Informationen notieren.",
 
-    "Patienten mit Namen ansprechen und Blickkontakt halten.",
+    "Patientenansprache mit Namen und Blickkontakt verbessern die Gesprächsatmosphäre.",
 
     "Freundlich und höflich mit Patienten umgehen.",
 
-    "Sich verständlich ausdrücken.",
+    "Sich gegenüber dem Patienten um eine verständliche Ausdrucksweise bemühen.",
 
-    "Dem Patienten sagen, welche Kollegin schuld am Problem ist.",
+    "Wenn Probleme durch das Verhalten von KollegInnen auftreten, sollte der Patient gesagt bekommen, wer das Problem verursacht hat und wen die Schuld trifft.",
 
-    "Auch zukünftig Hilfe anbieten."
+    "Den Patienten auch für die Zukunft aktive Hilfe anbieten, um Ängste und Ungewissheiten aufzubauen."
 
   ],
 
@@ -915,20 +846,15 @@ const questions = {
   answers: [
 
     "Reden ist Silber, Schweigen ist Gold.",
-
     "Morgenstund hat Gold im Mund.",
-
     "Freundlich und höflich mit Patienten umgehen.",
-
     "Es ist nicht alles Gold, was glänzt.",
-
     "Keine Antwort ist auch eine Antwort.",
-
     "Wie du mir, so ich dir."
 
   ],
 
-  correct: [4]
+  correct: [0,4]
 }
 
   ],
