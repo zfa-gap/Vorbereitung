@@ -3266,11 +3266,10 @@ const questions = {
   items: [
      "Erlass eines Mahnbescheides",
      "Patient ist in Zahlungsverzug",
-	"Zwangsvollstreckung"
+	"Zwangsvollstreckung",
     "Erlass eines Vollstreckungsbescheides",
-	"kaufmännisches Mahnverfahren",
+	"kaufmännisches Mahnverfahren"
    
-    
     
   ],
 
