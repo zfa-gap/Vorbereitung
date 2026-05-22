@@ -2722,14 +2722,12 @@ clearInterval(timer);
           q.correct[index]
         ){
 
-          select.style.border =
-            "2px solid #8dffb5";
+      select.classList.add("correct");
         }
 
         else{
 
-          select.style.border =
-            "2px solid #ff7b7b";
+        select.classList.add("wrong");
         }
       });
     }
