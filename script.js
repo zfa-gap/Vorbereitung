@@ -215,9 +215,9 @@ const questions = {
   type: "matching",
 
   categories: [
-    "KZVB = 1",
-    "BLZK = 2",
-    "ZBV = 3"
+    "KZVB",
+    "BLZK",
+    "ZBV"
   ],
 
   items: [
@@ -231,7 +231,7 @@ const questions = {
     "Verkürzungsanträge der Ausbildungsdauer genehmigen"
   ],
 
-  correct: [0,1,2,1,2,0,1,1]
+  correct: [0,1,2,2,0,1,1,2]
 },
      
 {
