@@ -210,6 +210,32 @@ const questions = {
 
 {
   question:
+  "Ordnen Sie die Aufgaben den Organisationen zu!",
+
+  type: "matching",
+
+  categories: [
+    "KZVB = 1",
+    "BLZK = 2",
+    "ZBV = 3"
+  ],
+
+  items: [
+    "Quartalsabrechnung",
+    "Standesvertretung aller Zahnärzte",
+    "Durchführung der GAP 1 und GAP 2",
+    "Genehmigung der Ausbildungsverträge",
+    "Zahnärztlichen Notdienst einteilen",
+    "Abrechnungsfortbildungen",
+    "Erstellen der GAP 1 und GAP 2",
+    "Verkürzungsanträge der Ausbildungsdauer genehmigen"
+  ],
+
+  correct: [0,1,2,1,2,0,1,1]
+},
+     
+{
+  question:
   "Welche Aussage zum Datenschutz ist richtig?",
 
   multiple: false,
@@ -286,7 +312,7 @@ const questions = {
 
   answers: [
     "Ein Patient hat das Recht, dass seine Daten berichtigt werden, wenn sie unrichtig sind.",
-    "Personenbezogene Daten dürfen nicht von Auszubildenden eingesehen werden.  ",
+    "Personenbezogene Daten dürfen nicht von Auszubildenden eingesehen werden.",
     "Ein Patient hat das Recht, dass seine Daten berichtigt werden, wenn diese falsch sind",
     "Ein Patient hat das Recht, dass auch Verdachtsdiagnosen, die sich nicht bewahrheitet haben, gelöscht werden.",
     "Personenbezogene Daten einer Zahnarztpraxis dürfen nicht gelöscht werden, wenn ihre gesetzlich vorgeschriebene Aufbewahrungsfrist noch nicht abgelaufen ist. ",
@@ -303,15 +329,15 @@ const questions = {
   multiple: true,
 
   answers: [
-    "Ein gutes Passwort sollte kurz sein.",
+    "Ein besonders gutes Passwort für ein Computerprogramm sollte nicht länger als 4 Zeichen sein und möglichst aus persönlichen Daten bestehen, damit man es sich leicht merken kann",
     "Ein sicheres Passwort sollte Sonderzeichen und Großbuchstaben enthalten.",
-    "Ein Passwort sollte über Jahre gleich bleiben.",
-    "Passwörter sollte man hinter dem Monitor notieren.",
+    "Wenn man sich ein gutes Passwort ausgedacht hat, dann kann man das über mehrere Jahre behalten, damit man nicht immer neu nachdenken muss.",
+    "Damit man sein Passwort nicht vergisst, sollte man es an einem geheimen Ort aufschreiben, z. B. hinter dem Monitor.",
     "Die Speicherung von Passwörtern sollte ausgeschaltet werden.",
     "Wenn Kolleginnen das Passwort kennen, sollte es geändert werden."
   ],
 
-  correct: [1,4]
+  correct: [1,5]
 },
 
 {
@@ -373,15 +399,136 @@ const questions = {
 
   answers: [
     "Personal- und Patientendaten sicher verwalten.",
-    "Zugriff soll überall möglich sein.",
-    "Recall braucht immer Zustimmung.",
-    "PCs sollen passwortgeschützt sein.",
+    "Der Zugriff auf Patientendaten soll in jedem Behandlungszimmer möglich sein.",
+    "Beim Recall muss der Patient immer zustimmen.",
+    "Um Daten vor Diebstahl zu schützen, muss der PC immer passwortgeschützt sein..",
     "Risiko eines PC-Ausfalls verringern.",
-    "Patientendaten dürfen für Werbung genutzt werden."
+    "Patientendaten dürfen ohne Einwilligung für Werbezwecke genutzt werden."
   ],
 
   correct: [0,4]
-}
+},
+
+
+     {
+  question:
+  "Welche der folgenden Feststellungen ist richtig?",
+
+  multiple: false,
+
+  answers: [
+
+    "Die Behandlungstage gehören zu den Stammdaten.",
+    "Die Angabe der behandelten Zähne gehört zu den Stammdaten.",
+    "Die Kartenleiste nimmt die Stammdaten des Patienten auf.",
+    "Die Stammdaten ändern sich häufig während der Behandlungsdauer.",
+    "Die Adresse des Patienten gehört zu den Stammdaten."
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Aussagen zum Anti-Viren-Programm sind richtig? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+
+    "Das Anti-Viren-Programm gehört zur Hardware.",
+    "Das Anti-Viren-Programm dient dazu, dass sich die Patienten nicht mit Viren infizieren.",
+    "Das Anti-Viren-Programm gehört zur Software.",
+    "Ein Anti-Viren-Programm funktioniert nur mit ordnungsgemäßer Desinfektion.",
+    "Das Anti-Viren-Programm schützt den PC vor Viren und Online-Bedrohungen.",
+    "Ein Anti-Viren-Programm ersetzt regelmäßige Datensicherungen vollständig."
+
+  ],
+
+  correct: [2,4]
+},
+
+{
+  question:
+  "Welche beiden Aussagen zur Einwilligungspflicht sind richtig? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+
+    "Erst durch die ausdrückliche Einwilligung des Patienten in die ärztliche Behandlung ist die Rechtsvoraussetzung für die Behandlung gegeben. Ansonsten liegt immer Körperverletzung vor, auch bei einer Notfallbehandlung.",
+    "Eine Einwilligung ist nicht notwendig, wenn nur durch rasches Handeln eine Lebensgefahr des Patienten abgewendet werden kann.",
+    "Die Einwilligung kann immer nur von geschäftsfähigen Patienten gegeben werden. Bei Patienten unter 18 Jahren ist immer die Einwilligung der gesetzlichen Vertreter notwendig.",
+    "Der Patient kann seine Einwilligung in die zahnärztliche Behandlung jederzeit widerrufen.",
+    "Der Patient kann seine Einwilligung in die zahnärztliche Behandlung nicht jederzeit widerrufen.",
+    "Die Einwilligung ist nur bei operativen Eingriffen notwendig, nicht bei einfachen Behandlungen."
+
+  ],
+
+  correct: [1,3]
+},
+
+{
+  question:
+  "Welche Aussage zur Einwilligungspflicht bei einem Behandlungsvertrag ist falsch?",
+
+  multiple: false,
+
+  answers: [
+
+    "Erst durch die ausdrückliche Einwilligung des Patienten in die ärztliche Behandlung ist die Rechtsvoraussetzung für die Behandlung gegeben.",
+    "Die Einwilligung kann immer nur von geschäftsfähigen Patienten gegeben werden. Bei Patienten unter 18 Jahren ist immer die Einwilligung der gesetzlichen Vertreter notwendig, ansonsten liegt immer Körperverletzung vor!",
+    "Die Einwilligung kann grundsätzlich nur von geschäftsfähigen Patienten gegeben werden.",
+    "Bei Kindern ist immer die Einwilligung der gesetzlichen Vertreter notwendig.",
+    "Der Patient kann seine Einwilligung in die zahnärztliche Behandlung jederzeit widerrufen."
+
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "In welchem der folgenden Fälle liegt eine „Geschäftsführung ohne Auftrag“ vor?",
+
+  multiple: false,
+
+  answers: [
+
+    "Ohne ausdrückliche Weisung ihres Chefs hat eine ZFA die Lieferung von Desinfektionsmittel veranlasst.",
+    "Ein langjähriger Patient kommt zur Beratung in die Praxis.",
+    "Einer 18-jährigen Patientin werden am dafür eigens vereinbarten Termin 2 Weisheitszähne entfernt.",
+    "Ein 5-jähriges Kindergartenkind wird von der Kindergärtnerin in die Praxis gebracht, weil sich bei einem Sturz ein Zahn stark gelockert hat und es aus dem Mund blutet. Die Eltern des Kindes sind nicht erreichbar. Der Zahnarzt behandelt das Kind.",
+    "Eine ZFA kauft Putzmittel für die Praxis ohne Rücksprache mit Dr. Ritter."
+
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche der folgenden Feststellungen zum Behandlungsvertrag ist richtig?",
+
+  multiple: false,
+
+  answers: [
+
+    "Der Behandlungsvertrag ist stets schriftlich abzuschließen.",
+
+    "Der Behandlungsvertrag ist eine Sonderform des Dienstvertrages.",
+
+    "Der Behandlungsvertrag regelt das Rechtsverhältnis zwischen Patienten und Krankenkassen.",
+
+    "Der Behandlungsvertrag regelt die Abrechnung der zahnärztlichen Leistungen mit den entsprechenden Kostenträgern.",
+
+    "Ein Behandlungsvertrag wird nur mit Privatpatienten geschlossen."
+
+  ],
+
+  correct: [1]
+},
 
   ],
 
