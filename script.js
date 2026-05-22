@@ -3758,35 +3758,67 @@ backToLastMenu();
    ZFA PRÜFUNGSTRAINER — QUIZ ENGINE
 ====================================================== */
 
+/* ======================================================
+   QUIZ ENGINE
+====================================================== */
+
 let aktuellerGap = "";
 let aktuellerBereich = "";
+
 let aktuelleFragen = [];
 let aktuelleFrageIndex = 0;
+
 let punkte = 0;
 let beantwortet = false;
+
+/* ======================================================
+   START
+====================================================== */
 
 function showBereiche(gap) {
 
   aktuellerGap = gap;
 
-  document.getElementById("start-screen").classList.add("hidden");
-  document.getElementById("bereich-screen").classList.remove("hidden");
+  document
+    .getElementById("start-screen")
+    .classList.add("hidden");
 
-  if(gap === "gap1") {
-    document.getElementById("bereich-title").innerText = "GAP 1 auswählen";
-  } else {
-    document.getElementById("bereich-title").innerText = "GAP 2 auswählen";
-  }
+  document
+    .getElementById("bereich-screen")
+    .classList.remove("hidden");
+
+  document
+    .getElementById("bereich-title")
+    .innerText =
+      gap === "gap1"
+      ? "GAP 1 auswählen"
+      : "GAP 2 auswählen";
 
 }
+
+/* ======================================================
+   HOME
+====================================================== */
 
 function goHome() {
 
-  document.getElementById("quiz-screen").classList.add("hidden");
-  document.getElementById("bereich-screen").classList.add("hidden");
-  document.getElementById("start-screen").classList.remove("hidden");
+  document
+    .getElementById("quiz-screen")
+    .classList.add("hidden");
+
+  document
+    .getElementById("bereich-screen")
+    .classList.add("hidden");
+
+  document
+    .getElementById("start-screen")
+    .classList.remove("hidden");
 
 }
+
+/* ======================================================
+   QUIZ START
+====================================================== */
 
 function startQuiz(bereich) {
 
@@ -3813,53 +3845,81 @@ function startQuiz(bereich) {
   aktuelleFragen = questions[key];
 
   aktuelleFrageIndex = 0;
+
   punkte = 0;
 
-  document.getElementById("bereich-screen").classList.add("hidden");
-  document.getElementById("quiz-screen").classList.remove("hidden");
+  document
+    .getElementById("bereich-screen")
+    .classList.add("hidden");
+
+  document
+    .getElementById("quiz-screen")
+    .classList.remove("hidden");
 
   showQuestion();
 
 }
 
+/* ======================================================
+   FRAGE ZEIGEN
+====================================================== */
+
 function showQuestion() {
 
   beantwortet = false;
 
-  const frage = aktuelleFragen[aktuelleFrageIndex];
+  const frage =
+    aktuelleFragen[aktuelleFrageIndex];
 
-  const answersDiv = document.getElementById("answers");
+  const answersDiv =
+    document.getElementById("answers");
 
   answersDiv.innerHTML = "";
 
-  document.getElementById("result").innerText = "";
+  document
+    .getElementById("result")
+    .innerText = "";
 
-  document.getElementById("progress").innerText =
+  document
+    .getElementById("progress")
+    .innerText =
     "Frage " +
     (aktuelleFrageIndex + 1) +
     " von " +
     aktuelleFragen.length;
 
-  document.getElementById("question").innerText =
+  document
+    .getElementById("question")
+    .innerText =
     frage.question || frage.frage;
+
+  /* =========================
+     MATCHING
+  ========================= */
 
   if(frage.type === "matching") {
 
     frage.items.forEach((item, index) => {
 
-      const wrapper = document.createElement("div");
+      const wrapper =
+        document.createElement("div");
 
       wrapper.style.marginBottom = "15px";
 
-      const label = document.createElement("p");
+      const label =
+        document.createElement("p");
 
       label.innerText = item;
 
-      const select = document.createElement("select");
+      const select =
+        document.createElement("select");
+
+      select.dataset.index = index;
 
       frage.categories.forEach((cat, i) => {
 
-        const option = document.createElement("option");
+        const option =
+          document.createElement("option");
 
         option.value = i;
         option.text = cat;
@@ -3875,7 +3935,8 @@ function showQuestion() {
 
     });
 
-    const btn = document.createElement("button");
+    const btn =
+      document.createElement("button");
 
     btn.innerText = "Antwort prüfen";
 
@@ -3887,45 +3948,65 @@ function showQuestion() {
 
   }
 
+  /* =========================
+     ORDERING
+  ========================= */
+
   if(frage.type === "ordering") {
 
     frage.items.forEach((item, index) => {
 
-      const p = document.createElement("p");
+      const p =
+        document.createElement("p");
 
-      p.innerText = (index + 1) + ". " + item;
+      p.innerText =
+        (index + 1) + ". " + item;
+
+      p.classList.add("ordering-item");
 
       answersDiv.appendChild(p);
 
     });
 
-    const btn = document.createElement("button");
+    const info =
+      document.createElement("p");
 
-    btn.innerText = "Weiter";
+    info.innerText =
+      "Reihenfolge-Aufgabe";
 
-    btn.onclick = nextQuestion;
+    answersDiv.appendChild(info);
 
-    answersDiv.appendChild(btn);
+    showNextButton();
 
     return;
 
   }
 
-  const answers = frage.answers || frage.antworten;
+  const answers =
+    frage.answers || frage.antworten;
+
+  /* =========================
+     MULTIPLE
+  ========================= */
 
   if(frage.multiple === true) {
 
     answers.forEach((answer, index) => {
 
-      const wrapper = document.createElement("div");
+      const wrapper =
+        document.createElement("div");
 
-      const checkbox = document.createElement("input");
+      wrapper.classList.add("checkbox-row");
+
+      const checkbox =
+        document.createElement("input");
 
       checkbox.type = "checkbox";
 
       checkbox.value = index;
 
-      const label = document.createElement("label");
+      const label =
+        document.createElement("label");
 
       label.innerText = answer;
 
@@ -3936,11 +4017,14 @@ function showQuestion() {
 
     });
 
-    const btn = document.createElement("button");
+    const btn =
+      document.createElement("button");
 
-    btn.innerText = "Antwort prüfen";
+    btn.innerText =
+      "Antwort prüfen";
 
-    btn.onclick = checkMultipleChoice;
+    btn.onclick =
+      checkMultipleChoice;
 
     answersDiv.appendChild(btn);
 
@@ -3948,13 +4032,19 @@ function showQuestion() {
 
   }
 
+  /* =========================
+     SINGLE CHOICE
+  ========================= */
+
   answers.forEach((answer, index) => {
 
-    const button = document.createElement("button");
+    const button =
+      document.createElement("button");
 
     button.innerText = answer;
 
-    button.onclick = () => checkSingleChoice(index);
+    button.onclick = () =>
+      checkSingleChoice(index);
 
     answersDiv.appendChild(button);
 
@@ -3962,31 +4052,50 @@ function showQuestion() {
 
 }
 
+/* ======================================================
+   SINGLE CHOICE
+====================================================== */
+
 function checkSingleChoice(index) {
 
   if(beantwortet) return;
 
   beantwortet = true;
 
-  const frage = aktuelleFragen[aktuelleFrageIndex];
+  const frage =
+    aktuelleFragen[aktuelleFrageIndex];
 
-  const correct = frage.correct || [frage.korrekt];
+  const correct =
+    frage.correct || [frage.korrekt];
 
-  if(correct.includes(index)) {
+  const richtig =
+    correct.includes(index);
+
+  if(richtig) {
 
     punkte++;
 
-    document.getElementById("result").innerText = "Richtig ✅";
+    document
+      .getElementById("result")
+      .innerText =
+      "Richtig ✅";
 
   } else {
 
-    document.getElementById("result").innerText = "Falsch ❌";
+    document
+      .getElementById("result")
+      .innerText =
+      "Falsch ❌";
 
   }
 
   showNextButton();
 
 }
+
+/* ======================================================
+   MULTIPLE
+====================================================== */
 
 function checkMultipleChoice() {
 
@@ -3994,27 +4103,37 @@ function checkMultipleChoice() {
 
   beantwortet = true;
 
-  const frage = aktuelleFragen[aktuelleFrageIndex];
-
-  const correct = frage.correct;
+  const frage =
+    aktuelleFragen[aktuelleFrageIndex];
 
   const checked =
-    [...document.querySelectorAll("#answers input:checked")]
-    .map(cb => Number(cb.value));
+    [...document.querySelectorAll(
+      "#answers input:checked"
+    )].map(cb => Number(cb.value));
+
+  const correct =
+    frage.correct;
 
   const richtig =
-    JSON.stringify(checked.sort()) ===
+    JSON.stringify(checked.sort())
+    ===
     JSON.stringify(correct.sort());
 
   if(richtig) {
 
     punkte++;
 
-    document.getElementById("result").innerText = "Richtig ✅";
+    document
+      .getElementById("result")
+      .innerText =
+      "Richtig ✅";
 
   } else {
 
-    document.getElementById("result").innerText = "Falsch ❌";
+    document
+      .getElementById("result")
+      .innerText =
+      "Falsch ❌";
 
   }
 
@@ -4022,22 +4141,32 @@ function checkMultipleChoice() {
 
 }
 
+/* ======================================================
+   MATCHING
+====================================================== */
+
 function checkMatching() {
 
   if(beantwortet) return;
 
   beantwortet = true;
 
-  const frage = aktuelleFragen[aktuelleFrageIndex];
+  const frage =
+    aktuelleFragen[aktuelleFrageIndex];
 
   const selects =
-    document.querySelectorAll("#answers select");
+    document.querySelectorAll(
+      "#answers select"
+    );
 
   let richtig = true;
 
   selects.forEach((select, index) => {
 
-    if(Number(select.value) !== frage.correct[index]) {
+    if(
+      Number(select.value)
+      !== frage.correct[index]
+    ) {
 
       richtig = false;
 
@@ -4049,11 +4178,17 @@ function checkMatching() {
 
     punkte++;
 
-    document.getElementById("result").innerText = "Richtig ✅";
+    document
+      .getElementById("result")
+      .innerText =
+      "Richtig ✅";
 
   } else {
 
-    document.getElementById("result").innerText = "Falsch ❌";
+    document
+      .getElementById("result")
+      .innerText =
+      "Falsch ❌";
 
   }
 
@@ -4061,27 +4196,43 @@ function checkMatching() {
 
 }
 
+/* ======================================================
+   NEXT BUTTON
+====================================================== */
+
 function showNextButton() {
 
-  const answersDiv = document.getElementById("answers");
+  const answersDiv =
+    document.getElementById("answers");
 
-  const btn = document.createElement("button");
+  const btn =
+    document.createElement("button");
 
-  btn.innerText = "Nächste Frage";
+  btn.innerText =
+    "Nächste Frage";
 
-  btn.onclick = nextQuestion;
+  btn.onclick =
+    nextQuestion;
 
   answersDiv.appendChild(btn);
 
 }
 
+/* ======================================================
+   NÄCHSTE FRAGE
+====================================================== */
+
 function nextQuestion() {
 
   aktuelleFrageIndex++;
 
-  if(aktuelleFrageIndex < aktuelleFragen.length) {
+  if(
+    aktuelleFrageIndex
+    < aktuelleFragen.length
+  ) {
 
     showQuestion();
+
     return;
 
   }
@@ -4090,19 +4241,28 @@ function nextQuestion() {
 
 }
 
+/* ======================================================
+   ERGEBNIS
+====================================================== */
+
 function showFinalResult() {
 
-  document.getElementById("question").innerText =
+  document
+    .getElementById("question")
+    .innerText =
     "Quiz beendet 🎉";
 
-  document.getElementById("answers").innerHTML = "";
+  document
+    .getElementById("answers")
+    .innerHTML = "";
 
-  document.getElementById("result").innerHTML =
-    "<strong>Punkte: " +
-    punkte +
+  document
+    .getElementById("result")
+    .innerHTML =
+    "<strong>Punkte: "
+    + punkte +
     " / " +
     aktuelleFragen.length +
     "</strong>";
 
 }
-
