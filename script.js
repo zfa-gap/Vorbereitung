@@ -928,6 +928,370 @@ const questions = {
   ],
 
   correct: [0,1,2,3,4]
+}, 
+
+     {
+  question:
+  "Eine „Geschäftsführung ohne Auftrag“ liegt vor, wenn ...",
+
+  multiple: false,
+
+  answers: [
+
+    "der Geschäftsführer einer Firma einem Zahnarzt ein unverlangtes Angebot zusendet.",
+    "eine zahnmedizinische Fachangestellte mit Patienten Termine vereinbart, ohne von ihrem Chef dazu beauftragt zu sein.",
+    "ein Zahnarzt einen Patienten gegen dessen Willen behandelt.",
+    "ein Zahnarzt einen Patienten, der seine eGK nicht vorgelegt hat, trotzdem behandelt.",
+    "ein Zahnarzt einem bewusstlosen Patienten Erste Hilfe leistet."
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Ein Zahnarzt führt eine Wurzelspitzenresektion bei einem Patienten durch. Um welche Vertragsart handelt es sich?",
+
+  multiple: false,
+
+  answers: [
+
+    "Arbeitsvertrag",
+    "Dienstvertrag",
+    "Werkvertrag",
+    "Behandlungsvertrag",
+    "Geschäftsführung ohne Auftrag"
+
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Mit welcher Berufsgruppe wird typischerweise ein Werkvertrag abgeschlossen?",
+
+  multiple: false,
+
+  answers: [
+
+    "Rechtsanwalt",
+    "Zahnarzt",
+    "Handwerker/Zahntechniker",
+    "Steuerberater",
+    "Kieferchirurg"
+
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Wann behandelt ein Zahnarzt einen Patienten ohne einen Vertrag mit dem Patienten abzuschließen?",
+
+  multiple: false,
+
+  answers: [
+
+    "Werkvertrag",
+    "Dienstvertrag",
+    "Arbeitsvertrag",
+    "Behandlungsvertrag",
+    "Geschäftsführung ohne Auftrag"
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "In welchem Fall handelt es sich um einen Werkvertrag?",
+
+  multiple: false,
+
+  answers: [
+
+    "Ein Patient gibt seine Einwilligung zu einer Kieferoperation.",
+    "Ein Zahnarzt erteilt einem Zahnlabor den Auftrag zur Reparatur einer Zahnprothese.",
+    "Ein Arzt behandelt am Unfallort einen bewusstlosen Patienten.",
+    "Ein Zahnarzt beauftragt in einem Streitfall einen Rechtsanwalt.",
+    "Ein Patient erscheint zur Routineuntersuchung in der Praxis."
+
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Wie viele Seiten hat eine Nachricht laut Schulz von Thun?",
+
+  multiple: false,
+
+  answers: [
+
+    "2",
+    "3",
+    "4",
+    "5",
+    "6"
+
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Welche Ebene gibt es beim 4-Ohren-Modell nicht?",
+
+  multiple: false,
+
+  answers: [
+
+    "Appell-Ebene",
+    "Sach-Ebene",
+    "Ich-Ebene",
+    "Du-Ebene",
+    "Beziehungs-Ebene"
+
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche 2 Aussagen treffen auf Watzlawicks bekannteste Kommunikationsregel zu?",
+
+  multiple: true,
+
+  answers: [
+
+    "Es gibt nichts Gutes, außer man tut es.",
+    "Reden ist Silber, Schweigen ist Gold.",
+    "Man kann nicht nicht kommunizieren.",
+    "Wer zuletzt lacht, denkt zu langsam.",
+    "Keine Antwort ist auch eine Antwort."
+
+  ],
+
+  correct: [2,4]
+},
+
+{
+  question:
+  "Welche Antwort ist richtig?",
+
+  multiple: false,
+
+  answers: [
+
+    "Bei einem Patienten mit einer Angststörung ist die Angst oft übertrieben und kann durch „sich zusammenreißen“ beherrscht werden.",
+    "Bei einem Patienten mit einer Angststörung kann die Angst von der ZFA in der Regel gar nicht wahrgenommen werden.",
+    "Ein Panikanfall beim Anblick einer Spritze kann sogar mit Todesangst beim Patienten einhergehen.",
+    "Ein Panikanfall beim Anblick einer Spritze geht niemals mit Todesangst beim Patienten einher.",
+    "Angststörungen spielen in der Zahnarztpraxis keine Rolle."
+
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Wann ist keine schriftliche Kommunikation angebracht?",
+
+  multiple: false,
+
+  answers: [
+
+    "Kündigungsschreiben",
+    "Ausbildungsvertrag",
+    "Mahnung",
+    "Mitarbeiterbesprechung",
+    "Auftragsbestätigung"
+
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Was zählt nicht zur nonverbalen Kommunikation?",
+
+  multiple: false,
+
+  answers: [
+
+    "Körpersprache",
+    "Mimik",
+    "Körperhaltung",
+    "Kleidung",
+    "Tonfall"
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welches sind die 3 „Todsünden“ in der Kommunikation?",
+
+  multiple: true,
+
+  answers: [
+
+    "Sich herablassend benehmen",
+    "Ich-Botschaften geben",
+    "Ungebetene Ratschläge aussprechen",
+    "Keine Gerüchte verbreiten",
+    "Nicht zu seiner eigenen Botschaft stehen",
+    "Empathie zeigen"
+
+  ],
+
+  correct: [0,2,4]
+},
+
+{
+  question:
+  "Was gehört nicht zu einer guten Gesprächsvorbereitung?",
+
+  multiple: false,
+
+  answers: [
+
+    "genügend Zeit einplanen",
+    "ruhigen Raum reservieren",
+    "sich über das Gegenüber informieren",
+    "passende Kleidung",
+    "sich Rechtfertigungen überlegen"
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Kommunikationsform ist die wichtigste in der Zahnarztpraxis?",
+
+  multiple: false,
+
+  answers: [
+
+    "E-Mail",
+    "Telefon",
+    "persönliche Interaktion",
+    "Videokonferenz",
+    "Social Media"
+
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Welche Kommunikation ist am effizientesten, um Patienten über die Öffnungszeiten der Zahnarztpraxis zu informieren?",
+
+  multiple: false,
+
+  answers: [
+
+    "E-Mail",
+    "Telefon",
+    "persönliche Interaktion",
+    "Videokonferenz",
+    "Internetauftritt"
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche nonverbale Kommunikation kann eine ZFA verwenden, um den Patienten zu beruhigen?",
+
+  multiple: false,
+
+  answers: [
+
+    "Augenbrauen heben",
+    "Lächeln",
+    "Mundwinkel nach unten",
+    "Kopf schütteln",
+    "Augen schließen"
+
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Was versteht man unter paraverbaler Kommunikation?",
+
+  multiple: false,
+
+  answers: [
+
+    "Kommunikation über Worte",
+    "Kommunikation durch Gebärden",
+    "Kommunikation durch Körpersprache",
+    "Kommunikation durch Emotionen",
+    "Kommunikation durch Stimme und Tonfall"
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welches Verhalten sollten Sie vermeiden, um die Patientenzufriedenheit zu verbessern?",
+
+  multiple: false,
+
+  answers: [
+
+    "Genau zuhören und wichtige Informationen notieren.",
+    "Patienten mit Namen ansprechen und Blickkontakt halten.",
+    "Freundlich und höflich mit Patienten umgehen.",
+    "Sich verständlich ausdrücken.",
+    "Dem Patienten sagen, welche Kollegin schuld am Problem ist.",
+    "Auch zukünftig Hilfe anbieten."
+
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Redewendung gibt den Grundsatz der Kommunikation nach Watzlawick am besten wieder?",
+
+  multiple: false,
+
+  answers: [
+
+    "Reden ist Silber, Schweigen ist Gold.",
+    "Morgenstund hat Gold im Mund.",
+    "Freundlich und höflich mit Patienten umgehen.",
+    "Es ist nicht alles Gold, was glänzt.",
+    "Keine Antwort ist auch eine Antwort.",
+    "Wie du mir, so ich dir."
+
+  ],
+
+  correct: [4]
 }
 
 ],
