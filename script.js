@@ -2920,7 +2920,7 @@ const questions = {
 
 
     {
-      frage: "Berechnen Sie die Mehrwertsteuer von 750,00 €, netto.",
+      question: "Berechnen Sie die Mehrwertsteuer von 750,00 €, netto.",
       antworten: [
         "142,00 €",
         "142,50 €",
@@ -2928,11 +2928,11 @@ const questions = {
         "928,20 €",
         "892,50 €"
       ],
-      korrekt: 1
+      correct: 1
     },
 
     {
-      frage: "Für Zahlung innerhalb von 8 Tage nach Rechnungsdatum darf Dr. Ritter 2% Skonto vom Rechnungsbetrag abziehen. Der Rechnungsbetrag lautet 892,50 €. Wie lautert der Überweisungsbetrag, wenn er innerhalb der Skontofrist bezahlt?",
+      question: "Für Zahlung innerhalb von 8 Tage nach Rechnungsdatum darf Dr. Ritter 2% Skonto vom Rechnungsbetrag abziehen. Der Rechnungsbetrag lautet 892,50 €. Wie lautert der Überweisungsbetrag, wenn er innerhalb der Skontofrist bezahlt?",
       antworten: [
         "17,85 €",
         "874,00 €",
@@ -2940,11 +2940,11 @@ const questions = {
         "874,65 €",
         "892,50 €"
       ],
-      korrekt: 3
+      correct: 3
     },
 
     {
-      frage: "Für Zahlung innerhalb von 7 Tage nach Rechnungsdatum darf ein Zahnarzt 3 % Skonto vom Rechnungsbetrag abziehen. Der Rechnungsbetrag lautet 1.286,33 €. Wie lautet der Überweisungsbetrag, wenn er innerhalb der Skontofrist bezahlt?",
+      question: "Für Zahlung innerhalb von 7 Tage nach Rechnungsdatum darf ein Zahnarzt 3 % Skonto vom Rechnungsbetrag abziehen. Der Rechnungsbetrag lautet 1.286,33 €. Wie lautet der Überweisungsbetrag, wenn er innerhalb der Skontofrist bezahlt?",
       antworten: [
         "1.286,33 €",
         "1.324,89 €",
@@ -2952,11 +2952,11 @@ const questions = {
         "38,00 €",
         "1.247,74 €"
       ],
-      korrekt: 4
+      correct: 4
     },
 
     {
-      frage: "Der Listenpreis einer Patientenliege beträgt 1.783,00 €. Dr. Ritter bekommt einen Rabatt und muss nur 1.693,85 € bezahlen. Wie viel % Rabatt hat er erhalten?",
+      question: "Der Listenpreis einer Patientenliege beträgt 1.783,00 €. Dr. Ritter bekommt einen Rabatt und muss nur 1.693,85 € bezahlen. Wie viel % Rabatt hat er erhalten?",
       antworten: [
         "5%",
         "10%",
@@ -2964,11 +2964,11 @@ const questions = {
         "105%",
         "15%"
       ],
-      korrekt: 0
+      correct: 0
     },
 
     {
-      frage: "Aufgrund besonders guter Leistungen erhält eine ZFA eine Gehaltserhöhung von 2,5%. Sie bekommt nach der Erhöhung 2.562,50 € pro Monat. Wie hoch (in €) war ihr Gehalt vor der Gehaltserhöhung?",
+      question: "Aufgrund besonders guter Leistungen erhält eine ZFA eine Gehaltserhöhung von 2,5%. Sie bekommt nach der Erhöhung 2.562,50 € pro Monat. Wie hoch (in €) war ihr Gehalt vor der Gehaltserhöhung?",
       antworten: [
         "2.626,56 €",
         "2.626,00 €",
@@ -2976,11 +2976,11 @@ const questions = {
         "2.500,00 €",
         "2.437,50 €"
       ],
-      korrekt: 3
+      correct: 3
     },
 
     {
-      frage: "Bei einer 40 Stundenwoche (SW) verdient eine ZFA monatlich 2.700,00 €. Wie hoch ist ihr Gehalt, wenn sie nur 32 Stunden pro Woche arbeitet?",
+      question: "Bei einer 40 Stundenwoche (SW) verdient eine ZFA monatlich 2.700,00 €. Wie hoch ist ihr Gehalt, wenn sie nur 32 Stunden pro Woche arbeitet?",
       antworten: [
         "2.165,00 €",
         "2.732,00 €",
@@ -2988,11 +2988,11 @@ const questions = {
         "2.160,00 €",
         "2.100,00 €"
       ],
-      korrekt: 3
+      correct: 3
     },
 
     {
-      frage: "Eine Auszubildende hat Anspruch auf 27 Urlaubstage (UT) im Jahr. Wie viele Urlaubstage bekommt sie, wenn das Ausbildungsverhältnis in diesem Jahr erst seit 01.09. besteht.",
+      question: "Eine Auszubildende hat Anspruch auf 27 Urlaubstage (UT) im Jahr. Wie viele Urlaubstage bekommt sie, wenn das Ausbildungsverhältnis in diesem Jahr erst seit 01.09. besteht.",
       antworten: [
         "6 Urlaubstage",
         "7 Urlaubstage",
@@ -3000,11 +3000,11 @@ const questions = {
         "9 Urlaubstage",
         "20 Urlaubstage"
       ],
-      korrekt: 3
+      correct: 3
     },
 
     {
-      frage: "Am 27.02. nimmt Dr. Ritter kurzfristig einen Kredit in Höhe von 2.480,00 € auf und zahlt 243 Tage zu spät am 31.10. einschließlich Zinsen 2.590,57 € zurück. Mit welcher Formel berechnen Sie den Zinssatz?",
+      question: "Am 27.02. nimmt Dr. Ritter kurzfristig einen Kredit in Höhe von 2.480,00 € auf und zahlt 243 Tage zu spät am 31.10. einschließlich Zinsen 2.590,57 € zurück. Mit welcher Formel berechnen Sie den Zinssatz?",
       antworten: [
         "p= k*t/100*360",
         "p= k*Z/100",
@@ -3012,11 +3012,11 @@ const questions = {
         "p=Z/K*t",
         "p= Z*100*360/K*T"
       ],
-      korrekt: 4
+      correct: 4
     },
 
     {
-      frage: "Am 27.02. nimmt Dr. Ritter einen Kredit von 2.480,00 € auf und zahlt 243 Tage später mit einem Zinssatz von 3,7% den Kredit wieder zurück. Wie viel Zinsen muss Dr. Ritter bezahlen?",
+      question: "Am 27.02. nimmt Dr. Ritter einen Kredit von 2.480,00 € auf und zahlt 243 Tage später mit einem Zinssatz von 3,7% den Kredit wieder zurück. Wie viel Zinsen muss Dr. Ritter bezahlen?",
       antworten: [
         "61,94 €",
         "62,00 €",
@@ -3024,11 +3024,11 @@ const questions = {
         "16,74 €",
         "3,70 €"
       ],
-      korrekt: 0
+      correct: 0
     },
 
     {
-      frage: "Was gehört nicht zur bargeldlosen Zahlung?",
+      question: "Was gehört nicht zur bargeldlosen Zahlung?",
       antworten: [
         "Überweisung",
         "Dauerauftrag",
@@ -3036,11 +3036,11 @@ const questions = {
         "Barzahlung gegen Quittung",
         "Zahlung mit Kreditkarte"
       ],
-      korrekt: 3
+      correct: 3
     },
 
     {
-      frage: "Für welche Art der Zahlung eignet sich ein Dauerauftrag am besten?",
+      question: "Für welche Art der Zahlung eignet sich ein Dauerauftrag am besten?",
       antworten: [
         "jährliche Einkommensteuernachzahlungen",
         "Stromrechnungen",
@@ -3048,11 +3048,11 @@ const questions = {
         "Lieferantenrechnung",
         "Prüfungsgebühren"
       ],
-      korrekt: 2
+      correct: 2
     },
 
     {
-      frage: "Was ist kein notwendiger Bestandteil einer Quittung?",
+      question: "Was ist kein notwendiger Bestandteil einer Quittung?",
       antworten: [
         "Datum der Zahlung",
         "Unterschrift des Zahlungsempfängers",
@@ -3060,7 +3060,7 @@ const questions = {
         "Unterschrift des Zahlenden",
         "Zahlungsbetrag"
       ],
-      korrekt: 3
+      correct: 3
     }
      
 
