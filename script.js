@@ -17,7 +17,7 @@ const questions = {
   
     {
       question:
-      "Frau Meier ist bei der AOK versichert. Welche beiden Aussagen zur AOK sind richtig?",
+      "Frau Meier ist bei der AOK versichert. Welche beiden Aussagen zur AOK sind richtig? (2 Antworten)",
 
       multiple: true,
 
@@ -69,7 +69,7 @@ const questions = {
 
     {
       question:
-      "Welche der nachfolgenden Krankenkassen gehören zu den Primärkassen?",
+      "Welche der nachfolgenden Krankenkassen gehören zu den Primärkassen? (2 Antworten)",
 
       multiple: true,
 
@@ -192,7 +192,7 @@ const questions = {
 
 {
   question:
-  "Welche beiden Aussagen zum Recall sind richtig?",
+  "Welche beiden Aussagen zum Recall sind richtig? (2 Antworten)",
 
   multiple: true,
 
@@ -270,7 +270,7 @@ const questions = {
 
 {
   question:
-  "Welche beiden Aussagen zum Datenschutzbeauftragten sind richtig?",
+  "Welche beiden Aussagen zum Datenschutzbeauftragten sind richtig? (2 Antworten)",
 
   multiple: true,
 
@@ -288,7 +288,7 @@ const questions = {
 
 {
   question:
-  "Welche beiden Aussagen zum Datenschutz sind falsch?",
+  "Welche beiden Aussagen zum Datenschutz sind falsch? (2 Antworten)",
 
   multiple: true,
 
@@ -306,7 +306,7 @@ const questions = {
 
 {
   question:
-  "Welche beiden Aussagen zum Umgang mit personenbezogenen Daten gemäß DSGVO sind falsch?",
+  "Welche beiden Aussagen zum Umgang mit personenbezogenen Daten gemäß DSGVO sind falsch? (2 Antworten)",
 
   multiple: true,
 
@@ -324,7 +324,7 @@ const questions = {
 
 {
   question:
-  "Welche beiden Aussagen zum Datenschutz sind richtig?",
+  "Welche beiden Aussagen zum Datenschutz sind richtig? (2 Antworten)",
 
   multiple: true,
 
@@ -393,7 +393,7 @@ const questions = {
 
 {
   question:
-  "Welche beiden Ziele verfolgt der Datenschutz?",
+  "Welche beiden Ziele verfolgt der Datenschutz? (2 Antworten)",
 
   multiple: true,
 
