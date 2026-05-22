@@ -2928,7 +2928,7 @@ const questions = {
         "928,20 €",
         "892,50 €"
       ],
-      correct: 1
+      correct: [1]
     },
 
     {
@@ -2940,7 +2940,7 @@ const questions = {
         "874,65 €",
         "892,50 €"
       ],
-      correct: 3
+      correct: [3]
     },
 
     {
@@ -2952,7 +2952,7 @@ const questions = {
         "38,00 €",
         "1.247,74 €"
       ],
-      correct: 4
+      correct: [4]
     },
 
     {
@@ -2964,7 +2964,7 @@ const questions = {
         "105%",
         "15%"
       ],
-      correct: 0
+      correct: [0]
     },
 
     {
@@ -2976,7 +2976,7 @@ const questions = {
         "2.500,00 €",
         "2.437,50 €"
       ],
-      correct: 3
+      correct: [3]
     },
 
     {
@@ -2988,7 +2988,7 @@ const questions = {
         "2.160,00 €",
         "2.100,00 €"
       ],
-      correct: 3
+      correct: [3]
     },
 
     {
@@ -3000,7 +3000,7 @@ const questions = {
         "9 Urlaubstage",
         "20 Urlaubstage"
       ],
-      correct: 3
+      correct: [3]
     },
 
     {
@@ -3012,7 +3012,7 @@ const questions = {
         "p=Z/K*t",
         "p= Z*100*360/K*T"
       ],
-      correct: 4
+      correct: [4]
     },
 
     {
@@ -3024,7 +3024,7 @@ const questions = {
         "16,74 €",
         "3,70 €"
       ],
-      correct: 0
+      correct: [0]
     },
 
     {
@@ -3036,7 +3036,7 @@ const questions = {
         "Barzahlung gegen Quittung",
         "Zahlung mit Kreditkarte"
       ],
-      correct: 3
+      correct: [3]
     },
 
     {
@@ -3048,7 +3048,7 @@ const questions = {
         "Lieferantenrechnung",
         "Prüfungsgebühren"
       ],
-      correct: 2
+      correct: [2]
     },
 
     {
@@ -3060,7 +3060,7 @@ const questions = {
         "Unterschrift des Zahlenden",
         "Zahlungsbetrag"
       ],
-      correct: 3
+      correct: [3]
     }
      
 
