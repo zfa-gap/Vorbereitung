@@ -2003,7 +2003,9 @@ const questions = {
       ],
 
       correct: [0]
-    }, {
+    }, 
+
+{
   question:
   "Warum sind Röntgenstrahlen für den Menschen gefährlich?",
 
@@ -2918,9 +2920,9 @@ const questions = {
   PV2: [
 
 
-
     {
-      question: "Berechnen Sie die Mehrwertsteuer von 750,00 €, netto.",
+      question: 
+	"Berechnen Sie die Mehrwertsteuer von 750,00 €, netto.",
 
  multiple: false,
 
@@ -2931,6 +2933,7 @@ const questions = {
         "928,20 €",
         "892,50 €"
       ],
+
       correct: [1]
     },
 
@@ -3097,7 +3100,199 @@ const questions = {
         "Zahlungsbetrag"
       ],
       correct: [3]
-    }
+    }, 
+
+{
+  question:
+  "Der Patient Erwin Müller hat am 03.04.2024 seine Rechnung erhalten. Die Zahlungsbedingung lautet: „Die Rechnung ist sofort zur Zahlung fällig. Bei Nichtbegleichen der Rechnung tritt gemäß § 286 BGB 30 Tage nach Rechnungserhalt Verzug ein.“ Herr Müller hat bis heute (24.06.2024) nicht bezahlt. Für wie viele Verzugstage können wir Verzugszinsen verlangen?",
+
+  multiple: false,
+
+  answers: [
+    "81 Tage",
+    "51 Tage",
+    "111 Tage",
+    "54 Tage",
+    "84 Tage"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Dr. Ritter kauft Verbandsmaterial bei einer Großhandlung. Ein Zahlungstermin wird nicht vereinbart. Wann kommt der Zahnarzt in Zahlungsverzug, wenn die Rechnung keine Zahlungsbedingungen enthält?",
+
+  multiple: false,
+
+  answers: [
+    "Sofort nach Erhalt der Ware",
+    "Wenn die Überweisung nicht innerhalb von 10 Tagen ab Rechnungsdatum erfolgt.",
+    "Automatisch ohne Mahnung 30 Tage nach Fälligkeit und Zugang der Rechnung",
+    "Immer automatisch ohne Mahnung 21 Tage nach Erhalt der Ware",
+    "Wenn er die Rechnung nicht unverzüglich (= ohne schuldhaftes Zögern) begleicht"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Zu welchem Zeitpunkt kommt ein Verbraucher in Zahlungsverzug, wenn im Kaufvertrag keine bestimmte Zahlungsfrist vereinbart wurde?",
+
+  multiple: false,
+
+  answers: [
+    "Nach Zugang einer 3. Mahnung des Verkäufers",
+    "30 Tage nach Zugang der Rechnung",
+    "Mit Lieferung des bestellten Gerätes",
+    "Mit Beantragung des Mahnbescheides",
+    "Mit dem Zugang einer Mahnung"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Wann muss Dr. Ritter eine Rechnung von HenrySchein bezahlen, wenn keinerlei Zahlungsbedingungen angegeben sind?",
+
+  multiple: false,
+
+  answers: [
+    "Sofort, ohne Abzug",
+    "Im Voraus",
+    "Innerhalb von 7 Tagen ohne Abzug",
+    "Innerhalb von 30 Tagen",
+    "Sofort, mit Abzug von Mehrwertsteuer"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Welche Aussagen zum außergerichtlichen Mahnverfahren sind richtig? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+    "Die Mahnschreiben sollen den Patienten verärgern.",
+    "Der offene Rechnungsbetrag soll so schneller beglichen werden.",
+    "Der Forderungsbetrag wird gerichtlich festgestellt.",
+    "Der Patient wird zur sofortigen Zahlung gezwungen.",
+    "Es können für den Schuldner zusätzliche Mahngebühren fällig werden.",
+    "Ein Inkassounternehmen hat mehr Befugnisse als der Zahnarzt."
+  ],
+
+  correct: [1,4]
+},
+
+{
+  question:
+  "Aus welchem Grund vermeidet Dr. Ritter ein gerichtliches Mahnverfahren bei geringen Honorarforderungen?",
+
+  multiple: false,
+
+  answers: [
+    "Ein gerichtliches Mahnverfahren darf nur durch einen Rechtsanwalt beantragt werden.",
+    "Die Kosten für ein gerichtliches Mahnverfahren sind im Vergleich zum außergerichtlichen Mahnverfahren niedriger.",
+    "Die Verjährung wird im gerichtlichen Mahnverfahren nicht gehemmt.",
+    "Bei geringen Honorarforderungen sind die Kosten für ein gerichtliches Mahnverfahren meist relativ hoch.",
+    "Ein gerichtliches Mahnverfahren darf erst ab einem Betrag von 100,00 Euro beantragt werden."
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Wie ist die richtige Reihenfolge beim gerichtlichen Mahnverfahren?",
+
+  multiple: false,
+
+  answers: [
+    "Mahnbescheid – Vollstreckungsbescheid – Zwangsvollstreckung",
+    "Mahnbescheid – Zwangsvollstreckung – Vollstreckungsbescheid",
+    "Einreichung der Klage – Urteil – Zwangsvollstreckung",
+    "Mahnbescheid – Urteil – Zwangsvollstreckung",
+    "Vollstreckungsbescheid – Mahnbescheid – Zwangsvollstreckung"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Was sind Vorteile eines effizienten kaufmännischen Mahnverfahrens in einer Zahnarztpraxis? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+    "Erkennen des Zahlungsverzugs von Patienten",
+    "Gewährleistungsansprüche werden gesichert",
+    "Liquiditätsvorteile für die Zahnarztpraxis",
+    "Die Patientenzufriedenheit wird verbessert",
+    "Behandlungsmethoden werden angepasst",
+    "Kostensenkung bei der Abrechnung"
+  ],
+
+  correct: [0,2]
+},
+
+{
+  question:
+  "Patientin Müller hat die Rechnung ihrer erhaltenen Zusatzleistungen nicht bezahlt. Nach drei schriftlichen Mahnungen wird Dr. Ritter ...",
+
+  multiple: false,
+
+  answers: [
+    "...einen gerichtlichen Mahnbescheid schreiben.",
+    "...die Zwangsvollstreckung beim Amtsgericht beantragen.",
+    "...ein Inkassobüro beauftragen.",
+    "...einen Rechtsanwalt beauftragen, der das Geld eintreibt.",
+    "...die Zustellung eines gerichtlichen Mahnbescheids beantragen."
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Wie ist die korrekte Reihenfolge, wenn der Patient eine Rechnung erhalten hat mit Zahlungsziel und das Zahlungsziel überschritten ist?",
+
+  type: "ordering",
+
+  items: [
+     "Erlass eines Mahnbescheides",
+     "Patient ist in Zahlungsverzug",
+	"Zwangsvollstreckung"
+    "Erlass eines Vollstreckungsbescheides",
+	"kaufmännisches Mahnverfahren",
+   
+    
+    
+  ],
+
+  correct: [1,4,0,3,2]
+},
+
+{
+  question:
+  "Wodurch wird die Verjährung einer Geldforderung gehemmt?",
+
+  multiple: false,
+
+  answers: [
+    "Durch einen eingeschriebenen Brief mit Einschreiben",
+    "Durch das Ausstellen eines Schuldscheins",
+    "Durch das Schreiben eines Rechtsanwalts",
+    "Durch die Bitte um Stundung der Forderung",
+    "Durch die Zustellung eines gerichtlichen Mahnbescheids"
+  ],
+
+  correct: [4]
+}
      
 
   ],
