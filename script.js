@@ -3291,6 +3291,798 @@ const questions = {
   ],
 
   correct: [4]
+}, 
+
+
+{
+  question:
+  "Nach zwei Mahnungen überweist Herr Ott einen Teilbetrag der Rechnung an den Zahnarzt. Welche Auswirkung hat diese Zahlung auf die Verjährung der Forderung?",
+
+  multiple: false,
+
+  answers: [
+    "Die Zahlung hat keine Auswirkung auf die Verjährung.",
+    "Die Verjährung läuft nochmals zwei Jahre ab dem Tag der Teilzahlung.",
+    "Die Verjährung läuft nochmals zwei Jahre ab Ende des Jahres.",
+    "Die Verjährung läuft nochmals drei Jahre ab dem Tag der Teilzahlung.",
+    "Die Verjährungsfrist beträgt nun 30 Jahre"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Was bedeutet die „Hemmung“ im Zusammenhang mit der Verjährung von Forderungen?",
+
+  multiple: false,
+
+  answers: [
+    "Die Verjährungsfrist ist 30 Jahre taggenau",
+    "Zur aktuellen Verjährungsfrist werden 6 Monate hinzugezählt",
+    "Die Verjährungsfrist ist 3 Jahre zum 31.12. des Jahres",
+    "Die Verjährungsfrist beginnt neu zu laufen, diesmal taggenau",
+    "Die Hemmung verhindert die Verjährung"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Voraussetzung muss für die Erteilung eines Dauerauftrages gegeben sein?",
+
+  multiple: false,
+
+  answers: [
+    "eine regelmäßige Zahlung in wechselnder Höhe",
+    "eine unregelmäßige Zahlung an wechselnde Gläubiger",
+    "eine unregelmäßige Zahlung in gleicher Höhe",
+    "eine regelmäßige, gleichbleibende Zahlung an immer denselben Gläubiger",
+    "eine regelmäßige Zahlung an verschiedene Gläubiger"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Bei welcher Zahlungsart kann der Schuldner die geleistete Zahlung von seiner Bank ohne Angabe von Gründen 8 Wochen lang zurückbuchen lassen?",
+
+  multiple: false,
+
+  answers: [
+    "Dauerauftrag",
+    "Sepa-Lastschrift-Verfahren",
+    "Überweisung",
+    "Kreditkarte",
+    "Electronic Cash"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Wofür steht die Abkürzung BGB?",
+
+  multiple: false,
+
+  answers: [
+    "Bundesgesetzbuch",
+    "Bayerisches Gesetzbuch",
+    "Bürgerliches Gesetzbuch",
+    "Betriebsgesetzbuch",
+    "Bürgerliches Grundgesetz"
+  ],
+
+  correct: [2]
+},
+
+
+
+{
+  question:
+  "Welche der folgenden Aussagen zu Freizeichnungsklauseln sind korrekt? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+    "Sie machen immer das gesamte Angebot verbindlich.",
+    "Sie können Teile des Angebots unverbindlich machen.",
+    "Sie beziehen sich auf die Preisbindung.",
+    "\"Solange Vorrat reicht\" ist eine Form der Freizeichnung.",
+    "Sie haben keine rechtliche Wirkung.",
+    "Sie machen das Angebot ohne Einschränkungen verbindlich."
+  ],
+
+  correct: [1,3]
+},
+
+{
+  question:
+  "Was passiert, wenn ein unbefristetes Angebot nicht rechtzeitig angenommen wird?",
+
+  multiple: false,
+
+  answers: [
+    "Es bleibt gültig, bis der Anbieter es widerruft.",
+    "Es erlischt.",
+    "Der Käufer kann das Angebot später annehmen.",
+    "Der Verkäufer muss das Angebot erneut unterbreiten.",
+    "Das Angebot wird automatisch zu einem befristeten Angebot."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Was versteht man unter einem Fixkauf?",
+
+  multiple: false,
+
+  answers: [
+    "Lieferung erfolgt sofort nach Bestellung.",
+    "Lieferung erfolgt zu einem bestimmten Liefertermin.",
+    "Der Käufer kann die Lieferung nach Belieben anfordern.",
+    "Der Verkäufer muss die Ware unverzüglich versenden.",
+    "Der Käufer hat Anspruch auf einen Nachlass bei verspäteter Lieferung."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Dr. Ritter hat einen Karteischrank zur Lieferung innerhalb 4 Wochen bestellt. Um welchen Kauf handelt es sich hinsichtlich der Lieferzeit?",
+
+  multiple: false,
+
+  answers: [
+    "Barkauf",
+    "Abzahlungskauf",
+    "Fixkauf",
+    "Zielkauf",
+    "Terminkauf"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Zahlungsbedingung gilt nach dem BGB für die Bezahlung einer Sache, wenn im Kaufvertrag keine Zahlungsvereinbarung getroffen wurde?",
+
+  multiple: false,
+
+  answers: [
+    "zahlbar innerhalb 14 Tagen nach Erhalt der Lieferung abzüglich 2 % Skonto",
+    "zahlbar innerhalb von 7 Tagen nach Lieferung netto Kasse",
+    "zahlbar sofort nach Erhalt der Lieferung mit Abzug von 3 % Skonto",
+    "zahlbar innerhalb einer angemessenen Zeit nach der Lieferung",
+    "zahlbar sofort nach Erhalt der Lieferung ohne Abzug"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Welche Bedeutung hat die Vertragsbedingung „Alle Lieferungen erfolgen unter Eigentumsvorbehalt“?",
+
+  multiple: false,
+
+  answers: [
+    "Die Ware bleibt so lange Eigentum des Lieferers, bis sie vollständig bezahlt wurde.",
+    "Der Lieferer kann die Ware auch nach vollständiger Bezahlung zurückverlangen.",
+    "Der Lieferer garantiert dem Käufer hiermit ein Rückgaberecht.",
+    "Der Kunde kann niemals Eigentümer der Ware werden.",
+    "Der Begriff „Eigentumsvorbehalt\" hat keine rechtliche Bedeutung."
+  ],
+
+  correct: [0]
+},
+
+
+{
+  question:
+  "Das Unternehmen Prodent KG bietet auf Wunsch eine Zahlungsfrist von 60 Tagen. Wie nennt man diese Art von Kauf?",
+
+  multiple: false,
+
+  answers: [
+    "Zielkauf",
+    "Fixkauf",
+    "Terminkauf",
+    "Ratenkauf",
+    "Barkauf"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Erklären Sie die Zahlungsbedingung „Zahlung innerhalb von 30 Tagen netto“.",
+
+  multiple: false,
+
+  answers: [
+    "Dr. Ritter muss nur den Nettobetrag zahlen. Die Umsatzsteuer trägt der Anbieter.",
+    "Dr. Ritter muss den Bruttobetrag innerhalb von 30 Tagen zahlen, er darf weder Umsatzsteuer noch Skonto vom Rechnungsbetrag abziehen.",
+    "Dr. Ritter muss den Nettobetrag an den Anbieter zahlen und die Umsatzsteuer an das Finanzamt überweisen.",
+    "Dr. Ritter kann die Umsatzsteuer als Treuebonus betrachten und für sich behalten.",
+    "Die Aussage „netto“ hat keine Auswirkung auf die Zahlung, da sie nur für das Finanzamt bestimmt ist."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Die ZMV Lotte Weber hat für das Wartezimmer der Praxis Dr. Ritter eine neue Garderobe bestellt. Bei der Lieferung überprüft sie die Garderobe und stellt fest, dass sie starke Schäden hat, die man nicht reparieren kann. Welches Recht sollte die Praxis Dr. Ritter in Anspruch nehmen?",
+
+  multiple: false,
+
+  answers: [
+    "Schadensersatz",
+    "Ersatzlieferung",
+    "Nachbesserung",
+    "Rücktritt vom Vertrag",
+    "Preisnachlass"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "In welchen beiden Fällen ist keine Mahnung erforderlich, damit Lieferungsverzug eintritt?",
+
+  multiple: true,
+
+  answers: [
+    "Es wurde ein kalendermäßig bestimmter Liefertermin vereinbart.",
+    "Es wurde „Lieferung frühestens Anfang März“ vereinbart.",
+    "Es wurde „Lieferung ab Mai“ vereinbart.",
+    "Der Lieferer teilt mit, dass er nicht rechtzeitig liefern kann.",
+    "Es wurde „Lieferung so bald wie möglich“ vereinbart.",
+    "Es wurde nichts für die Lieferung vereinbart."
+  ],
+
+  correct: [0,3]
+},
+
+{
+  question:
+  "Welches Recht hat der Käufer unter anderem, wenn der Lieferer in Lieferungsverzug geraten ist?",
+
+  multiple: false,
+
+  answers: [
+    "Er kann dem Lieferer einen Mahnbescheid senden.",
+    "Er kann Verzugszinsen verlangen.",
+    "Er kann Minderung verlangen.",
+    "Er kann auf Lieferung bestehen.",
+    "Er kann einen Selbsthilfeverkauf vornehmen."
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Am 13.08.2024 bekommt die Praxis Dr. Ritter eine E-Mail von der Tzimas AG, dass die Bestellung der neuen Sitzbank für das Wartezimmer bestätigt wurde. Bestellt wurde am 12.08.2024. Bis zum 03.09.2024 wurde nicht geliefert. Liegt hier ein Lieferungsverzug vor?",
+
+  multiple: false,
+
+  answers: [
+    "Nein, da der Lieferungsverzug erst 30 Tage nach der Bestellung eintritt",
+    "Nein, erst mit Zustellung einer Anmahnung der Lieferung mit Setzung einer Nachfrist",
+    "Nein, erst nachdem eine, in einer Mahnung festgelegte Nachfrist, verstrichen ist",
+    "Ja, da die zwei Wochen, in denen die Lieferung zugesagt wurde, schon überschritten sind",
+    "Ja, da Dr. Ritter rechtzeitig bestellt hat und somit ein Kaufvertrag zustande kam"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Dr. Ritter hat ein Angebot von der Firma Soares-Dent KG bekommen und bestellt am 05.07.2024 neue Instrumente für das Behandlungszimmer 4. In der Auftragsbestätigung steht eine Lieferfrist von etwa 5 Wochen. Am 18.08.2024 wurden die Instrumente immer noch nicht geliefert. Welche der folgenden Aussagen ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Dr. Ritter kann vom Kaufvertrag zurücktreten",
+    "Dr. Ritter kann automatisch nach 30 Tagen Verzugszinsen verlangen",
+    "Die Soares-Dent KG befindet sich seit dem 05.06.2024 in Lieferungsverzug",
+    "Die Soares-Dent KG befindet sich seit dem 12.06.2024 in Lieferungsverzug",
+    "Dr. Ritter muss die Soares-Dent KG erst durch eine Mahnung in Verzug setzen, bevor er Rechte geltend machen kann"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Die bestellten Instrumente werden schnell benötigt, da fast alle alten Instrumente beim Umbau am 04.10.2024 schon entsorgt wurden. Wann ist für Dr. Ritter ein Deckungskauf möglich?",
+
+  multiple: false,
+
+  answers: [
+    "Das Gesetz sieht in diesem Fall keinen Deckungskauf vor",
+    "Ein Deckungskauf wäre bereits ab dem 06.07.2024 möglich gewesen",
+    "Ab dem 12.10.2024, da an diesem Tag die Lieferfrist schon um zwei Wochen überschritten wurde",
+    "Ab dem 14.10.2024",
+    "Nach Ablauf einer Nachfrist, die Dr. Ritter im Rahmen einer Mahnung festgelegt hat"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Die ZFA Hanna Hinterhuber hat für die Praxis Dr. Ritter am 20.07.2024 zehn Packungen FFP2-Masken bei der Firma Maskenprofi Deluxe KG bestellt. Noch am selben Tag erhält sie per E-Mail eine Auftragsbestätigung. Für die Lieferung wurde der 25.07.2024 vereinbart. Ab wann befindet sich die Maskenprofi Deluxe KG im Lieferungsverzug?",
+
+  multiple: false,
+
+  answers: [
+    "Ab dem 25.07.2024",
+    "Nach Zugang einer Mahnung durch die Praxis Dr. Ritter",
+    "Nach Ablauf einer, in einer Mahnung vorgegebenen, Nachfrist",
+    "Ab dem 26.07.2024",
+    "Ab dem 21.07.2024"
+  ],
+
+  correct: [3]
+},
+
+
+{
+  question:
+  "Der tägliche Verbrauch von Einmalhandschuhen liegt bei 60 Stück, die Lieferzeit beträgt 2 Tage. Der Mindestbestand soll immer 100 Stück sein. Der Höchstbestand soll bei 5000 Stück liegen. Wie hoch ist der Meldebestand?",
+
+  multiple: false,
+
+  answers: [
+    "120 Stück",
+    "5100 Stück",
+    "120 Stück",
+    "220 Stück",
+    "4880 Stück"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Der tägliche Verbrauch von Einmalhandschuhen liegt bei 60 Stück, die Lieferzeit beträgt 2 Tage. Der Mindestbestand soll immer 100 Stück sein. Der Höchstbestand soll bei 5000 Stück liegen. Wie hoch ist die Bestellmenge?",
+
+  multiple: false,
+
+  answers: [
+    "5100",
+    "4900",
+    "220",
+    "5000",
+    "60"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Nennen Sie zwei Vorteile für ein kleines Lager.",
+
+  multiple: true,
+
+  answers: [
+    "Wenig „Verderb“ der gelagerten Produkte",
+    "Mengenrabatte können in Anspruch genommen werden",
+    "Geringere Mietkosten beim Lagerraum",
+    "Weniger Lieferkosten",
+    "Übersichtlicher als ein großes Lager",
+    "Patienten beschweren sich weniger"
+  ],
+
+  correct: [0,2]
+},
+
+{
+  question:
+  "Welche Aussagen zur Dokumentation von Chargennummern sind richtig und welche falsch?",
+
+  type: "matching",
+
+  items: [
+    "Die Chargennummer ist die Patientennummer.",
+    "Die Freigabe des Sterilisationsgutes darf nur eine vom ZA benannte und ausgebildete ZFA übernehmen.",
+    "Die Chargenkontrolle erfolgt immer bei der Rechnungserstellung für die Privatpatienten.",
+    "Die Dokumentation der Chargennummer ist aufgrund der Dokumentationspflicht bei einigen Behandlungen einzuhalten.",
+    "Die Chargenkontrolle ist nur vom Praxisinhaber durchzuführen.",
+    "Chargen unterstützen die Kontrolle des MHD von Lagerartikeln.",
+    "Das Lager wird nach dem Prinzip „first-in-first-out“ organisiert."
+  ],
+
+  categories: [
+    "Richtig",
+    "Falsch"
+  ],
+
+  correct: [1,0,1,0,1,0,0]
+},
+
+{
+  question:
+  "Was braucht nicht bei der Freigabe auf dem aufbereiteten Medizinprodukt dokumentiert werden? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+    "Die freigebende Person",
+    "Laufende Nummer des Sterilisationsprozesses",
+    "Patientennummer und Behandlungsdatum",
+    "Sterilisierdatum",
+    "Inhalt, sofern nicht erkennbar",
+    "Praxisadresse und Homepage der Zahnarztpraxis"
+  ],
+
+  correct: [2,5]
+},
+
+{
+  question:
+  "Wer ist nach § 135a Sozialgesetzbuch V verpflichtet ein Qualitätsmanagement einzuführen?",
+
+  multiple: false,
+
+  answers: [
+    "alle Vertragszahnärzte",
+    "alle angestellten Zahnärzte",
+    "alle Zahnärzte, die ausschließlich Privatpatienten behandeln",
+    "alle Berufsschulen",
+    "alle Zahnmedizinische Fachangestellte"
+  ],
+
+  correct: [0]
+},
+
+{
+  question:
+  "Welche Aussagen zum Qualitätsmanagement (QM) sind falsch? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+    "Die Einführung eines QM dient der ständigen Verbesserung der Qualität der zahnmedizinischen Versorgung.",
+    "Durch QM können alle Behandlungsfehler vermeiden werden",
+    "QM soll die Arbeitszufriedenheit der Praxismitarbeiter erhöhen.",
+    "QM ist Aufgabe aller Mitarbeiter einer Zahnarztpraxis.",
+    "In bestimmten Bereichen kann die Qualität der zahnmedizinischen Versorgung auch gemessen werden.",
+    "Auszubildende können in das QM nicht eingebunden werden."
+  ],
+
+  correct: [1,5]
+},
+
+{
+  question:
+  "Welche Handlungen von Dr. Ritter zählt nicht zu einem praxisinternen Qualitätsmanagement?",
+
+  multiple: false,
+
+  answers: [
+    "Dr. Ritter behandelt seine Patienten entsprechend dem aktuellen Stand der zahnmedizinischen Wissenschaft.",
+    "Dr. Ritter hat in den Weihnachtsferien die Praxis geschlossen.",
+    "Dr. Ritter legt Wert auf regelmäßige Teambesprechungen.",
+    "Dr. Ritter hat schriftlich festgelegt, welche Mitarbeiter wofür zuständig ist.",
+    "Alle Mitarbeiter von Dr. Ritter nehmen jährlich an zwei Fortbildungen teil.",
+    "Dr. Ritter gewährt seinen Mitarbeitern den gesetzlichen Mindesturlaub."
+  ],
+
+  correct: [5]
+},
+
+{
+  question:
+  "Was ist richtig (r) und was ist falsch (f)? Zu den Instrumenten des Qualitätsmanagements gehören:",
+
+  type: "matching",
+
+  items: [
+    "die Einführung regelmäßiger Teambesprechungen",
+    "die übertarifliche Bezahlung der Mitarbeiter",
+    "die Verwendung von Checklisten",
+    "die Nutzung von Fehlern zur Einleitung von Verbesserungen",
+    "die Durchführung von Patientenbefragungen",
+    "die Festlegung von Zielen für die Praxis"
+  ],
+
+  categories: [
+    "Richtig",
+    "Falsch"
+  ],
+
+  correct: [0,1,0,0,0,0]
+},
+
+
+{
+  question:
+  "Welche der folgenden Handlungen zählt nicht zum praxisinternen QM?",
+
+  multiple: false,
+
+  answers: [
+    "Dr. Ritter erstellt eine genaue Anleitung für die Arbeitsschritte zur Sterilisation der benutzten Instrumente.",
+    "Dr. Ritter hat nach einer Teambesprechung schriftlich festgelegt, wie viel Prozent der Anteil der Privatpatienten in seiner Praxis dieses Jahr wachsen soll.",
+    "Dr. Ritter hat ein Organigramm erstellt, in dem genau festgehalten ist, wer wem Weisungen erteilen darf.",
+    "Dr. Ritter hat eine Checkliste zur Reinigung des Behandlungszimmers nach der Behandlung eines Patienten erstellt.",
+    "Dr. Ritter hat einen Ablaufplan zum Beschwerdemanagement schriftlich festgelegt."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche Funktion hat das Organigramm in einer Zahnarztpraxis?",
+
+  multiple: false,
+
+  answers: [
+    "Es dient der Visualisierung der Praxisabläufe und Prozesse",
+    "Es ermöglicht die Optimierung der Personalkosten",
+    "Es dient der Dokumentation der Qualifikationen der Mitarbeiter",
+    "Es verdeutlicht die hierarchische Struktur und Aufgabenverteilung und Weisungsbefugnis",
+    "Es hat keine Funktion, da es nur Kliniken haben."
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welche Funktion hat die Ablauforganisation in einer Zahnarztpraxis?",
+
+  multiple: false,
+
+  answers: [
+    "Sie legt die Struktur und Hierarchie der Praxis fest.",
+    "Sie bestimmt die Öffnungszeiten und Sprechstunden der Praxis.",
+    "Sie definiert, wie die Arbeitsabläufe in der Praxis gestaltet werden sollen.",
+    "Sie regelt, wie die Aufgaben und Verantwortlichkeiten verteilt werden.",
+    "Sie hat keine Funktion, da es nur Kliniken haben."
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Welche Auswirkungen hat der autoritäre Führungsstil von Herrn Dr. Ritter auf die Motivation der Mitarbeiter in seinem Zahnarztbetrieb?",
+
+  multiple: false,
+
+  answers: [
+    "Die Mitarbeiter werden weder motiviert noch demotiviert, da der autoritäre Führungsstil keine Auswirkungen auf die Motivation hat.",
+    "Die Mitarbeiter werden motiviert, da sie klare Anweisungen und Erwartungen erhalten.",
+    "Die Mitarbeiter werden demotiviert, da sie keine Mitsprache und Eigeninitiative zeigen können.",
+    "Die Mitarbeiter werden motiviert, da sie klare Strukturen und Verantwortlichkeiten haben.",
+    "Es gibt keine autoritären Führungsstile mehr."
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Was beschreibt die Prozessqualität in einer Zahnarztpraxis?",
+
+  multiple: false,
+
+  answers: [
+    "Die Ausstattung der Praxis und die Qualität.",
+    "Diagnostischen und therapeutischen Maßnahmen im Prozess eines Behandlungsfalles",
+    "Die Zufriedenheit der Patienten",
+    "Die Ausbildung der Mitarbeiter",
+    "Die Ausstattung des Wartezimmers"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche der folgenden Aussagen beschreibt die Strukturqualität?",
+
+  multiple: false,
+
+  answers: [
+    "Die Wartezeit der Patienten",
+    "Die Ausstattung der Praxis",
+    "Die Ergebnisse der Behandlung",
+    "Die Kommunikation mit den Patienten",
+    "Ob die Krone hält."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Was ist ein Beispiel für Ergebnisqualität?",
+
+  multiple: false,
+
+  answers: [
+    "Die Wartezeit der Patienten",
+    "Die Zufriedenheit der Patienten nach der Behandlung",
+    "Die Hygienevorschriften",
+    "Die Ausbildung der Mitarbeiter",
+    "Ob es einen Aufzug in der Praxis gibt."
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Warum wurde in der Praxis von Dr. Ritter ein Qualitätsmanagement eingeführt?",
+
+  multiple: false,
+
+  answers: [
+    "Er möchte den Gewinn seiner Praxis maximieren",
+    "Dr. Ritter kann seine Mitarbeiter verwalten und die Gehaltsabrechnung durchführen",
+    "Zur Produktentwicklung und Markforschung",
+    "Dr. Ritter möchte sein Risiko minimieren",
+    "Dr. Ritter kann so die Versorgung von Patienten verbessern und sicherstellen"
+  ],
+
+  correct: [4]
+},
+
+{
+  question:
+  "Wie lüftet man richtig, um Energieverlust zu reduzieren?",
+
+  multiple: false,
+
+  answers: [
+    "nur gekippte Fenster in der kalten Jahreszeit",
+    "Klimaanlagen nur im Dauerbetrieb verwenden",
+    "Lüften auch tagsüber nur mit gekipptem Fenster",
+    "In der warmen Jahreszeit Lüften durch möglichst ständig offene Türen und Fenster",
+    "Stoßlüften in der kalten Jahreszeit"
+  ],
+
+  correct: [4]
+},
+
+
+{
+  question:
+  "Dr. Ritter möchte auch in der Verwaltung den Grundsatz der Nachhaltigkeit verfolgen. Welcher der folgenden Vorschläge ist falsch?",
+
+  multiple: false,
+
+  answers: [
+    "Verwendung von recyceltem Papier, z.B. chlorfreies Recyclingpapier bei Druckerpapier, Einmalhandtüchern",
+    "Bedrucken Sie Papier, wenn möglich nicht beidseitig, sondern nur einseitig.",
+    "Verwenden Sie energieeffiziente Computer und Drucker.",
+    "Kaufen Sie langlebige Medizinprodukte mit einer möglichst langen Garantie.",
+    "Senden Sie Terminerinnerungen per E-Mail oder SMS oder wenn per Post, auf Recyclingpapier"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Welche Möglichkeit ist die geeignetste (aus zeitlicher und ökologischer Sicht), um Strom zu sparen?",
+
+  multiple: false,
+
+  answers: [
+    "Nutzung des Energiesparmodus in der Nacht",
+    "jedes EDV-Gerät muss am Abend einzeln ausgeschalten werden",
+    "alle Geräte bleiben dauerhaft eingeschaltet",
+    "Einrichtung von abschaltbaren Steckerleisten",
+    "alle Geräte bleiben über Nacht im Stand-By-Betrieb"
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Welchen Vorteil hat ein Öko- oder Naturstromanbieter?",
+
+  multiple: false,
+
+  answers: [
+    "Die Leuchtkraft wird in allen Zimmern gesteigert.",
+    "Die Lebensdauer der elektronischen Geräte steigt.",
+    "Es wird deutlich weniger Strom verbraucht.",
+    "Kohlendioxidemissionen werden reduziert.",
+    "Kohlendioxidemissionen können gesteigert werden."
+  ],
+
+  correct: [3]
+},
+
+{
+  question:
+  "Dr. Ritter möchte den Energieverbrauch in der ZA-Praxis reduzieren. Welche Aussagen sind richtig? (2 Antworten)",
+
+  multiple: true,
+
+  answers: [
+    "Heizkörper sind effizienter, wenn Sie regelmäßig entlüftet werden und nicht abgedeckt und verdeckt stehen.",
+    "Schalten Sie Geräte, insbesondere Computer, Drucker, Monitore und v.a. Stand-by Geräte nachts und zum Wochenende nicht ab.",
+    "Beim Kauf von neuen Geräten braucht der Energieverbrauch nicht beachtet werden.",
+    "Wärmedämmende Folien an den Praxisfenstern können das Aufheizen der Räume im Sommer steigern.",
+    "Lichtschalter, die an Bewegungsmelder gekoppelt sind, können in Praxisräumen, die nur kurz benutzt werden, dabei helfen, den Stromverbrauch zu reduzieren.",
+    "RDG und Autoklaven haben einen geringen Energiebedarf."
+  ],
+
+  correct: [0,4]
+},
+
+{
+  question:
+  "Dr. Ritter möchte seinen ökologischen Fußabdruck in der Praxis reduzieren. Was wäre eine geeignete Maßnahme?",
+
+  multiple: false,
+
+  answers: [
+    "Anschaffung von Druckern für jeden Mitarbeiter",
+    "Nutzung von konventionellen Glühbirnen statt LEDs",
+    "Verwendung von digitalen bildgebenden statt analogen Verfahren",
+    "Einführung von neuen Papierformularen für Patienten",
+    "Verwendung von gedruckten Formularen und Papier anstelle von Nachrichten über Messaging-Diensten"
+  ],
+
+  correct: [2]
+},
+
+{
+  question:
+  "Praxis Dr. Ritter ist an Nachhaltigkeit interessiert. Welche Aussage ist richtig?",
+
+  multiple: false,
+
+  answers: [
+    "Dauerlüften in der warmen Jahreszeit",
+    "Dr. Ritter sucht nach Einsparpotentialen bei der Energienutzung",
+    "alle elektronischen Geräte auch nachts in Stand-By-Funktion",
+    "Klimaanlagen in Dauerbetrieb halten für einen guten Patientenkomfort",
+    "Einsatz von Bewegungsmeldern nur in der Nacht"
+  ],
+
+  correct: [1]
+},
+
+{
+  question:
+  "Wo hat die Zahnarztpraxis nur beschränkten Einfluss auf die Nachhaltigkeit?",
+
+  multiple: false,
+
+  answers: [
+    "Materialverbrauch",
+    "Stromverbrauch",
+    "Müllentsorgung",
+    "Bau der Praxis bei der Übernahme",
+    "Raumtemperaturkontrolle"
+  ],
+
+  correct: [3]
 }
      
 
