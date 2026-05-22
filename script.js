@@ -2921,6 +2921,9 @@ const questions = {
 
     {
       question: "Berechnen Sie die Mehrwertsteuer von 750,00 €, netto.",
+
+ multiple: false,
+
       answers: [
         "142,00 €",
         "142,50 €",
@@ -2933,6 +2936,9 @@ const questions = {
 
     {
       question: "Für Zahlung innerhalb von 8 Tage nach Rechnungsdatum darf Dr. Ritter 2% Skonto vom Rechnungsbetrag abziehen. Der Rechnungsbetrag lautet 892,50 €. Wie lautert der Überweisungsbetrag, wenn er innerhalb der Skontofrist bezahlt?",
+
+ multiple: false,
+
       answers: [
         "17,85 €",
         "874,00 €",
@@ -2945,6 +2951,9 @@ const questions = {
 
     {
       question: "Für Zahlung innerhalb von 7 Tage nach Rechnungsdatum darf ein Zahnarzt 3 % Skonto vom Rechnungsbetrag abziehen. Der Rechnungsbetrag lautet 1.286,33 €. Wie lautet der Überweisungsbetrag, wenn er innerhalb der Skontofrist bezahlt?",
+
+ multiple: false,
+
       answers: [
         "1.286,33 €",
         "1.324,89 €",
@@ -2957,6 +2966,9 @@ const questions = {
 
     {
       question: "Der Listenpreis einer Patientenliege beträgt 1.783,00 €. Dr. Ritter bekommt einen Rabatt und muss nur 1.693,85 € bezahlen. Wie viel % Rabatt hat er erhalten?",
+
+ multiple: false,
+
       answers: [
         "5%",
         "10%",
@@ -2969,6 +2981,9 @@ const questions = {
 
     {
       question: "Aufgrund besonders guter Leistungen erhält eine ZFA eine Gehaltserhöhung von 2,5%. Sie bekommt nach der Erhöhung 2.562,50 € pro Monat. Wie hoch (in €) war ihr Gehalt vor der Gehaltserhöhung?",
+
+ multiple: false,
+
       answers: [
         "2.626,56 €",
         "2.626,00 €",
@@ -2981,6 +2996,9 @@ const questions = {
 
     {
       question: "Bei einer 40 Stundenwoche (SW) verdient eine ZFA monatlich 2.700,00 €. Wie hoch ist ihr Gehalt, wenn sie nur 32 Stunden pro Woche arbeitet?",
+
+ multiple: false,
+
       answers: [
         "2.165,00 €",
         "2.732,00 €",
@@ -2993,6 +3011,9 @@ const questions = {
 
     {
       question: "Eine Auszubildende hat Anspruch auf 27 Urlaubstage (UT) im Jahr. Wie viele Urlaubstage bekommt sie, wenn das Ausbildungsverhältnis in diesem Jahr erst seit 01.09. besteht.",
+
+ multiple: false,
+
       answers: [
         "6 Urlaubstage",
         "7 Urlaubstage",
@@ -3005,6 +3026,9 @@ const questions = {
 
     {
       question: "Am 27.02. nimmt Dr. Ritter kurzfristig einen Kredit in Höhe von 2.480,00 € auf und zahlt 243 Tage zu spät am 31.10. einschließlich Zinsen 2.590,57 € zurück. Mit welcher Formel berechnen Sie den Zinssatz?",
+
+ multiple: false,
+
       answers: [
         "p= k*t/100*360",
         "p= k*Z/100",
@@ -3017,6 +3041,9 @@ const questions = {
 
     {
       question: "Am 27.02. nimmt Dr. Ritter einen Kredit von 2.480,00 € auf und zahlt 243 Tage später mit einem Zinssatz von 3,7% den Kredit wieder zurück. Wie viel Zinsen muss Dr. Ritter bezahlen?",
+
+ multiple: false,
+
       answers: [
         "61,94 €",
         "62,00 €",
@@ -3029,6 +3056,9 @@ const questions = {
 
     {
       question: "Was gehört nicht zur bargeldlosen Zahlung?",
+
+ multiple: false,
+
       answers: [
         "Überweisung",
         "Dauerauftrag",
@@ -3041,6 +3071,9 @@ const questions = {
 
     {
       question: "Für welche Art der Zahlung eignet sich ein Dauerauftrag am besten?",
+
+ multiple: false,
+
       answers: [
         "jährliche Einkommensteuernachzahlungen",
         "Stromrechnungen",
@@ -3053,6 +3086,9 @@ const questions = {
 
     {
       question: "Was ist kein notwendiger Bestandteil einer Quittung?",
+
+ multiple: false,
+
       answers: [
         "Datum der Zahlung",
         "Unterschrift des Zahlungsempfängers",
