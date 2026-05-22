@@ -4266,3 +4266,8 @@ function showFinalResult() {
     "</strong>";
 
 }
+function openCategory(category){
+
+  startQuiz(category);
+
+}
