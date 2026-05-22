@@ -19,7 +19,13 @@ body{
   Helvetica,
   sans-serif;
 
-  background: #003444;
+ background:
+linear-gradient(
+180deg,
+#002b3a 0%,
+#003b4f 55%,
+#003444 100%
+);
 
   color:white;
 
