@@ -5,39 +5,10 @@
 /* ======================================================
    FRAGEN
 ====================================================== */
-function saveProgress(data) {
-  localStorage.setItem("quizProgress", JSON.stringify(data));
-}
-
-function loadProgress() {
-  const saved = localStorage.getItem("quizProgress");
-
-  if (saved) {
-    return JSON.parse(saved);
-  }
-
-  return null;
-}
-
-let currentCategory = "PV";
-let currentQuestion = 0;
-let score = 0;
-let userAnswers = [];
-
-
-
-const saved = loadProgress();
-
-if (saved) {
-  currentCategory = saved.currentCategory;
-  currentQuestion = saved.currentQuestion;
-  score = saved.score;
-  userAnswers = saved.userAnswers;
-}
 
 const questions = {
 
-  /* ======================================================
+  /* ======================================================x
      GAP 1 — PRAXISVERWALTUNG
   ====================================================== */
 
@@ -870,7 +841,7 @@ const questions = {
   question:
   "Welche Redewendung gibt den Grundsatz der Kommunikation nach Watzlawick am besten wieder?",
 
-  multiple: true,
+  multiple: false,
 
   answers: [
 
@@ -1870,8 +1841,8 @@ const questions = {
   type: "matching",
 
   categories: [
-    "hygienische Händedesinfektion",
-    "chirurgische Händedesinfektion"
+    "hygienische Händedesinfektion = 1",
+    "chirurgische Händedesinfektion = 2"
   ],
 
   items: [
@@ -4143,23 +4114,6 @@ const questions = {
 
 };
 
-
-
-function saveProgress(data) {
-  localStorage.setItem("quizProgress", JSON.stringify(data));
-}
-
-function loadProgress() {
-  const saved = localStorage.getItem("quizProgress");
-
-  if (saved) {
-    return JSON.parse(saved);
-  }
-
-  return null;
-}
-
-
 /* ======================================================
    VARIABLEN
 ====================================================== */
@@ -4533,62 +4487,53 @@ timer = setInterval(()=>{
 
     wrongQuestions.push(q);
 
-   document
-  .getElementById("feedback")
-  .innerText =
-  "⏰ Zeit abgelaufen";
+    document
+      .getElementById("feedback")
+      .innerText =
+      "⏰ Zeit abgelaufen";
 
-answerChecked = true;
+    answerChecked = true;
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
-  currentQuestion++;
+      currentQuestion++;
 
-  saveProgress({
-    currentCategory,
-    currentQuestion,
-    score,
-    userAnswers
-  });
+      if(
+        currentQuestion >=
+        currentQuestions.length
+      ){
 
-  if(
-    currentQuestion >=
-    currentQuestions.length
-  ){
+        finishQuiz();
 
-    localStorage.removeItem("quizProgress");
+        return;
+      }
 
-    finishQuiz();
+      answerChecked = false;
 
-    return;
+      showQuestion();
+
+    },1000);
   }
 
-  answerChecked = false;
-
-  showQuestion();
-
 },1000);
+  document.querySelector(
+    ".next-btn"
+  ).innerText =
+  "Antwort prüfen";
+}
 
 /* ======================================================
    NÄCHSTE FRAGE
 ====================================================== */
 
-currentQuestion++;
+function nextQuestion(){
 
-saveProgress({
-  currentCategory,
-  currentQuestion,
-  score,
-  userAnswers
-});
+  const q =
+    currentQuestions[currentQuestion];
 
-if(
-  currentQuestion >= currentQuestions.length
-){
-  localStorage.removeItem("quizProgress");
-  finishQuiz();
-  return;
-}
+  if(!q){
+    return;
+  }
 
   if(!answerChecked){
 clearInterval(timer);
@@ -4758,7 +4703,7 @@ document.querySelector(
     >=
    currentQuestions.length
   ){
-localStorage.removeItem("quizProgress");
+
   finishQuiz();
 
 return;
