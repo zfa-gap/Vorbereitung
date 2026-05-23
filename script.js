@@ -37,9 +37,9 @@ if (saved) {
 
 const questions = {
 
-/* ======================================================
-   GAP 1 — PRAXISVERWALTUNG
-====================================================== */
+  /* ======================================================
+     GAP 1 — PRAXISVERWALTUNG
+  ====================================================== */
 
   PV: [
 
@@ -4533,40 +4533,41 @@ timer = setInterval(()=>{
 
     wrongQuestions.push(q);
 
-    document
-      .getElementById("feedback")
-      .innerText =
-      "⏰ Zeit abgelaufen";
+   document
+  .getElementById("feedback")
+  .innerText =
+  "⏰ Zeit abgelaufen";
 
-    answerChecked = true;
+answerChecked = true;
 
-    setTimeout(()=>{
+setTimeout(()=>{
 
-      currentQuestion++;
+  currentQuestion++;
 
-      if(
-        currentQuestion >=
-        currentQuestions.length
-      ){
+  saveProgress({
+    currentCategory,
+    currentQuestion,
+    score,
+    userAnswers
+  });
 
-        finishQuiz();
+  if(
+    currentQuestion >=
+    currentQuestions.length
+  ){
 
-        return;
-      }
+    localStorage.removeItem("quizProgress");
 
-      answerChecked = false;
+    finishQuiz();
 
-      showQuestion();
-
-    },1000);
+    return;
   }
 
+  answerChecked = false;
+
+  showQuestion();
+
 },1000);
-  document.querySelector(
-    ".next-btn"
-  ).innerText =
-  "Antwort prüfen";
-}
 
 /* ======================================================
    NÄCHSTE FRAGE
