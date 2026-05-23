@@ -832,3 +832,13 @@ h1{
     min-width:100%;
   }
 }
+
+
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+}
