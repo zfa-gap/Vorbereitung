@@ -870,7 +870,7 @@ const questions = {
   question:
   "Welche Redewendung gibt den Grundsatz der Kommunikation nach Watzlawick am besten wieder?",
 
-  multiple: false,
+  multiple: true,
 
   answers: [
 
@@ -1870,8 +1870,8 @@ const questions = {
   type: "matching",
 
   categories: [
-    "hygienische Händedesinfektion = 1",
-    "chirurgische Händedesinfektion = 2"
+    "hygienische Händedesinfektion",
+    "chirurgische Händedesinfektion"
   ],
 
   items: [
