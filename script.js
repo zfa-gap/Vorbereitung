@@ -5,6 +5,35 @@
 /* ======================================================
    FRAGEN
 ====================================================== */
+function saveProgress(data) {
+  localStorage.setItem("quizProgress", JSON.stringify(data));
+}
+
+function loadProgress() {
+  const saved = localStorage.getItem("quizProgress");
+
+  if (saved) {
+    return JSON.parse(saved);
+  }
+
+  return null;
+}
+
+let currentCategory = "PV";
+let currentQuestion = 0;
+let score = 0;
+let userAnswers = [];
+
+
+
+const saved = loadProgress();
+
+if (saved) {
+  currentCategory = saved.currentCategory;
+  currentQuestion = saved.currentQuestion;
+  score = saved.score;
+  userAnswers = saved.userAnswers;
+}
 
 const questions = {
 
@@ -4114,6 +4143,23 @@ const questions = {
 
 };
 
+
+
+function saveProgress(data) {
+  localStorage.setItem("quizProgress", JSON.stringify(data));
+}
+
+function loadProgress() {
+  const saved = localStorage.getItem("quizProgress");
+
+  if (saved) {
+    return JSON.parse(saved);
+  }
+
+  return null;
+}
+
+
 /* ======================================================
    VARIABLEN
 ====================================================== */
@@ -4526,14 +4572,19 @@ timer = setInterval(()=>{
    NÄCHSTE FRAGE
 ====================================================== */
 
-function nextQuestion(){
+function nextQuestion() {
 
-  const q =
-    currentQuestions[currentQuestion];
+  currentQuestion++;
 
-  if(!q){
-    return;
-  }
+  saveProgress({
+    currentCategory,
+    currentQuestion,
+    score,
+    userAnswers
+  });
+
+  showQuestion();
+}
 
   if(!answerChecked){
 clearInterval(timer);
@@ -4703,7 +4754,7 @@ document.querySelector(
     >=
    currentQuestions.length
   ){
-
+localStorage.removeItem("quizProgress");
   finishQuiz();
 
 return;
