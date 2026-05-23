@@ -4572,18 +4572,21 @@ timer = setInterval(()=>{
    NÄCHSTE FRAGE
 ====================================================== */
 
-function nextQuestion() {
+currentQuestion++;
 
-  currentQuestion++;
+saveProgress({
+  currentCategory,
+  currentQuestion,
+  score,
+  userAnswers
+});
 
-  saveProgress({
-    currentCategory,
-    currentQuestion,
-    score,
-    userAnswers
-  });
-
-  showQuestion();
+if(
+  currentQuestion >= currentQuestions.length
+){
+  localStorage.removeItem("quizProgress");
+  finishQuiz();
+  return;
 }
 
   if(!answerChecked){
