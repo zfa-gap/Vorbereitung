@@ -5,6 +5,7 @@
 /* ======================================================
    FRAGEN
 ====================================================== */
+
 function saveProgress(data) {
   localStorage.setItem("quizProgress", JSON.stringify(data));
 }
@@ -19,6 +20,11 @@ function loadProgress() {
   return null;
 }
 
+/* ======================================================
+   FRAGENOBJEKT
+====================================================== */
+
+const questions = {
 
 
 
