@@ -20,7 +20,29 @@ function loadProgress() {
 }
 
 
+/* ======================================================
+   VARIABLEN
+====================================================== */
 
+let currentCategory = "";
+let currentQuestion = 0;
+let currentQuestions = [];
+let answerChecked = false;
+let xp = 0;
+let streak = 0;
+let bestStreak = 0;
+
+let correctCount = 0;
+let wrongCount = 0;
+
+let wrongQuestions = [];
+
+let timer;
+let timeLeft = 90;
+let currentGap = "";
+
+let score = 0;
+let userAnswers = [];
 
 
 const questions = {
