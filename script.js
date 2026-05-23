@@ -4262,15 +4262,15 @@ function openCategory(category){
   currentCategory = category;
 
   currentQuestion = 0;
-currentQuestions =
-[
-...questions[currentCategory]
-];
 
-currentQuestions.sort(
-() => Math.random() - 0.5
-);
+  currentQuestions =
+  [
+    ...questions[currentCategory]
+  ];
 
+  currentQuestions.sort(
+    () => Math.random() - 0.5
+  );
 
   answerChecked = false;
 
@@ -4293,7 +4293,6 @@ currentQuestions.sort(
 
   showQuestion();
 }
-
 /* ======================================================
    KATEGORIEN
 ====================================================== */
@@ -4561,22 +4560,7 @@ setTimeout(()=>{
    NÄCHSTE FRAGE
 ====================================================== */
 
-currentQuestion++;
 
-saveProgress({
-  currentCategory,
-  currentQuestion,
-  score,
-  userAnswers
-});
-
-if(
-  currentQuestion >= currentQuestions.length
-){
-  localStorage.removeItem("quizProgress");
-  finishQuiz();
-  return;
-}
 
   if(!answerChecked){
 clearInterval(timer);
