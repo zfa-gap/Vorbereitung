@@ -19,10 +19,6 @@ function loadProgress() {
   return null;
 }
 
-let currentCategory = " ";
-let currentQuestion = 0;
-let score = 0;
-let userAnswers = [];
 
 
 
