@@ -6,29 +6,9 @@
    FRAGEN
 ====================================================== */
 
-function saveProgress(data) {
-  localStorage.setItem("quizProgress", JSON.stringify(data));
-}
-
-function loadProgress() {
-  const saved = localStorage.getItem("quizProgress");
-
-  if (saved) {
-    return JSON.parse(saved);
-  }
-
-  return null;
-}
-
-/* ======================================================
-   FRAGENOBJEKT
-====================================================== */
-
 const questions = {
 
-
-
-  /* ======================================================
+  /* ======================================================x
      GAP 1 — PRAXISVERWALTUNG
   ====================================================== */
 
@@ -861,7 +841,7 @@ const questions = {
   question:
   "Welche Redewendung gibt den Grundsatz der Kommunikation nach Watzlawick am besten wieder?",
 
-  multiple: true,
+  multiple: false,
 
   answers: [
 
@@ -1861,8 +1841,8 @@ const questions = {
   type: "matching",
 
   categories: [
-    "hygienische Händedesinfektion",
-    "chirurgische Händedesinfektion"
+    "hygienische Händedesinfektion = 1",
+    "chirurgische Händedesinfektion = 2"
   ],
 
   items: [
@@ -4134,11 +4114,6 @@ const questions = {
 
 };
 
-
-
-
-
-
 /* ======================================================
    VARIABLEN
 ====================================================== */
@@ -4159,11 +4134,6 @@ let wrongQuestions = [];
 let timer;
 let timeLeft = 90;
 let currentGap = "";
-
-let score = 0;
-let userAnswers = [];
-
-
 
 /* ======================================================
    NAVIGATION
@@ -4258,15 +4228,15 @@ function openCategory(category){
   currentCategory = category;
 
   currentQuestion = 0;
+currentQuestions =
+[
+...questions[currentCategory]
+];
 
-  currentQuestions =
-  [
-    ...questions[currentCategory]
-  ];
+currentQuestions.sort(
+() => Math.random() - 0.5
+);
 
-  currentQuestions.sort(
-    () => Math.random() - 0.5
-  );
 
   answerChecked = false;
 
@@ -4289,6 +4259,7 @@ function openCategory(category){
 
   showQuestion();
 }
+
 /* ======================================================
    KATEGORIEN
 ====================================================== */
@@ -4508,57 +4479,61 @@ timer = setInterval(()=>{
     .innerText =
     "⏳ " + timeLeft + " Sekunden";
 
-if(timeLeft <= 0){
+  if(timeLeft <= 0){
 
-  clearInterval(timer);
+    clearInterval(timer);
 
-  wrongCount++;
+    wrongCount++;
 
-  wrongQuestions.push(q);
+    wrongQuestions.push(q);
 
-  document
-    .getElementById("feedback")
-    .innerText =
-    "⏰ Zeit abgelaufen";
+    document
+      .getElementById("feedback")
+      .innerText =
+      "⏰ Zeit abgelaufen";
 
-  answerChecked = true;
+    answerChecked = true;
 
-  setTimeout(()=>{
+    setTimeout(()=>{
 
-    currentQuestion++;
+      currentQuestion++;
 
-    saveProgress({
-      currentCategory,
-      currentQuestion,
-      score,
-      userAnswers
-    });
+      if(
+        currentQuestion >=
+        currentQuestions.length
+      ){
 
-    if(
-      currentQuestion >=
-      currentQuestions.length
-    ){
+        finishQuiz();
 
-      localStorage.removeItem("quizProgress");
+        return;
+      }
 
-      finishQuiz();
+      answerChecked = false;
 
-      return;
-    }
+      showQuestion();
 
-    answerChecked = false;
+    },1000);
+  }
 
-    showQuestion();
-
-  },1000);
-
-});
+},1000);
+  document.querySelector(
+    ".next-btn"
+  ).innerText =
+  "Antwort prüfen";
+}
 
 /* ======================================================
    NÄCHSTE FRAGE
 ====================================================== */
 
+function nextQuestion(){
 
+  const q =
+    currentQuestions[currentQuestion];
+
+  if(!q){
+    return;
+  }
 
   if(!answerChecked){
 clearInterval(timer);
@@ -4728,7 +4703,7 @@ document.querySelector(
     >=
    currentQuestions.length
   ){
-localStorage.removeItem("quizProgress");
+
   finishQuiz();
 
 return;
@@ -4738,230 +4713,8 @@ return;
 
   answerChecked = false;
 
-function showQuestion(){
-
-  const q =
-    currentQuestions[currentQuestion];
-
-  if(!q){
-
-    document
-      .getElementById("question-number")
-      .innerText = "";
-
-    document
-      .getElementById("question")
-      .innerText =
-      "Noch keine Fragen vorhanden 😄";
-
-    document
-      .getElementById("answers")
-      .innerHTML = "";
-
-    return;
-  }
-
-  document
-    .getElementById("question-number")
-    .innerText =
-    "Frage "
-    + (currentQuestion + 1)
-    + " von "
-    + currentQuestions.length;
-
-  document
-    .getElementById("question")
-    .innerText =
-    q.question;
-
-  const answersDiv =
-    document.getElementById("answers");
-
-  answersDiv.innerHTML = "";
-
-  /* =========================
-     MATCHING
-  ========================= */
-
-  if(q.type === "matching"){
-
-    q.items.forEach((item,index)=>{
-
-      const row =
-        document.createElement("div");
-
-      row.className = "matching-row";
-
-      let options =
-        `<option value="">Auswählen</option>`;
-
-      q.categories.forEach((cat,catIndex)=>{
-
-        options +=
-        `<option value="${catIndex}">
-          ${cat}
-        </option>`;
-      });
-
-      row.innerHTML = `
-
-        <div class="match-item">
-          ${item}
-        </div>
-
-        <select>
-          ${options}
-        </select>
-      `;
-
-      answersDiv.appendChild(row);
-    });
-  }
-
-  /* =========================
-     ORDERING
-  ========================= */
-
-  else if(q.type === "ordering"){
-
-    q.items.forEach((item,index)=>{
-
-      const row =
-        document.createElement("div");
-
-      row.className = "matching-row";
-
-      let options =
-        `<option value="">Position wählen</option>`;
-
-      for(let i = 1; i <= q.items.length; i++){
-
-        options +=
-        `<option value="${i-1}">
-          ${i}
-        </option>`;
-      }
-
-      row.innerHTML = `
-
-        <div class="match-item">
-          ${item}
-        </div>
-
-        <select>
-          ${options}
-        </select>
-      `;
-
-      answersDiv.appendChild(row);
-    });
-  }
-
-  /* =========================
-     NORMALE FRAGEN
-  ========================= */
-
-  else{
-
-    q.answers.forEach((answer,index)=>{
-
-      const label =
-        document.createElement("label");
-
-      label.className =
-        "answer";
-
-      label.innerHTML =
-
-        `<input
-          type="${
-            q.multiple
-            ? 'checkbox'
-            : 'radio'
-          }"
-          name="answer"
-          value="${index}"
-        >
-
-        ${answer}`;
-
-      answersDiv.appendChild(label);
-    });
-  }
-
-  document
-    .getElementById("feedback")
-    .innerText = "";
-
-  clearInterval(timer);
-
-  timeLeft = 90;
-
-  document
-    .getElementById("feedback")
-    .innerText =
-    "⏳ " + timeLeft + " Sekunden";
-
-  timer = setInterval(()=>{
-
-    timeLeft--;
-
-    document
-      .getElementById("feedback")
-      .innerText =
-      "⏳ " + timeLeft + " Sekunden";
-
-    if(timeLeft <= 0){
-
-      clearInterval(timer);
-
-      wrongCount++;
-
-      wrongQuestions.push(q);
-
-      document
-        .getElementById("feedback")
-        .innerText =
-        "⏰ Zeit abgelaufen";
-
-      answerChecked = true;
-
-      setTimeout(()=>{
-
-        currentQuestion++;
-
-        saveProgress({
-          currentCategory,
-          currentQuestion,
-          score,
-          userAnswers
-        });
-
-        if(
-          currentQuestion >=
-          currentQuestions.length
-        ){
-
-          localStorage.removeItem("quizProgress");
-
-          finishQuiz();
-
-          return;
-        }
-
-        answerChecked = false;
-
-        showQuestion();
-
-      },1000);
-    }
-
-  },1000);
+  showQuestion();
 }
-
-
-
-
 function finishQuiz(){
 
 clearInterval(timer);
