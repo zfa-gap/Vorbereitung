@@ -4512,50 +4512,51 @@ timer = setInterval(()=>{
     .innerText =
     "⏳ " + timeLeft + " Sekunden";
 
-  if(timeLeft <= 0){
+if(timeLeft <= 0){
 
-    clearInterval(timer);
+  clearInterval(timer);
 
-    wrongCount++;
+  wrongCount++;
 
-    wrongQuestions.push(q);
+  wrongQuestions.push(q);
 
-   document
-  .getElementById("feedback")
-  .innerText =
-  "⏰ Zeit abgelaufen";
+  document
+    .getElementById("feedback")
+    .innerText =
+    "⏰ Zeit abgelaufen";
 
-answerChecked = true;
+  answerChecked = true;
 
-setTimeout(()=>{
+  setTimeout(()=>{
 
-  currentQuestion++;
+    currentQuestion++;
 
-  saveProgress({
-    currentCategory,
-    currentQuestion,
-    score,
-    userAnswers
-  });
+    saveProgress({
+      currentCategory,
+      currentQuestion,
+      score,
+      userAnswers
+    });
 
-  if(
-    currentQuestion >=
-    currentQuestions.length
-  ){
+    if(
+      currentQuestion >=
+      currentQuestions.length
+    ){
 
-    localStorage.removeItem("quizProgress");
+      localStorage.removeItem("quizProgress");
 
-    finishQuiz();
+      finishQuiz();
 
-    return;
-  }
+      return;
+    }
 
-  answerChecked = false;
+    answerChecked = false;
 
-  showQuestion();
+    showQuestion();
 
-},1000);
-}
+  },1000);
+
+});
 
 /* ======================================================
    NÄCHSTE FRAGE
