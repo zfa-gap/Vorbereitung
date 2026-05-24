@@ -1,3 +1,49 @@
+/* =========================================
+   TOP BAR
+========================================= */
+
+.top-bar{
+
+  width:100%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:flex-start;
+
+  padding:16px 20px;
+
+  margin-bottom:25px;
+
+  background:
+  rgba(255,255,255,0.06);
+
+  border-bottom:
+  1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(8px);
+}
+
+.top-btn{
+
+  border:none;
+
+  border-radius:16px;
+
+  padding:14px 22px;
+
+  font-size:20px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  background:#d6f0eb;
+
+  color:#003b4d;
+}
+
 /* ======================================================
    RESET
 ====================================================== */
