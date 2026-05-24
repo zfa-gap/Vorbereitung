@@ -4360,8 +4360,8 @@ function showQuestion(){
 
     button.classList.add("answer-btn");
 
-    button.onclick = () =>
-      selectAnswer(index);
+button.onclick = () =>
+  checkAnswer(index);
 
     answersDiv.appendChild(button);
 
