@@ -4589,22 +4589,26 @@ function nextQuestion(){
         ===
         JSON.stringify(q.correct);
 
-      selects.forEach((select,index)=>{
+selects.forEach((select,index)=>{
 
-        if(
-          selected[index]
-          ===
-          q.correct[index]
-        ){
+  if(
+    selected[index]
+    ===
+    q.correct[index]
+  ){
 
-          select.classList.add("correct");
-        }
+    select.classList.add(
+      "correct-select"
+    );
+  }
 
-        else{
+  else{
 
-          select.classList.add("wrong");
-        }
-      });
+    select.classList.add(
+      "wrong-select"
+    );
+  }
+});
     }
 
     /* NORMALE FRAGEN */
