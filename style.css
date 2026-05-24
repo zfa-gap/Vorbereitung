@@ -842,3 +842,12 @@ footer {
     font-size: 14px;
     color: rgba(255,255,255,0.6);
 }
+
+
+#score-display {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+}
