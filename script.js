@@ -4233,6 +4233,13 @@ currentQuestions =
 ...questions[currentCategory]
 ];
 
+correctCount = 0;
+wrongCount = 0;
+xp = 0;
+streak = 0;
+bestStreak = 0;
+
+
 currentQuestions.sort(
 () => Math.random() - 0.5
 );
@@ -4258,6 +4265,7 @@ currentQuestions.sort(
     getCategoryName(category);
 
   showQuestion();
+updateProgress();
 }
 
 /* ======================================================
@@ -4508,9 +4516,11 @@ timer = setInterval(()=>{
         return;
       }
 
-      answerChecked = false;
+     answerChecked = false;
 
-      showQuestion();
+showQuestion();
+
+updateProgress();
 
     },1000);
   }
@@ -4535,8 +4545,13 @@ function nextQuestion(){
     return;
   }
 
+  /* =========================================
+     ANTWORT PRÜFEN
+  ========================================= */
+
   if(!answerChecked){
-clearInterval(timer);
+
+    clearInterval(timer);
 
     let isCorrect = false;
 
@@ -4559,7 +4574,7 @@ clearInterval(timer);
           parseInt(select.value)
         );
 
-   if(selected.some(isNaN)){
+      if(selected.some(isNaN)){
 
         alert(
           "Bitte alles auswählen 😄"
@@ -4582,12 +4597,12 @@ clearInterval(timer);
           q.correct[index]
         ){
 
-      select.classList.add("correct");
+          select.classList.add("correct");
         }
 
         else{
 
-        select.classList.add("wrong");
+          select.classList.add("wrong");
         }
       });
     }
@@ -4655,6 +4670,10 @@ clearInterval(timer);
       });
     }
 
+    /* =========================================
+       FEEDBACK
+    ========================================= */
+
     document
       .getElementById("feedback")
       .innerText =
@@ -4663,30 +4682,32 @@ clearInterval(timer);
       ? "✅ Richtig"
       : "❌ Falsch";
 
-if(isCorrect){
+    if(isCorrect){
 
-  xp += 10;
+      xp += 10;
 
-  streak++;
+      streak++;
 
-  correctCount++;
+      correctCount++;
 
-  if(streak > bestStreak){
+      if(streak > bestStreak){
 
-    bestStreak = streak;
-  }
-}
+        bestStreak = streak;
+      }
+    }
 
-else{
+    else{
 
-  streak = 0;
+      streak = 0;
 
-  wrongCount++;
+      wrongCount++;
 
-  wrongQuestions.push(q);
-}
-    
-document.querySelector(
+      wrongQuestions.push(q);
+    }
+
+    updateProgress();
+
+    document.querySelector(
       ".next-btn"
     ).innerText =
     "Weiter →";
@@ -4696,17 +4717,19 @@ document.querySelector(
     return;
   }
 
+  /* =========================================
+     NÄCHSTE FRAGE
+  ========================================= */
+
   currentQuestion++;
 
   if(
     currentQuestion
     >=
-   currentQuestions.length
+    currentQuestions.length
   ){
 
-  finishQuiz();
-
-return;
+    finishQuiz();
 
     return;
   }
@@ -4714,62 +4737,121 @@ return;
   answerChecked = false;
 
   showQuestion();
+
+  updateProgress();
 }
+
+/* ======================================================
+   QUIZ ENDE
+====================================================== */
+
 function finishQuiz(){
 
-clearInterval(timer);
+  clearInterval(timer);
 
-if(wrongQuestions.length > 0){
+  /* =========================================
+     FALSCHE FRAGEN WIEDERHOLEN
+  ========================================= */
 
-currentQuestions =
-[...wrongQuestions];
+  if(wrongQuestions.length > 0){
 
-wrongQuestions = [];
+    currentQuestions =
+    [...wrongQuestions];
 
-currentQuestion = 0;
+    wrongQuestions = [];
 
-alert(
-"🔁 Nur falsche Fragen kommen nochmal 😄"
-);
+    currentQuestion = 0;
 
-answerChecked = false;
+    alert(
+      "🔁 Nur falsche Fragen kommen nochmal 😄"
+    );
 
-showQuestion();
+    answerChecked = false;
 
-return;
+    showQuestion();
+
+    updateProgress();
+
+    return;
+  }
+
+  /* =========================================
+     STATISTIK
+  ========================================= */
+
+  const total =
+    correctCount + wrongCount;
+
+  const percent =
+    Math.round(
+      (correctCount / total) * 100
+    );
+
+  alert(
+
+    "🎉 Bereich abgeschlossen\n\n"
+
+    + "⭐ XP: " + xp + "\n"
+
+    + "🔥 Beste Serie: "
+    + bestStreak + "\n"
+
+    + "✅ Richtig: "
+    + correctCount + "\n"
+
+    + "❌ Falsch: "
+    + wrongCount + "\n"
+
+    + "📊 Trefferquote: "
+    + percent + "%"
+  );
+
+  correctCount = 0;
+  wrongCount = 0;
+  streak = 0;
+  bestStreak = 0;
+
+  updateProgress();
+
+  backToLastMenu();
 }
 
-const total =
-correctCount + wrongCount;
+/* ======================================================
+   FORTSCHRITT
+====================================================== */
 
-const percent =
-Math.round(
-(correctCount / total) * 100
-);
+function updateProgress(){
 
-alert(
+  const total =
+    currentQuestions.length;
 
-"🎉 Bereich abgeschlossen\n\n"
+  const current =
+    currentQuestion;
 
-+ "⭐ XP: " + xp + "\n"
+  const percent =
+    Math.round(
+      (current / total) * 100
+    );
 
-+ "🔥 Beste Serie: "
-+ bestStreak + "\n"
+  document
+    .getElementById("score-display")
+    .innerText =
 
-+ "✅ Richtig: "
-+ correctCount + "\n"
+    "Punkte: "
+    + correctCount
+    + " / "
+    + total;
 
-+ "❌ Falsch: "
-+ wrongCount + "\n"
+  document
+    .getElementById("percentage-display")
+    .innerText =
 
-+ "📊 Trefferquote: "
-+ percent + "%"
-);
+    percent + "%";
 
-correctCount = 0;
-wrongCount = 0;
-streak = 0;
-bestStreak = 0;
+  document
+    .getElementById("progress-bar")
+    .style.width =
 
-backToLastMenu();
+    percent + "%";
 }
+
