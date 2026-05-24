@@ -17,11 +17,12 @@
 
   border-radius:20px;
 
+  background:
+  rgba(214,240,235,0.08);
+
   border:
   2px solid rgba(214,240,235,0.12);
 
-  background:
-  rgba(214,240,235,0.08);
 
   color:white;
 
