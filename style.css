@@ -892,13 +892,15 @@ h1{
 
   .back-btn{
 
-    padding:12px 18px;
-
+   width:100%;
+     padding:12px 18px;
     border-radius:16px;
-
     font-size:16px;
-
+     font-weight:700;
+     
     margin-bottom:22px;
+     text-align:left;
+     
   }
 
   .next-btn{
