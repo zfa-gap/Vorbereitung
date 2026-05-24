@@ -4305,10 +4305,10 @@ function getCategoryName(category){
    FRAGE ANZEIGEN
 ====================================================== */
 
-function showQuestion() {
+function showQuestion(){
 
   const q =
-    currentQuiz[currentQuestion];
+    currentQuestions[currentQuestion];
 
   document.getElementById(
     "score-display"
@@ -4351,7 +4351,21 @@ function showQuestion() {
 
   answersDiv.innerHTML = "";
 
-  // HIER kommen deine Antwortenbuttons usw.
+  q.answers.forEach((answer, index) => {
+
+    const button =
+      document.createElement("button");
+
+    button.innerText = answer;
+
+    button.classList.add("answer-btn");
+
+    button.onclick = () =>
+      selectAnswer(index);
+
+    answersDiv.appendChild(button);
+
+  });
 
 }
 /* =========================
