@@ -4855,3 +4855,38 @@ function updateProgress(){
     percent + "%";
 }
 
+function resetQuiz(){
+
+  const confirmReset =
+    confirm(
+      "Quiz wirklich zurücksetzen?"
+    );
+
+  if(!confirmReset){
+    return;
+  }
+
+  clearInterval(timer);
+
+  currentQuestion = 0;
+
+  correctCount = 0;
+  wrongCount = 0;
+
+  xp = 0;
+
+  streak = 0;
+  bestStreak = 0;
+
+  wrongQuestions = [];
+
+  currentQuestions.sort(
+    () => Math.random() - 0.5
+  );
+
+  answerChecked = false;
+
+  showQuestion();
+
+  updateProgress();
+}
