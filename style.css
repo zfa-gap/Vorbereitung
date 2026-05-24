@@ -54,6 +54,38 @@
   box-sizing:border-box;
 }
 
+.reset-btn{
+
+  width:100%;
+
+  margin-top:14px;
+
+  padding:14px;
+
+  border:none;
+
+  border-radius:18px;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  background:
+  rgba(255,255,255,0.08);
+
+  color:white;
+
+  transition:0.2s;
+}
+
+.reset-btn:hover{
+
+  background:
+  rgba(255,255,255,0.16);
+}
+
 /* ======================================================
    BODY
 ====================================================== */
