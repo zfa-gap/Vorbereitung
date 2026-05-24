@@ -115,7 +115,7 @@ linear-gradient(
 
   text-align:center;
 
-  margin-bottom:70px;
+  margin-bottom:60px;
 
 }
 
@@ -127,7 +127,7 @@ linear-gradient(
 
   height:auto;
 
-  margin-bottom:30px;
+  margin-bottom:25px;
 
   object-fit:contain;
 
@@ -218,11 +218,11 @@ h1{
   border:
   2px solid rgba(214,240,235,0.45);
 
-  border-radius:24px;
+  border-radius:34px;
 
-  padding:24px;
+  padding:34px;
 
-  min-height:140px;
+  min-height:180px;
 
   cursor:pointer;
 
@@ -312,9 +312,9 @@ h1{
 
 .main-card h2{
 
-  font-size:22px;
+  font-size:32px;
 
-  margin-bottom:10px;
+  margin-bottom:14px;
 
   font-weight:800;
 
@@ -330,9 +330,9 @@ h1{
 
 .main-card p{
 
-  font-size:15px;
+  font-size:20px;
 
-  line-height:1.4;
+  line-height:1.6;
 
   color:#d6f0eb;
 
@@ -526,7 +526,7 @@ h1{
 
   body{
 
-    padding:18px 12px;
+    padding:8px 10px;
   }
 
   /* LOGO */
@@ -535,27 +535,28 @@ h1{
 
   width:100%;
 
-  max-width:420px;
+  max-width:340px;
 
   margin:auto;
-}
 
+  margin-top:10px;
+}
    
   h1{
 
-    font-size:30px;
+    font-size:24px;
   }
 
   .subtitle{
 
-    font-size:17px;
+    font-size:15px;
 
     line-height:1.4;
   }
 
   .center-title{
 
-    font-size:30px;
+    font-size:24px;
 
     margin-bottom:30px;
   }
@@ -566,7 +567,7 @@ h1{
 
     flex-direction:column;
 
-    gap:22px;
+    gap:20px;
   }
 
   /* GROSSE AUSWAHLKARTEN */
@@ -575,29 +576,28 @@ h1{
 
     width:100%;
 
-    min-height:190px;
+    min-height:180px;
 
-    padding:28px 24px;
+    padding:20px 18px;
 
-    border-radius:28px;
+    border-radius:23px;
   }
 
   .main-card h2{
 
-    font-size:28px;
+    font-size:22px;
   }
 
   .main-card p{
 
-    font-size:16px;
+    font-size:14px;
 
     line-height:1.5;
   }
 
   .icon{
 
-    font-size:30px;
-      margin-bottom:10px;
+    font-size:38px;
   }
 
   /* QUIZ */
@@ -817,7 +817,7 @@ h1{
 
 /* MOBILE */
 
-@media(max-width:700px){
+@media(max-width:600px){
 
   .matching-row{
 
