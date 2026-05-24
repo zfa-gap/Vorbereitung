@@ -357,13 +357,17 @@
 
 <div class="quiz-box">
 
+<div class="stats-bar">
+
   <div id="score-display">
-    Punkte: 0
+    ⭐ 0 Punkte
   </div>
 
   <div id="percentage-display">
-    0 %
+    📊 0%
   </div>
+
+</div>
 
   <div class="progress-container">
     <div id="progress-bar"></div>
@@ -385,6 +389,14 @@
           Antwort prüfen
 
         </button>
+
+<button
+  class="reset-btn"
+  onclick="resetQuiz()"
+>
+  🔄 Quiz zurücksetzen
+</button>
+
 
         <div id="feedback"></div>
 
