@@ -4833,28 +4833,27 @@ function updateProgress(){
       (current / total) * 100
     );
 
-  document
-    .getElementById("score-display")
-    .innerText =
+document
+  .getElementById("score-display")
+  .innerText =
 
-    "Punkte: "
-    + correctCount
-    + " / "
-    + total;
+  "⭐ Punkte: "
+  + correctCount
+  + " / "
+  + total;
 
-  document
-    .getElementById("percentage-display")
-    .innerText =
+document
+  .getElementById("percentage-display")
+  .innerText =
 
-    percent + "%";
+  "📊 " + percent + "%";
 
-  document
-    .getElementById("progress-bar")
-    .style.width =
+document
+  .getElementById("progress-bar")
+  .style.width =
 
-    percent + "%";
+  percent + "%";
 }
-
 function resetQuiz(){
 
   const confirmReset =
