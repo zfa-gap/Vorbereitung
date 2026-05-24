@@ -6,42 +6,33 @@
 
   width:100%;
 
+  padding:20px;
+
   display:flex;
 
   align-items:center;
 
-  justify-content:flex-start;
-
-  padding:16px 20px;
-
-  margin-bottom:25px;
-
-  background:
-  rgba(255,255,255,0.06);
+  background:#0b4d63;
 
   border-bottom:
   1px solid rgba(255,255,255,0.08);
-
-  backdrop-filter: blur(8px);
 }
 
 .top-btn{
 
   border:none;
 
-  border-radius:16px;
+  background:none;
 
-  padding:14px 22px;
+  color:white;
 
-  font-size:20px;
+  font-size:22px;
 
   font-weight:700;
 
   cursor:pointer;
 
-  background:#d6f0eb;
-
-  color:#003b4d;
+  padding:0;
 }
 
 /* ======================================================
@@ -115,6 +106,29 @@ linear-gradient(
 
   position:relative;
 
+}
+
+footer{
+
+  width:100%;
+
+  margin-top:40px;
+
+  padding:20px;
+
+  text-align:center;
+
+  font-size:14px;
+
+  line-height:1.6;
+
+  color:rgba(255,255,255,0.72);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
 }
 
 /* ======================================================
