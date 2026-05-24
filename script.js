@@ -4310,11 +4310,6 @@ function showQuestion(){
   const q =
     currentQuestions[currentQuestion];
 
-  document.getElementById(
-    "score-display"
-  ).innerText =
-    `Punkte: ${score}`;
-
   if(!q){
 
     document
@@ -4329,6 +4324,8 @@ function showQuestion(){
     document
       .getElementById("answers")
       .innerHTML = "";
+
+
 
     return;
   }
@@ -4350,26 +4347,6 @@ function showQuestion(){
     document.getElementById("answers");
 
   answersDiv.innerHTML = "";
-
-  q.answers.forEach((answer, index) => {
-
-    const button =
-      document.createElement("button");
-
-    button.innerText = answer;
-
-    button.classList.add("answer-btn");
-
-    button.addEventListener(
-      "click",
-      () => checkAnswer(index)
-    );
-
-    answersDiv.appendChild(button);
-
-  });
-
-}
 /* =========================
    MATCHING
 ========================= */
