@@ -630,7 +630,7 @@ h1{
 
 .bottom-row{
 
-  margin-top:30px;
+  margin-top:40px;
 
   display:flex;
 
@@ -652,7 +652,33 @@ h1{
 
 }
 
+/* =========================================
+   MATCHING
+========================================= */
 
+.matching-row{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+
+  margin-bottom:28px;
+}
+
+.match-item{
+
+  display:block;
+
+  margin-bottom:10px;
+
+  font-size:18px;
+
+  font-weight:600;
+
+  line-height:1.4;
+}
 /* =========================================
    SELECT / DROPDOWN
 ========================================= */
@@ -957,13 +983,23 @@ h1{
 
     padding:14px;
 
-    gap:12px;
+  margin-bottom:28px;
+   gap:12px;
+
   }
 
-  .match-item{
+.match-item{
 
-    font-size:14px;
-  }
+  display:block;
+
+  margin-bottom:10px;
+
+  font-size:18px;
+
+  font-weight:600;
+
+  line-height:1.4;
+}
 
 .matching-row select{
 
@@ -971,9 +1007,8 @@ h1{
 
   min-width:100%;
 
-  font-size:14px;
-
-  padding:12px 14px;
+ padding:16px 18px;
+font-size:17px;
 
   border-radius:14px;
 }
