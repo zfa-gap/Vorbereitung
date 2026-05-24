@@ -4347,6 +4347,7 @@ function showQuestion(){
     document.getElementById("answers");
 
   answersDiv.innerHTML = "";
+
 /* =========================
    MATCHING
 ========================= */
