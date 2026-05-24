@@ -623,7 +623,7 @@ const questions = {
 
 {
   question:
-  "Welche 2 Aussagen treffen auf Watzlawicks bekannteste Kommunikationsregel zu?",
+  "Welche 2 Aussagen treffen auf Watzlawicks bekannteste Kommunikationsregel zu? (2 Antworten)",
 
   multiple: true,
 
@@ -841,7 +841,7 @@ const questions = {
   question:
   "Welche Redewendung gibt den Grundsatz der Kommunikation nach Watzlawick am besten wieder?",
 
-  multiple: false,
+  multiple: true,
 
   answers: [
 
