@@ -4301,6 +4301,10 @@ function getCategoryName(category){
   return "Quiz";
 }
 
+/* ======================================================
+   FRAGE ANZEIGEN
+====================================================== */
+
 function showQuestion() {
 
   const q =
@@ -4328,26 +4332,6 @@ function showQuestion() {
 
     return;
   }
-
-  document
-    .getElementById("question-number")
-    .innerText =
-    "Frage "
-    + (currentQuestion + 1)
-    + " von "
-    + currentQuestions.length;
-
-  document
-    .getElementById("question")
-    .innerText =
-    q.question;
-
-  const answersDiv =
-    document.getElementById("answers");
-
-  answersDiv.innerHTML = ""
-;
-
 
 
 /* =========================
