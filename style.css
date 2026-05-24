@@ -57,11 +57,17 @@
 
   margin-top:14px;
 
-  padding:14px;
-
-  border:none;
+  padding:16px;
 
   border-radius:18px;
+
+  border:
+  2px solid rgba(214,240,235,0.12);
+
+  background:
+  rgba(214,240,235,0.08);
+
+  color:white;
 
   font-size:16px;
 
@@ -69,18 +75,13 @@
 
   cursor:pointer;
 
-  background:
-  rgba(255,255,255,0.08);
-
-  color:white;
-
   transition:0.2s;
 }
 
 .reset-btn:hover{
 
   background:
-  rgba(255,255,255,0.16);
+  rgba(214,240,235,0.16);
 }
 
 /* ======================================================
@@ -284,6 +285,48 @@ h1{
   flex-wrap:wrap;
 
 }
+
+/* =========================================
+   STATS BAR
+========================================= */
+
+.stats-bar{
+
+  display:flex;
+
+  justify-content:flex-end;
+
+  align-items:center;
+
+  gap:14px;
+
+  margin-bottom:20px;
+
+  flex-wrap:wrap;
+}
+
+#score-display,
+#percentage-display{
+
+  background:
+  rgba(214,240,235,0.08);
+
+  border:
+  2px solid rgba(214,240,235,0.12);
+
+  border-radius:16px;
+
+  padding:10px 16px;
+
+  font-size:16px;
+
+  font-weight:700;
+
+  color:white;
+}
+
+
+
 
 /* ======================================================
    VERTIKAL
@@ -642,6 +685,19 @@ h1{
   border-radius:16px;
 } 
    
+
+.reset-btn{
+
+  width:100%;
+
+  padding:14px;
+
+  font-size:15px;
+
+  border-radius:16px;
+
+  margin-top:10px;
+}
    
    
    body{
@@ -852,6 +908,25 @@ h1{
 
     font-size:14px;
   }
+
+
+.stats-bar{
+
+  justify-content:center;
+
+  gap:10px;
+
+  margin-bottom:16px;
+}
+
+#score-display,
+#percentage-display{
+
+  font-size:14px;
+
+  padding:8px 12px;
+}
+
 
 footer {
 
