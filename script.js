@@ -4333,19 +4333,27 @@ function showQuestion() {
     return;
   }
 
-document
-  .getElementById("question-number")
-  .innerText =
-  "Frage "
-  + (currentQuestion + 1)
-  + " von "
-  + currentQuestions.length;
+  document
+    .getElementById("question-number")
+    .innerText =
+    "Frage "
+    + (currentQuestion + 1)
+    + " von "
+    + currentQuestions.length;
 
-document
-  .getElementById("question")
-  .innerText =
-  q.question;
+  document
+    .getElementById("question")
+    .innerText =
+    q.question;
 
+  const answersDiv =
+    document.getElementById("answers");
+
+  answersDiv.innerHTML = "";
+
+  // HIER kommen deine Antwortenbuttons usw.
+
+}
 /* =========================
    MATCHING
 ========================= */
