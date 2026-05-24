@@ -4301,14 +4301,15 @@ function getCategoryName(category){
   return "Quiz";
 }
 
-/* ======================================================
-   FRAGE ANZEIGEN
-====================================================== */
-
-function showQuestion(){
+function showQuestion() {
 
   const q =
-    currentQuestions[currentQuestion];
+    currentQuiz[currentQuestion];
+
+  document.getElementById(
+    "score-display"
+  ).innerText =
+    `Punkte: ${score}`;
 
   if(!q){
 
@@ -4324,8 +4325,6 @@ function showQuestion(){
     document
       .getElementById("answers")
       .innerHTML = "";
-
-
 
     return;
   }
@@ -4346,7 +4345,10 @@ function showQuestion(){
   const answersDiv =
     document.getElementById("answers");
 
-  answersDiv.innerHTML = "";
+  answersDiv.innerHTML = ""
+;
+
+
 
 /* =========================
    MATCHING
